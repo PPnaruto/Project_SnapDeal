@@ -1,0 +1,58 @@
+/* Header-CSS */
+#header{
+    height: 96px;
+    background-color: #e40046;
+    color: white;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+}
+#logo{
+    margin-left: 80px;
+}
+#info{
+    margin-left: 800px;
+    font-size: 13px;
+    z-index: 1;
+}
+
+/* Payment-detais CSS */
+#payment_parent{
+height: 700px;
+width: 90%;
+background-color: #f9fafb;
+z-index: 2;
+display: flex;
+margin: auto ;
+margin-top: -15px;
+justify-content: space-between;
+border-radius: 20px;
+}
+#payment_detail{
+    width: 65%;
+    border: 2px solid black;
+}
+#cart_detail{
+    width: 30%;
+    border: 2px solid palevioletred;
+}
+#login{
+    margin: 20px;
+    display: flex;
+    /* border: 2px solid black; */
+    align-items: center;
+    /* background-color: #666; */
+    background-color: #e1e6eb;
+    border-radius: 7px;
+}
+#right_logo{
+    margin-left: 20px;
+}
+#login_name{
+    margin-left: 50px;
+}
+#login_id{
+    margin-left: 150px;
+}
+
+
