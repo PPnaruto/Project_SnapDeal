@@ -65,14 +65,14 @@ border-radius: 20px;
     margin-left: 200px;
     border: 1px solid rebeccapurple;
 }
-#address,#review{
+#address,#review,#Payment{
     /* height: 400px; */
     border-radius: 5px;
     border: 1px solid gray;
     margin: 20px;
     padding-bottom: 20px;
 }
-#ad,#review_bar{
+#ad,#review_bar,#payment_bar{
     height: 56px;
     background-color: black;
     color: white;
@@ -185,5 +185,114 @@ table>*{
     color: gray;
     font-size: 12px;
 }
+tbody{
+    border: 2px solid red;
+}
+#div_order{
+    display: flex;
+    /* border: 2px solid black; */
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+#order_img{
+    width: 60px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    /* border: 2px solid red; */
+}
+#remove_order{
+    margin-left: 50px;
+    margin-top: -8px;
+}
+#promo{
+    margin-top: 5px;
+    /* height: 400px; */
+    border-top: 3px solid gray;
+    color: gray;
+}
+#promo>div{
+    display: flex;
+    align-items: center;
+}
+
+#promo>div:first-child{
+    margin-left: 50px;
+}
+#apply{
+    color: blue;
+    margin-left: 10px;
+}
+#pay_total{
+    margin-left: 225px;
+    font-size: 20px;
+}
+#promo_input{
+    border: none;
+}
+#btn_payment{
+    background-color: #e40046;
+    color: white;
+    width: 275px;
+    height: 40px;
+    margin-left: 500px;
+    margin-top: 10px;
+}
+#payment_child{
+    display: flex;
+    gap: 80px;
+
+}
+#payment_way{
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid gray;
+    padding: 0 20px ;
+}
+#payment_way>p{
+    font-size: 20px;
+    color: gray;
+
+}
+#way,#cashon_way{
+    /* border: 2px solid red; */
+    width: 45%;
+    position: relative;
+}
+#way>p,#cashon_way>p{
+    font-size: 20px;
+}
+#way>div{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#way>div>input{
+    width: 250px;
+    padding: 5px 10px;
+}
+#btn_place{
+    background-color: #e40046;
+    color: white;
+    margin-top: 20px;
+    width: 220px;
+    height: 40px;
+    margin-left: 20%;
+}
+#cashon_way{
+    width: 20%;
+    position: absolute;
+    display: none;
+    left: 23%;  
+}
+#cashon_way>button{
+    margin-left: 0;
+}
+
+
+
+
 
 
