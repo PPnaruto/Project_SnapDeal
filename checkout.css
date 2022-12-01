@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 body
 {
-    /* padding: 0 90px; */
     background-color: #F7F7F7;
 }
 *
@@ -234,15 +233,19 @@ body
 }
 
 /* view cart */
-#view-cart
+.view-c
 {
+    z-index: 10;
     padding: 0 20px;
-    width: 85%;
+    width: 80%;
     margin: auto;
     margin-top: 0px;
     height: 68vh;
     background-color: #ffffff;
     overflow-y: scroll;
+    position:fixed;
+    left: 9%;
+    
 }
 #shopping-cart
 {
@@ -303,7 +306,7 @@ td
     font-weight: 400;
     color: #666666;    
 }
-#view-cart-footer
+.view-c-f
 {
     display: flex;
     background-color:#222222;
@@ -316,9 +319,9 @@ td
     left: 0;
     padding-left: 70px;
 }
-#view-cart-footer > div
+.view-c-f > div
 {
-    margin: 0 50px;
+    margin-left: 120px;
 }
 #price-button
 {
@@ -503,4 +506,8 @@ nav>div>div:nth-of-type(2)>p {
 
 #nav_signin {
     position: relative;
+}
+#staticBackdrop
+{
+    margin-top: 5%;
 }
