@@ -1,0 +1,2787 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://www.snapdeal.com/img/icons/finalFavicon.ico">
+    <title>Online Shopping Site India - Shop Electronics, Men & Women Clothing, Shoes - www.Snapdeal.com</title>
+    <!-- <link rel="icon" href="https://www.snapdeal.com/img/icons/finalFavicon.ico"> -->
+    <style>
+        /* div {
+            border: 1px solid red;
+        } */
+        /* div>div {
+            border: 1px solid green;
+        } */
+
+        body {
+            margin: 0;
+            background-color: #f7f7f7;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        /* CSS for nav top bar starts */
+
+        .topThinBar {
+            background-color: #c7363d;
+            color: white;
+            font-size: 12px;
+        }
+
+        .topThinBar>div {
+            display: flex;
+            justify-content: space-between;
+            line-height: 5px;
+            max-width: 1402px;
+            margin: auto;
+        }
+
+
+        .topThinBar>div>div:nth-of-type(2) {
+            display: flex;
+            gap: 10px;
+        }
+
+        .topThinBar>div>div:nth-of-type(2)>p {
+            cursor: pointer;
+        }
+
+        nav {
+            background-color: #e53f46;
+            height: 65px;
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0px;
+            display: flex;
+            align-items: center;
+            z-index: 2;
+        }
+
+        nav>div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+            max-width: 1402px;
+            margin: auto;
+            width: 100%;
+            height: 65px;
+        }
+
+        nav>div>div:nth-of-type(1) {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            color: #fff;
+            /* max-width: 1600px; */
+            /* margin: auto; */
+            width: 70%;
+        }
+
+        nav>div>div:nth-of-type(1)>a {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        nav>div>div:nth-of-type(2) {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            color: #fff;
+            /* max-width: 1600px; */
+            /* margin: auto; */
+            width: 25%;
+        }
+
+        .sd-logo {
+            width: 142px;
+            height: 30px;
+            margin-right: 58px;
+        }
+
+        nav>div>div:nth-of-type(2)>p {
+            font-size: 13px;
+        }
+
+        .searchBar {
+            min-width: 400px;
+            width: 100%;
+            max-width: 880px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .searchBar>input {
+            width: 78%;
+            padding: 0 10px 0 32px;
+            height: 37px;
+            border: 0;
+            border-radius: 2px;
+            background-color: rgb(244, 244, 244);
+        }
+
+        .searchBar>button {
+            /* padding: 10px 5%; */
+            width: 16.67%;
+            border: 0;
+            border-radius: 2px;
+            background-color: #333;
+            color: white;
+            font-size: 14px;
+            padding: 0 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .searchBar>button:hover {
+            background-color: #3f3f3f;
+        }
+
+        .cartButton {
+            border-left: 1px solid #ce3840;
+            border-right: 1px solid #ce3840;
+            min-width: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40%;
+            max-width: 150px;
+            /* margin-left: 9%; */
+            height: 100%;
+            font-size: 13px;
+            /* justify-self: flex-end; */
+            cursor: pointer;
+        }
+
+        .cartButton>img {
+            margin-left: 5px;
+        }
+
+        .signinButton {
+            min-width: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40%;
+            max-width: 180px;
+            font-size: 13px;
+            /* margin-left: 9%; */
+            height: 60px;
+            cursor: pointer;
+        }
+
+        .signinButton:hover {
+            background-color: #333;
+            border-radius: 5px;
+        }
+
+        .signinButton>div:nth-of-type(2) {
+            width: 37px;
+            height: 37px;
+            background-color: rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 25px;
+        }
+
+        #nav_signin {
+            position: relative;
+        }
+
+        #nav_signin>ul {
+            background-color: #333;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            list-style: none;
+            position: absolute;
+            left: -70px;
+            top: 34px;
+            width: 500%;
+            padding-top: 20px;
+            padding-left: 0;
+            border-radius: 5px;
+        }
+
+        #nav_signin>ul>li {
+            height: 40px;
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+            margin-bottom: 0;
+            cursor: pointer;
+        }
+
+        #nav_signin>ul>li>img {
+            width: 18px;
+            margin-right: 10px;
+        }
+
+        #nav_signin>ul>li:hover {
+            background-color: rgba(29, 28, 28, 0.356);
+        }
+
+        #nav_signin>ul>hr {
+            width: 99%;
+            border: 1px solid #555;
+
+        }
+
+        #nav_signin>ul>div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        #nav_signin>ul>div>p:nth-of-type(1) {
+            text-align: center;
+            font-size: 11px;
+            color: #b4b4b4;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        #nav_signin>ul>div>p:nth-of-type(2) {
+            text-align: center;
+            margin-top: 0;
+        }
+
+        #nav_signin>ul>div>button {
+            color: #ffffff;
+            background-color: #e40046;
+            font-size: 13px;
+            margin-bottom: 0px;
+            cursor: pointer;
+            height: 40px;
+            border-radius: 3px;
+            border: 0;
+            font-weight: 400;
+            width: 90%;
+            margin-bottom: 10px;
+        }
+
+        /* CSS for top nav bar ends */
+
+        /* CSS for top content */
+
+        #topContent {
+            display: grid;
+            grid-template-columns: 200px 882px 230px;
+            grid-template-areas:
+                "a b c"
+                "a d d";
+            gap: 15px;
+            max-width: 1402px;
+            margin: 10px auto;
+        }
+
+        #categories {
+            grid-area: a;
+        }
+
+        #slideshow {
+            grid-area: b;
+            height: 330px;
+            overflow: hidden;
+        }
+
+        #slideshow>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        #login_cards {
+            grid-area: c;
+            width: 100%;
+            height: 330px
+        }
+
+        #trending_products {
+            grid-area: d
+        }
+
+        #trending_products>h2 {
+            font-size: 18px;
+            font-weight: 400;
+            margin-left: 20px;
+        }
+
+        #topContent>div {
+            /* min-height: 500px; */
+            background-color: #fff;
+            border-radius: 4px;
+            box-shadow: 0px 0px 10px rgb(243, 243, 243);
+            border: 1px solid rgb(212, 212, 212);
+        }
+
+        #categories {
+            width: 200px;
+        }
+
+        #trending_products>div {
+            display: flex;
+            overflow-y: hidden;
+        }
+
+        #trending_products>div>div {
+            min-width: 205px;
+            max-width: 232px;
+            box-sizing: border-box;
+            padding: 20px;
+            margin-bottom: 15px;
+            font-size: 13px;
+            color: #999;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+
+        #trending_products>div>div:hover {
+            box-shadow: 0px 0 10px 3px rgba(167, 165, 165, 0.253);
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #trending_products>div>div>img {
+            width: 100%;
+        }
+
+        #trending_products>div>div>div:nth-of-type(1) {
+            height: 36px;
+            /* white-space: nowrap; */
+            overflow: hidden;
+            /* text-overflow: ellipsis; */
+            line-height: 18px;
+        }
+
+        .star-rating {
+            font-size: 15px;
+            letter-spacing: 1px;
+        }
+
+        /* #slideshow {
+            max-width: 1140px;
+        } */
+
+        /* #slideshow img {
+            width: 100%;
+        } */
+
+        /* CSS for top content */
+
+
+
+        /* CSS for login starts */
+
+        #overlay {
+            display: none;
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            z-index: 5;
+        }
+
+        #overlay>div:nth-child(1) {
+            background-color: #000000;
+            opacity: 0.7;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        #login-area {
+            width: 726px;
+            height: 360px;
+            border-radius: 5px;
+            margin: 15% 30%;
+            background-color: #edf1f4;
+            ;
+            position: absolute;
+            z-index: 10;
+            background-image: url("https://i2.sdlcdn.com/img/snapdeal/sprite/userAuthSpritev3.png");
+            display: flex;
+            align-items: center;
+            box-shadow: 0 10px 10px rgba(59, 57, 57, 0.472);
+        }
+
+        #login-area>div:nth-of-type(1) {
+            padding: 27px 34px 27px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 360px;
+            box-sizing: border-box;
+        }
+
+        #login-area>div>div {
+            display: flex;
+            align-items: center;
+        }
+
+        #login-area>div:nth-of-type(1)>div {
+            align-items: flex-start;
+        }
+
+        #login-area>div>div>div {
+            width: 200px;
+        }
+
+        #login-area>div>div>div:nth-of-type(1) {
+            width: 65px;
+            height: 63px;
+            overflow: hidden;
+        }
+
+        #login-area>div>div>div>h4 {
+            font-weight: 100;
+            margin: 2px;
+            font-size: 11px;
+        }
+
+        #login-area>div>div>div>p {
+            color: #666;
+            font-size: 11px;
+            margin: 0
+        }
+
+        #login-area>div:nth-of-type(2) {
+            padding: 25px 29px 29px 29px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            width: 340px;
+            height: 405px;
+            box-sizing: border-box;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 10px 10px rgba(59, 57, 57, 0.472);
+            display: none;
+        }
+
+        #login-area>div:nth-of-type(2)>p:nth-of-type(1) {
+            color: #333;
+            font-size: 18px;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        #login-area>div:nth-of-type(2)>p:nth-of-type(2) {
+            color: #333;
+            font-size: 11px;
+            margin: 0 0 20px;
+        }
+
+        #login-area>div:nth-of-type(2)>input {
+            color: #333;
+            font-size: 12px;
+            padding: 9px 10px;
+            border: 1px solid #d2d2d2;
+            height: 20px;
+        }
+
+        #login-area>div:nth-of-type(2)>button:nth-of-type(1) {
+            border: 0;
+            background: transparent;
+            color: #d2d2d2;
+            font-size: 20px;
+            position: absolute;
+            top: 5px;
+            left: 630px;
+            cursor: pointer;
+        }
+
+        #login-area>div:nth-of-type(2)>button:nth-of-type(2) {
+            color: #ffffff;
+            background-color: #e40046;
+            font-size: 13px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            cursor: pointer;
+            height: 40px;
+            border-radius: 3px;
+            border: 0;
+            font-weight: 400;
+        }
+
+        #login-area>div:nth-of-type(2)>p:nth-of-type(3) {
+            margin-top: 10px;
+            margin-bottom: 8px;
+            font-size: 12px;
+            color: #bbbbbb;
+            text-align: center;
+        }
+
+        #login-area>div:nth-of-type(2)>div {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 20px;
+        }
+
+        #login-area>div:nth-of-type(2)>div>button {
+            width: 141px;
+            height: 40px;
+            box-sizing: border-box;
+            border: 0;
+            font-size: 10px;
+            border-radius: 2px;
+            box-shadow: 0 2px 10px rgba(59, 57, 57, 0.239);
+        }
+
+        #login-area>div:nth-of-type(2)>div>button:nth-of-type(1) {
+            background-color: #4267B2;
+            color: #fff;
+        }
+
+        #login-area>div:nth-of-type(2)>div>button:nth-of-type(2) {
+            margin-left: 15px;
+            background-color: #fff;
+
+        }
+
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .social-btn>div {
+            width: 16.69px;
+            height: 16.69px;
+            overflow: hidden;
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        #login-area>div:nth-of-type(3) {
+            padding: 25px 29px 29px 29px;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: space-evenly; */
+            width: 340px;
+            height: 653px;
+            box-sizing: border-box;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 10px 10px rgba(59, 57, 57, 0.472);
+            display: none;
+        }
+
+        #login-area>div:nth-of-type(3)>button:nth-of-type(1) {
+            border: 0;
+            background: transparent;
+            color: #d2d2d2;
+            font-size: 20px;
+            position: absolute;
+            top: -125px;
+            left: 640px;
+            cursor: pointer;
+        }
+
+        #login-area>div:nth-of-type(3)>p:nth-of-type(1),
+        div:nth-of-type(4)>p:nth-of-type(1) {
+            color: #333;
+            font-size: 18px;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        #login-area>div:nth-of-type(3)>p:nth-of-type(2) {
+            color: #333;
+            font-size: 11px;
+            margin: 0 0 20px;
+        }
+
+        #login-area>div:nth-of-type(3)>form {
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+        }
+
+        #login-area>div:nth-of-type(3)>form>input {
+            color: #333;
+            font-size: 12px;
+            padding: 9px 10px;
+            border: 1px solid #d2d2d2;
+            height: 20px;
+        }
+
+        #login-area>div:nth-of-type(3)>form>p:nth-of-type(1) {
+            color: #999;
+            font-size: 10px;
+        }
+
+        #login-area>div:nth-of-type(3)>form>div {
+            display: flex;
+            align-content: center;
+            font-size: 11px;
+            margin-bottom: 0;
+        }
+
+        #login-area>div:nth-of-type(3)>form>div>input {
+            transform: scale(1.5);
+            margin-right: 15px;
+        }
+
+        #login-area>div:nth-of-type(3)>form>button,
+        div:nth-of-type(4)>form>button {
+            color: #ffffff;
+            background-color: #e40046;
+            font-size: 13px;
+            margin-top: 10px;
+            margin-bottom: 0px;
+            cursor: pointer;
+            height: 40px;
+            border-radius: 3px;
+            border: 0;
+            font-weight: 400;
+            width: 100%;
+        }
+
+        #login-area>div:nth-of-type(3)>form>p:nth-of-type(2) {
+            color: #999;
+            font-size: 10px;
+            text-align: center;
+            margin: 0;
+        }
+
+        #login-area>div:nth-of-type(3)>p:nth-of-type(3) {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 12px;
+            color: #bbbbbb;
+            text-align: center;
+        }
+
+        #login-area>div:nth-of-type(3)>div>button {
+            width: 141px;
+            height: 40px;
+            box-sizing: border-box;
+            border: 0;
+            font-size: 10px;
+            border-radius: 2px;
+            box-shadow: 0 2px 10px rgba(59, 57, 57, 0.239);
+        }
+
+        #login-area>div:nth-of-type(3)>div>button:nth-of-type(1) {
+            background-color: #4267B2;
+            color: #fff;
+        }
+
+        #login-area>div:nth-of-type(3)>div>button:nth-of-type(2) {
+            margin-left: 15px;
+            background-color: #fff;
+        }
+
+        #login-area>div:nth-of-type(4) {
+            padding: 20px 29px 50px 29px;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: space-evenly; */
+            width: 340px;
+            height: 424px;
+            box-sizing: border-box;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 10px 10px rgba(59, 57, 57, 0.472);
+            /* display: none; */
+        }
+
+        #login-area>div:nth-of-type(4)>div:nth-of-type(1) {
+            width: 208px;
+            height: 140px;
+            overflow: hidden;
+            align-self: center;
+        }
+
+        #login-area>div:nth-of-type(4)>button:nth-of-type(1) {
+            border: 0;
+            background: transparent;
+            color: #d2d2d2;
+            font-size: 20px;
+            position: absolute;
+            top: -15px;
+            left: 640px;
+            cursor: pointer;
+        }
+
+        #login-area>div:nth-of-type(4)>p:nth-of-type(2) {
+            color: #333;
+            font-size: 12px;
+            margin: 0;
+            text-align: center;
+        }
+
+        #login-area>div:nth-of-type(4)>p:nth-of-type(3) {
+            color: #333;
+            font-size: 13px;
+            margin-top: 5px;
+            text-align: center;
+        }
+
+        #login-area>div:nth-of-type(4)>form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #login-area>div:nth-of-type(4)>form>input {
+            width: 55%;
+            text-align: center;
+            border-radius: 2px;
+            margin-top: 10px;
+            border: 1px solid #e5e5e5;
+            background-color: #fbfbfb;
+            padding: 10px 20px;
+        }
+
+        #login-area>div:nth-of-type(4)>form>p {
+            text-align: center;
+            color: #25A8ED;
+            font-size: 12px;
+            margin-top: 8px;
+            margin-bottom: 15px;
+        }
+
+        /* CSS for login ends */
+
+        /* CSS for cart overlay starts */
+
+        .cart-without-items {
+            max-width: 1160px;
+            min-width: 960px;
+            background-color: white;
+            box-shadow: 0 10px 10px rgba(59, 57, 57, 0.472);
+            position: absolute;
+            z-index: 10;
+            top: 20%;
+            left: 15%;
+            padding: 20px;
+        }
+
+        .cart-without-items>h4 {
+            text-align: center;
+            color: #5a5a59;
+            font-size: 18px;
+        }
+
+        .cart-without-items>button:nth-of-type(1) {
+            border: 0;
+            background: transparent;
+            color: black;
+            font-size: 20px;
+            position: absolute;
+            top: 25px;
+            left: 950px;
+            cursor: pointer;
+        }
+
+        .cart-without-items>p:nth-of-type(1) {
+            text-align: center;
+            color: #344c55;
+            font-size: 16px;
+            margin-top: 40px;
+        }
+
+        .cart-without-items>hr {
+            border: 1px solid #f5f5f5;
+        }
+
+        .cart-without-items>ul {
+            height: 170px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            row-gap: 20px;
+            font-size: 13px;
+            color: #777;
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .cart-without-items>div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cart-without-items>div>button:nth-of-type(1) {
+            color: #ffffff;
+            background-color: #e40046;
+            font-size: 13px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            height: 40px;
+            border-radius: 3px;
+            border: 0;
+            font-weight: 400;
+            width: 280px;
+        }
+
+        .cart-without-items>div>div {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cart-without-items>div>div>p {
+            color: #b2b2b2;
+            font-size: 12px;
+            vertical-align: middle;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cart-with-items>div:nth-of-type(1) {
+            width: 100%;
+            position: absolute;
+            z-index: 10px;
+            bottom: 0;
+        }
+
+        .cart-with-items>div:nth-of-type(1)>div:nth-of-type(1) {
+            display: flex;
+            justify-content: center;
+        }
+
+        .cart-content-area {
+            max-height: 500px;
+            max-width: 1160px;
+            min-width: 960px;
+            background-color: white;
+            box-shadow: 0 10px 10px rgba(59, 57, 57, 0.472);
+            padding: 20px;
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 5px;
+            ;
+        }
+
+        .cart-with-items>div:nth-of-type(1)>div:nth-of-type(2) {
+            width: 100%;
+            height: 135px;
+            background-color: #222;
+            display: flex;
+            justify-content: center;
+            box-sizing: border-box;
+            padding: 20px 0;
+        }
+
+        .cart-pricing-area {
+            max-width: 1160px;
+            min-width: 960px;
+            width: 100%;
+            color: #ddd;
+            font-size: 13px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .cart-pricing-area>div:nth-of-type(2) {
+            width: 290px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .cart-pricing-area>div:nth-of-type(2)>div {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .cart-pricing-area>div:nth-of-type(2)>div p {
+            margin: 5px;
+        }
+
+        #cart-sub-total-price {
+            font-size: 13px;
+            color: white;
+        }
+
+        .cart-pricing-area>div:nth-of-type(2)>div:nth-of-type(2)>p:nth-of-type(2) {
+            color: #60bf79;
+        }
+
+        .cart-pricing-area>div:nth-of-type(3) {
+            display: flex;
+            align-items: center;
+        }
+
+        #cart-sub-total-btn {
+            color: #ffffff;
+            background-color: #e40046;
+            font-size: 13px;
+            cursor: pointer;
+            height: 40px;
+            border-radius: 3px;
+            border: 0;
+            font-weight: 400;
+            width: 240px;
+        }
+
+        .cart-content-area>div:nth-of-type(1) {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .cart-content-area>div:nth-of-type(1)>h4 {
+            font-size: 18px;
+            color: #5a5a59;
+        }
+
+        .cart-content-area>div:nth-of-type(1)>h4>span {
+            font-size: 14px;
+            color: #999;
+        }
+
+        .cart-content-area>div:nth-of-type(1)>button {
+            border: 0;
+            background: transparent;
+            color: black;
+            font-size: 25px;
+            position: relative;
+            top: 0px;
+            left: 0px;
+            cursor: pointer;
+        }
+
+        .cart-content-area>div:nth-of-type(2) {
+            display: flex;
+            justify-content: space-between;
+            height: 47px;
+            font-size: 14px;
+            color: #999;
+            background-color: #f7f7f7;
+            padding: 0px 10px;
+        }
+
+        .cart-content-area>div:nth-of-type(2)>p:nth-of-type(1) {
+            width: 30%;
+        }
+
+        .cart-content-area>div:nth-of-type(2)>p:nth-of-type(2) {
+            width: 10%;
+            text-align: center;
+        }
+
+        .cart-content-area>div:nth-of-type(2)>p:nth-of-type(3) {
+            width: 10%;
+            text-align: center;
+        }
+
+        .cart-content-area>div:nth-of-type(2)>p:nth-of-type(4) {
+            width: 25%;
+        }
+
+        .cart-content-area>div:nth-of-type(2)>p:nth-of-type(5) {
+            width: 10%;
+            text-align: center;
+        }
+
+        #cart-contents {
+            height: 327px;
+            overflow-y: scroll;
+            font-size: 14px;
+            color: #666;
+        }
+
+        #cart-contents>div {
+            display: flex;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgb(211, 209, 209);
+            height: 140px;
+            justify-content: space-between;
+        }
+
+        #cart-contents>div img {
+            width: 100%;
+        }
+
+        #cart-contents>div>div:nth-of-type(1) {
+            display: flex;
+            width: 30%;
+        }
+
+        #cart-contents>div>div:nth-of-type(1)>div:nth-of-type(1) {
+            width: 80px;
+            margin-right: 10px;
+        }
+
+        #cart-contents>div>div:nth-of-type(1)>div:nth-of-type(2)>p {
+            width: 175px;
+            height: 75px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 10 0px;
+        }
+
+        #cart-contents>div>div:nth-of-type(1)>div:nth-of-type(2)>button {
+            background-color: transparent;
+            border: 0;
+            color: #666;
+            cursor: pointer;
+        }
+
+        #cart-contents>div>div:nth-of-type(2) {
+            width: 10%;
+            display: flex;
+            justify-content: center;
+        }
+
+        #cart-contents>div>div:nth-of-type(3) {
+            width: 10%;
+            display: flex;
+            justify-content: center;
+        }
+
+        #cart-contents>div>div:nth-of-type(4) {
+            width: 25%;
+        }
+
+        #cart-contents>div>div:nth-of-type(4)>p {
+            font-size: 13px;
+            margin-top: 10px;
+        }
+
+        #cart-contents>div>div:nth-of-type(4)>p>span {
+            color: #60bf79;
+            margin-left: 5px;
+        }
+
+        #cart-contents>div>div:nth-of-type(5) {
+            width: 10%;
+            display: flex;
+            justify-content: center;
+        }
+
+
+
+        /* CSS for cart overlay ends */
+
+        /* CSS from product_catalogue starts */
+        #productsDisplay {
+            max-width: 1402px;
+            display: grid;
+            grid-template-columns: repeat(5, auto);
+            justify-content: space-between;
+            margin: auto;
+        }
+
+        #productsDisplay>div {
+            min-width: 205px;
+            width: 16rem;
+            box-sizing: border-box;
+            padding: 20px;
+            margin: auto;
+            margin-bottom: 15px;
+            font-size: 13px;
+            color: #999;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+
+        #productsDisplay>div:hover {
+            box-shadow: 0 10px 20px 5px rgba(167, 165, 165, 0.253);
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #productsDisplay>div>img {
+            width: 100%;
+        }
+
+        #productsDisplay>div>div:nth-of-type(1) {
+            height: 36px;
+            /* white-space: nowrap; */
+            overflow: hidden;
+            /* text-overflow: ellipsis; */
+            line-height: 18px;
+        }
+
+        .star-rating {
+            font-size: 15px;
+            letter-spacing: 1px;
+        }
+
+        #loadMore {
+            max-width: 1600px;
+            margin: auto;
+            display: flex;
+            justify-content: center
+        }
+
+        #loadMore>button {
+            padding: 0 10px;
+            border: 0;
+            background-color: #333;
+            color: white;
+            font-size: 14px;
+            padding: 0 10px;
+            margin: 0 auto;
+            width: 340px;
+            height: 40px;
+            border-radius: 4px;
+            box-shadow: 0 0 5px rgba(128, 128, 128, 0.397);
+            margin-top: 10px;
+        }
+
+        #loadMore>button:hover {
+            cursor: pointer;
+        }
+
+        /* CSS from product_catalogue ends */
+
+        /* CSS for Go to top btn starts */
+
+        #go_to_top {
+            position: fixed;
+            top: 90%;
+            left: 96%;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background-color: #333;
+            opacity: 0.8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        /* CSS for Go to top btn ends */
+
+        /* CSS for footer */
+        #imagecontainer {
+            display: flex;
+            margin: 3%;
+            background: #ffffff;
+        }
+
+        #imagephone {
+            flex-basis: 50%;
+            text-align: center;
+        }
+
+        #downloadapp {
+            flex-basis: 50%;
+            background-image: url("images/leave.png");
+            background-repeat: no-repeat;
+            background-position: right top;
+            vertical-align: top;
+            margin-right: 0px;
+            padding: 80px 0px;
+        }
+
+        #image-head {
+            font-size: 40.4px;
+            font-weight: bold;
+            line-height: 1.33;
+            color: #222222;
+        }
+
+        #image-para {
+            font-size: 17.6px;
+            font-weight: normal;
+            line-height: 1.84;
+            color: #777777;
+        }
+
+        .button {
+            margin-top: 20px;
+            width: 150px;
+            height: 45px;
+            border-radius: 5px;
+            border: 0px;
+        }
+
+        .buttonApp {
+            background: url("images/apple.png");
+            background-size: cover;
+            padding-left: -5px;
+        }
+
+        .buttonPlay {
+            background: url("images/android.png");
+            background-size: cover;
+            margin-left: 10px;
+        }
+
+        #four-flex {
+            background-color: #ffffff;
+            border-top: 1px solid #e2e2e2;
+            border-bottom: 1px solid #e2e2e2;
+            padding: 0% 5%;
+            display: flex;
+
+        }
+
+        .inside-flex {
+            flex-basis: 23%;
+            border-right: 1px solid #e2e2e2;
+            border-left: 1px solid #e2e2e2;
+            padding: 45px 25px 0px;
+            height: 180px;
+            text-align: center;
+        }
+
+        .inside-flex-fonthead {
+            font-weight: normal;
+            font-size: 17.2px;
+            color: #4e4e4e;
+        }
+
+        .inside-flex-fontbody {
+            font-size: 13.2px;
+            color: #a4a3a3;
+            line-height: 1.7;
+        }
+
+        #footer {
+            border-bottom: 1px solid #e2e2e2;
+            background-color: #ffffff;
+            padding: 3% 5%;
+            display: flex;
+        }
+
+        #footer>div:nth-child(1) {
+            flex-basis: 20%;
+        }
+
+        #footer>div:nth-child(2) {
+            flex-basis: 15%;
+        }
+
+        #footer>div:nth-child(3) {
+            flex-basis: 20%;
+        }
+
+        #footer>div:nth-child(4) {
+            flex-basis: 17%;
+        }
+
+        .subs-box {
+            display: flex;
+        }
+
+        #sub-text {
+            height: 37px;
+            font-size: 13px;
+            color: #999;
+            border: none;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            background-color: #f7f8fa;
+            padding-left: 10px;
+        }
+
+        #sub-button {
+            background-color: black;
+            color: #ffffff;
+            border: none;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+        .footer-fonthead {
+            font-size: 15px;
+            font-weight: 400;
+            color: #25363b;
+        }
+
+        #paymentconnect {
+            display: flex;
+            padding: 10px 5% 20px;
+            background-color: #ffffff;
+        }
+
+        #paymentconnect>div:nth-child(1) {
+            flex-basis: 40%;
+        }
+
+        .paymentconnect-fonthead {
+            font-weight: 300;
+        }
+
+        #connecticons {
+            display: flex;
+        }
+
+        #connecticons>div:nth-child(even) {
+            padding: 0px 25px;
+        }
+
+        #footer-description {
+            padding: 1.5% 5%;
+        }
+
+        .footer-desfont {
+            font-size: 13.5px;
+            color: #777;
+            line-height: 1.7;
+        }
+
+        #aboutsnap {
+            padding-top: 1%;
+            font-size: 18px;
+            font-weight: bold;
+            color: #344c55;
+        }
+
+        #lastfooter {
+            display: flex;
+            background-color: #ffffff;
+            padding: .5% 5%;
+        }
+
+        #lastfooter>div:nth-child(1) {
+            flex-basis: 90%;
+        }
+
+        /* CSS for footer ends */
+
+        #login_cards {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .sideDiv {
+            display: inline-block;
+            text-align: center;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+
+        #snap {
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+
+        #snap2 {
+            height: 120px;
+            width: 210px;
+            opacity: 0.5;
+        }
+
+        .sidedivPare {
+            margin: 0;
+        }
+
+        #sidedivBtn {
+            width: 160px;
+            height: 35px;
+            margin-top: 25px;
+            background-color: black;
+            color: white;
+            border: black;
+            border-radius: 5px;
+
+        }
+
+        .sideDiv>div {
+            margin-top: 32px;
+
+        }
+
+        .sidedivNextbtn {
+            background-color: #E0E0E0;
+            padding: 8px;
+            border: #E0E0E0;
+            margin-left: 15px;
+        }
+
+        .p1 {
+            font-size: revert;
+            margin: 0px;
+
+        }
+
+        .p2 {
+            font-size: small;
+            margin: 0px;
+
+        }
+
+        .p3 {
+            font-size: small;
+            margin: 5px 2px;
+            width: 200px;
+        }
+
+        .p4 {
+            font-size: revert;
+        }
+
+        #firstbtn {
+            height: 35px;
+            margin-top: 5px;
+            background-color: black;
+            color: white;
+            border: black;
+            border-radius: 5px;
+        }
+
+
+
+        /* CSS for login slider card starts*/
+
+        /* CSS for login slider card ends*/
+
+        /* CSS for categories starts */
+
+        .sidemenu ul li {
+            list-style-type: none;
+        }
+
+        .sidemenu li a {
+            font-size: 12px;
+            padding: 6px 0px;
+            color: #666;
+            ;
+            vertical-align: baseline;
+        }
+
+        .sidemenu {
+            background-color: white;
+            border-radius: 3px;
+            grid-row: 1/ 4;
+            box-shadow: 0 10px 20px 5px rgba(167, 165, 165, 0.253);
+        }
+
+        .sliders {
+            background-color: rgb(211, 211, 211);
+            border: 1px solid grey;
+            border-radius: 3px;
+        }
+
+        .logincard {
+            background-color: rgb(211, 211, 211);
+            border: 1px solid grey;
+            border-radius: 3px;
+        }
+
+        .recentproduct-heading {
+            grid-column: 2/ 4;
+        }
+
+        .recentproduct {
+            background-color: rgb(211, 211, 211);
+            border: 1px solid grey;
+            border-radius: 3px;
+            grid-column: 2/ 4;
+            grid-row: 3/5;
+        }
+
+        #head-text {
+            font-size: 20px;
+
+        }
+
+        .sidebar-heading {
+            font-size: 12px;
+            color: #333333;
+            font-weight: 600;
+            margin-left: 10px;
+            margin-bottom: 5px;
+        }
+
+        .nav-area {
+            position: relative;
+            padding: 0;
+            margin-left: 10px;
+            width: 200px;
+        }
+
+        .nav-area a,
+        .nav-area a:link,
+        .nav-area a:visited,
+        .nav-area a:focus {
+            color: #666666;
+            text-decoration: none;
+            padding-left: 10px;
+        }
+
+        .nav-area a:hover {
+            color: black;
+            text-decoration: none;
+        }
+
+        .nav-area>li {
+            display: block;
+            text-align: left;
+
+        }
+
+        .nav-area>li>a {
+            display: block;
+        }
+
+        .nav-area>li:hover a {
+            color: black;
+
+        }
+
+        .nav-area>li:hover {
+            width: 187px;
+            background-color: #f7f7f7;
+            border-top: 1px solid rgb(180, 180, 180);
+            border-bottom: 1px solid rgb(180, 180, 180);
+            border-left: 3px solid rgb(192, 0, 0);
+            border-bottom-left-radius: 2px;
+            border-top-left-radius: 2px;
+        }
+
+        .nav-area>li>.sub-nav {
+            list-style: none;
+            top: 0;
+            left: 190px;
+            width: 880px;
+            min-height: 520px;
+            margin-top: 30px;
+            padding: 0;
+            z-index: 1;
+            overflow: hidden;
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+
+
+        }
+
+        .nav-area>li:hover .sub-nav {
+            opacity: 1;
+            visibility: visible;
+            margin-top: -16px;
+            padding-left: -70px;
+            background: #f7f7f7;
+            display: flex;
+            box-shadow: 10px 10px 10px 10px rgba(167, 165, 165, 0.253);
+
+        }
+
+        /* .nav-area ul li:hover:after {
+            color: #333333;
+        } */
+        .nav-area .sidemenu {
+            width: 100%;
+            float: left;
+
+        }
+
+        .nav-area .sub-nav p {
+            width: 200px;
+            height: 520px;
+            padding: 0;
+            margin-left: 15px;
+            margin-top: 10px;
+            font-size: 12px;
+            line-height: 1.6;
+            border-right: 1px solid rgb(224, 224, 224);
+        }
+
+        .nav-area .sub-nav img {
+            width: 200px;
+            padding: 0;
+            margin-left: 15px;
+            margin-top: 10px;
+        }
+
+        .sub-menu-p {
+            color: #666666;
+        }
+
+        .sub-menu-phead {
+            color: black;
+        }
+
+
+
+        .inside-sidebarmain {
+            margin-right: 8px;
+            flex-basis: auto;
+        }
+
+        .inside-sidebarmain2 {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .material-icons {
+            font-size: 11px;
+            color: rgb(180, 180, 180);
+        }
+
+        .in {
+            margin-top: 6px;
+        }
+
+        .viewall {
+            color: #337ab7;
+        }
+
+        .sidebar-nohover {
+            font-size: 12px;
+        }
+
+        /* CSS for categories ends */
+
+        @media (min-width: 1582px) {
+            #productsDisplay {
+                max-width: 1600px;
+                grid-template-columns: 16.67% 16.67% 16.67% 16.67% 16.67% 16.67%;
+                justify-content: space-between;
+            }
+
+            nav>div,
+            .topThinBar>div {
+                max-width: 1600px;
+            }
+
+            #topContent {
+                max-width: 1600px;
+                grid-template-columns: 200px 71.25% 230px;
+            }
+        }
+
+        @media (max-width: 1320px) {
+            #topContent {
+                /* grid-template-columns: 200px 71.25%; */
+                grid-template-areas:
+                    "a b b"
+                    "a d d";
+            }
+
+            #login_cards {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Login Signup Cart Overlay starts -->
+    <div id="overlay">
+        <div onclick="removeOverlay()">
+
+        </div>
+        <div id="login-area">
+            <div>
+                <div>
+                    <div>
+                        <img src="https://i2.sdlcdn.com/img/snapdeal/sprite/userAuthSpritev3.png"
+                            style=" object-fit: cover; object-position: 0px -378px;">
+                    </div>
+                    <div>
+                        <h4>MANAGE YOUR ORDERS</h4>
+                        <p>Track orders, manage cancellation & returns.</p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <img src="https://i2.sdlcdn.com/img/snapdeal/sprite/userAuthSpritev3.png"
+                            style=" object-fit: cover; object-position: -60px -378px;">
+                    </div>
+                    <div>
+                        <h4>SHORTLIST ITEMS YOU LOVE</h4>
+                        <p>Keep items you love on a watchlist.</p>
+                    </div>
+
+                </div>
+                <div>
+                    <div>
+                        <img src="https://i2.sdlcdn.com/img/snapdeal/sprite/userAuthSpritev3.png"
+                            style=" object-fit: cover; object-position: -128px -378px;">
+                    </div>
+                    <div>
+                        <h4>
+                            AWESOME OFFERS UPDATES FOR YOU
+                        </h4>
+                        <p>Be firs to know about great offers and save</p>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Login Panel -->
+            <div>
+                <p>Login/Sign Up On Snapdeal</p>
+                <button onclick="removeOverlay()">X</button>
+                <p>Please provide your Mobile Number or Email to Login/Sign Up on Snapdeal</p>
+                <input type="text" id="login_number_email" placeholder="Mobile Number / Email">
+                <button onclick="validateUser()">CONTINUE</button>
+                <p>or Login using</p>
+                <div>
+                    <button class="social-btn">
+                        <div>
+                            <div style="background-color: white;">
+                                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111393.png"
+                                    style="width: 16px; object-position: 0px 2px;">
+                            </div>
+                        </div>
+                        Facebook
+                    </button>
+                    <button class="social-btn">
+                        <div>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png"
+                                style="width: 16px;">
+                        </div>
+                        Google
+                    </button>
+                </div>
+            </div>
+            <!-- Sign up Panel -->
+            <div>
+                <p>Sign Up</p>
+                <button onclick="removeOverlay()">X</button>
+                <p>Create an account on Snapdeal</p>
+                <form onsubmit="addUser(event)">
+                    <input type="email" id="signup_email" placeholder="Email" required>
+                    <input type="tel" minlength="10" maxlength="10" placeholder="Mobile Number" id="signup_mobile"
+                        required>
+                    <input type="text" id="signup_name" placeholder="Name" required>
+                    <input type="date" id="signup_dob" placeholder="DOB" required>
+                    <input type="password" placeholder="Passwords" id="signup_password"
+                        pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$" required>
+                    <p>Password should have a minimum of 6 character, atleast 1 numeric and 1 alphabet</p>
+                    <div>
+                        <input type="checkbox" checked>
+                        <label>Keep me logged in</label>
+                    </div>
+                    <button>CONTINUE</button>
+                    <p>By registering, I agree to <span style="color: #25a8ed;">Terms & Conditions</span> </p>
+                </form>
+
+                <p>or Login using</p>
+                <div>
+                    <button class="social-btn">
+                        <div style="background-color: white;">
+                            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111393.png"
+                                style="width: 16px; object-position: 0px 2px;">
+                        </div>
+                        Facebook
+                    </button>
+                    <button class="social-btn">
+                        <div>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png"
+                                style="width: 16px;">
+                        </div>
+                        Google
+                    </button>
+                </div>
+            </div>
+            <!-- Otp panel -->
+            <div>
+                <p>Login On Snapdeal</p>
+                <button onclick="removeOverlay()">X</button>
+                <div>
+                    <img src="https://i2.sdlcdn.com/img/snapdeal/sprite/userAuthSpritev3.png"
+                        style=" object-fit: cover; object-position: -245px -198px;">
+                </div>
+                <p>Please enter verification code (OTP) sent to:</p>
+                <p id="verification_email">email</p>
+                <form onsubmit="completeLogin(event)">
+                    <input type="text" minlength="4" maxlength="4" placeholder="Code" id="otp_code" required>
+                    <p>Resend OTP</p>
+                    <button>CONTINUE</button>
+                </form>
+
+
+            </div>
+        </div>
+        <div id="cart-overlay">
+            <div class="cart-without-items">
+                <h4>Shopping Cart is empty!</h4>
+                <button onclick="removeOverlay()">X</button>
+                <p>BROWSE CATEGORIES</p>
+                <hr>
+                <ul>
+                    <li>- Appliances</li>
+                    <li>- Cameras & Accessories</li>
+                    <li>- Gaming</li>
+                    <li>- Men's Clothing</li>
+                    <li>- Tablets & Accessories</li>
+                    <li>- Baby & Kids</li>
+                    <li>- Daily Needs</li>
+                    <li>- Jewellery</li>
+                    <li>- Mobile Accessories</li>
+                    <li>- TV, Audio & Video</li>
+                    <li>- Beauty & Personal Care</li>
+                    <li>- Furnishing</li>
+                    <li>- Kitchenware</li>
+                    <li>- Mobile Phones</li>
+                    <li>- Women's Ethnic Wear</li>
+                    <li>- Books</li>
+                    <li>- Furniture</li>
+                    <li>- Laptops & Computers</li>
+                    <li>- Nutrition & Supplements</li>
+                    <li>- Women's Western Wear</li>
+                </ul>
+                <div>
+                    <button onclick="removeOverlay()">START SHOPPING NOW</button>
+                    <div>
+                        <p><img src="https://img.icons8.com/ios/50/000000/favorites-shield.png"
+                                style="width: 16px; margin-right: 10px;">
+                            Safe and Secure</p>
+                        <p><img src="https://img.icons8.com/ios-glyphs/24/000000/card-security.png"
+                                style="width: 16px; margin-right: 10px; " />
+                            100% Payment Protection, Easy Returns Policy</p>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="cart-with-items">
+                <div>
+                    <div>
+                        <div class="cart-content-area">
+                            <div>
+                                <h4>Shopping Cart <span id="total_items_overlay_cart">(5 Items)</span></h4>
+                                <button onclick="removeOverlay()">X</button>
+                            </div>
+                            <div>
+                                <p>Item Details</p>
+                                <p>Price</p>
+                                <p>Quantity</p>
+                                <p>Showing Availability</p>
+                                <p>Subtotal</p>
+                            </div>
+                            <div id="cart-contents">
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="cart-pricing-area">
+                            <div>
+                                <p>Delivery and payment options can be selected later</p>
+                                <p>
+                                    <img src="https://img.icons8.com/ios/50/ffffff/favorites-shield.png"
+                                        style="width: 16px; margin-right: 10px;">
+                                    Safe and Secure Payments
+                                </p>
+                                <p><img src="https://img.icons8.com/ios-glyphs/30/ffffff/card-security.png"
+                                        style="width: 16px; margin-right: 10px;" />
+                                    100% Payment Protection, Easy Returns Policy</p>
+                            </div>
+                            <div>
+                                <div>
+                                    <p>Sub Total:</p>
+                                    <p id="cart-sub-total-price">price</p>
+                                </div>
+                                <div>
+                                    <p>Delivery Charges:</p>
+                                    <p>FREE</p>
+                                </div>
+                            </div>
+                            <div>
+                                <button id="cart-sub-total-btn" onclick="goToPaymentPage()">PROCEED TO PAY
+                                    Rs.1,169</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+    <!-- Login Signup Cart Overlay Ends -->
+
+    <!-- Top navigation starts -->
+    <div class="topThinBar">
+        <div>
+            <div>
+                <p>Brand Waali Quality, Bazaar Waali Deal!</p>
+            </div>
+            <div>
+                <p>Gift Cards</p>
+                <p>Help Center</p>
+                <p>Sell On Snapdeal</p>
+                <img src="https://i4.sdlcdn.com/img/platinum09/downloadappicon2ndsep.png"
+                    style="width: 13px; height:18px; margin: 5px 0 0 5px;">
+                <p>Download App</p>
+            </div>
+        </div>
+
+    </div>
+    <nav>
+        <div>
+            <div>
+                <a href="home.html">
+                    <img class="sd-logo" src="https://i3.sdlcdn.com/img/snapdeal/darwin/logo/sdLatestLogo.svg">
+                </a>
+
+                <div class="searchBar">
+                    <input type="text/" placeholder="Search products & brands">
+                    <button class="black-btn"><img src="https://img.icons8.com/material-outlined/24/ffffff/search.png"
+                            style="width: 20px; padding-right: 10px;" />Search</button>
+                </div>
+
+            </div>
+            <div>
+                <div onclick="showCart()" class="cartButton">
+                    <p>Cart</p>
+                    <img src="https://img.icons8.com/windows/32/ffffff/shopping-cart.png">
+                </div>
+                <div class="signinButton">
+                    <div id="nav_signin">
+                        <p>Sign In</p>
+                        <ul>
+                            <li><img src="https://img.icons8.com/material-outlined/24/ffffff/user--v1.png" />Your
+                                Account</li>
+                            <li><img
+                                    src="https://img.icons8.com/external-those-icons-lineal-those-icons/24/ffffff/external-box-shipping-delivery-those-icons-lineal-those-icons-2.png" />
+                                Your Orders</li>
+                            <li><img src="https://img.icons8.com/material-outlined/24/ffffff/like--v1.png" />
+                                Shortlist
+                            </li>
+                            <li><img src="https://img.icons8.com/ios-glyphs/30/ffffff/get-cash.png" />
+                                SD Cash
+                            </li>
+                            <hr>
+                            <div onclick="showLogin()">
+                                <p>If you are a new user</p>
+                                <p>Register</p>
+                                <button>LOGIN</button>
+                            </div>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <img src="https://img.icons8.com/material-rounded/24/ffffff/user.png" style="width: 24px;" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Top navigation ends -->
+
+    <section id="topContent">
+        <!-- <div id="categories"> -->
+        <div class="sidemenu">
+            <ul class="nav-area">
+                <p class="sidebar-heading">TOP CATEGORIES</p>
+                <li><a href="#">
+                        <span class="inside-sidebarmain"><img src="images/discount.png" width="28px"></span>
+                        <span class="inside-sidebarmain2">
+                            <p class="in">Men's Fashion</p>
+                        </span></a>
+
+                    <div class="sub-nav">
+                        <div class="sub-menu">
+                            <div>
+                                <p class="sub-menu-p"><span class="sub-menu-phead">SUMMER ESSENTIALS</span><br>
+                                    AC Blankets<br>
+                                    Air Conditioners<br>
+                                    Refrigerators<br>
+                                    Fans<br>
+                                    Air Coolers<br>
+                                    Ice trays<br>
+                                    Juicers<br>
+                                    Water Bottles<br>
+                                    Hair Dryers<br>
+                                    Chillers & Water Coolers<br>
+                                    <br>
+                                    <span class="sub-menu-phead">SUMMER CARE</span><br>
+                                    Sunscreens<br>
+                                    Face Wash & Cleansers<br>
+                                    Wipes<br>
+                                    Hats<br>
+                                    Sunglasses<br>
+                                    Umbrellas<br>
+                                    Mosquito Nets
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="sub-menu">
+                            <div>
+                                <p class="sub-menu-p"><span class="sub-menu-phead">MEN'S SUMMER FASHION</span><br>
+
+                                    T-shirt Store<br>
+                                    Half Sleeve Shirts<br>
+                                    Shorts & 3/4ths<br>
+                                    Flip Flops<br>
+                                    Sandals<br>
+                                    Casual Shoes<br>
+                                    <br>
+                                    <span class="sub-menu-phead">WOMEN'S SUMMER FASHION</span><br>
+                                    Kurtis<br>
+                                    Dresses<br>
+                                    Tops & Tunics<br>
+                                    Innerwear & Sleepwear<br>
+                                    Flats<br>
+                                    Slippers<br>
+                                    <br>
+                                    <span class="sub-menu-phead">KIDS' FASHION</span><br>
+                                    Boy's Kurta Pyjama<br>
+                                    Girl's Lehenga Cholis<br>
+                                    Top & Bottom Sets<br>
+                                    Ethnic Gowns
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="sub-menu">
+                            <div>
+                                <p class="sub-menu-p"><span class="sub-menu-phead">FEATURED STORES</span><br>
+                                    99 Store<br>
+                                    Imports Store<br>
+                                    Beauty Store<br>
+                                    Wedding Store<br>
+                                    Travel Store<br>
+                                    Anti-Pollution Store<br>
+                                    Mobiles Accessories Mela<br>
+                                    Bicycle Store<br>
+                                    <br>
+                                    <span class="sub-menu-phead">SPECIAL OFFERS</span><br>
+                                    Sports Shoes 20-60% Off<br>
+                                    Sarees Starting Rs. 499<br>
+                                    TVs & Accessories<br>
+                                    Automotive Upto 60% Off<br>
+                                    Cricket Gear From Rs. 150<br>
+                                    Storage - Under 999<br>
+                                    Toys Upto 70% Off<br>
+                                    Best in PowerBanks
+                                </p>
+                            </div>
+                        </div>
+                        <div class="sub-menu">
+                            <div>
+                                <img src="https://n4.sdlcdn.com/imgs/i/f/f/BlockbusterDeals-cb277.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="sidebar-main"><a href="">
+                        <span class="inside-sidebarmain"><img src="images/smartphone.png" width="28px"></span>
+                        <span class="inside-sidebarmain2">
+                            <p class="in">Women's Fashion</p>
+                        </span></a>
+
+                    <div class="sub-nav">
+                        <div class="sub-menu">
+                            <div>
+                                <p class="sub-menu-p"><span class="sub-menu-phead">MOBILE PHONES</span><br>
+                                    Smartphones<br>
+                                    Feature Phones<br>
+                                    <br>
+                                    <span class="sub-menu-phead">MOBILE CASES & COVERS</span><br>
+                                    New Launches Covers<span> 🔥</span> <br>
+                                    Printed Back Covers<br>
+                                    Plain Back Covers<br>
+                                    Flip Covers<br>
+                                    Premium Covers<br>
+                                    <span class="viewall">View All ></span><br>
+                                    <br>
+                                    <span class="sub-menu-phead">POWER BANKS</span><br>
+                                    Ambrane<br>
+                                    Intex<br>
+                                    Syska<br>
+                                    Polymer Power Banks<br>
+                                    <br>
+                                    <span class="sub-menu-phead">TOP BRANDS</span><br>
+                                    Panasonic<br>
+                                    Micromax<br>
+                                    Intex<br>
+                                    Samsung<br>
+                                    Karbonn
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="sub-menu">
+                            <div>
+                                <p class="sub-menu-p"><span class="sub-menu-phead">MOBILE ACCESSORIES</span><br>
+                                    Batteries<br>
+                                    Screen Guards<br>
+                                    Cables & Chargers<br>
+                                    Smartwatch Accessories<br>
+                                    Selfie Sticks<br>
+                                    Bluetooth Devices<br>
+                                    <span class="viewall">View All ></span><br>
+                                    <br>
+                                    <span class="sub-menu-phead">WEARABLES & SMARTWATCHES</span><br>
+                                    Life Like<br>
+                                    Top Selling Wearables<br>
+                                    TABLETS<br>
+                                    iKall<br>
+                                    Samsung<br>
+                                    Micromax<br>
+                                    iBall<br>
+                                    <span class="viewall">View All ></span><br>
+
+                                    <br>
+                                    <span class="sub-menu-phead">TABLET ACCESSORIES</span><br>
+                                    Tablet Covers<br>
+                                    Tablet Keyboards
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="sub-menu">
+                            <div>
+                                <p class="sub-menu-p"><span class="sub-menu-phead">FEATURED STORES</span><br>
+                                    POPULAR SMARTPHONES
+                                    Redmi Note 5 Pro<br>
+                                    Redmi Note 6 Pro<br>
+                                    Samsung Galaxy J6+<br>
+                                    Vivo V11 Pro<span> 🔥</span> <br>
+                                    Oppo F9 Pro<br>
+                                    Oppo A3S<br>
+                                    Honor 9 Lite<br>
+                                    Vivo Y83 Pro<br>
+                                    Lenovo K8 Plus<br>
+                                    Samsung Galaxy J2 Core<br>
+                                    Vivo Y71i<br>
+                                    <br>
+                                    <span class="sub-menu-phead">POPULAR FEATURE PHONES</span><br>
+                                    I Kall K71 (Dark Blue)<br>
+                                    JIO MOBILE (Black, 4G)<br>
+                                    <br>
+                                    <span class="sub-menu-phead">POPULAR ACCESSORIES</span><br>
+                                    Ambrane 10000 mAh<br>
+                                    Ambrane 13000 mAh<br>
+                                    Callmate 15000 mAh<br>
+                                    Intex 12500 mAh<br>
+                                    Stonx 15000 mAh<br>
+                                    Must Haves Accessories<br>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="sub-menu">
+                            <div>
+                                <img src="https://n2.sdlcdn.com/imgs/i/7/q/Mobiles_17jan-197ca.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="sidebar-main"><a href="">
+                        <span class="inside-sidebarmain"><img src="images/fridge.png" width="28px"></span>
+                        <span class="inside-sidebarmain2">
+                            <p class="in">Home & Kitchen</p>
+                        </span></a>
+
+                    <div class="sub-nav">
+                        <div class="sub-menu">
+                            <div>
+                                <p class="sub-menu-p"><span class="sub-menu-phead">TELEVISIONS</span><br>
+
+                                    Top Selling TVs<br>
+                                    Full HD TVs<br>
+                                    Smart TVs<br>
+                                    Ultra HD TVs<br>
+                                    DTH Services<br>
+                                    Streaming Media Players<br>
+                                    <br>
+                                    <span class="sub-menu-phead">SPEAKERS</span><br>
+                                    Home Audio Systems<br>
+                                    Bluetooth Speakers<br>
+                                    2.1 & 2.0 Speakers<br>
+                                    HEADPHONE & EARPHONES<br>
+                                    Headphones<br>
+                                    Earphones<br>
+                                    Headsets with Micromax<br>
+                                    <br>
+                                    <span class="sub-menu-phead">AUDIO & VIDEO</span><br>
+                                    iPods & MP3 Players<br>
+                                    DVD & Blu-ray Players<br>
+                                    Projectors<br>
+                                    Audio & Video Accessories<br>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="sub-menu">
+                            <div>
+                                <p class="sub-menu-p"><span class="sub-menu-phead">WINTER APPLIANCES</span><br>
+                                    Geysers<br>
+                                    Immersion Rods<br>
+                                    Room Heaters<br>
+                                    Oil Filled Radiators<br>
+                                    <br>
+                                    <span class="sub-menu-phead">WASHING MACHINES</span><br>
+                                    Semi Automatic<br>
+                                    Fully Automatic<br>
+                                    SUMMER APPLIANCES<br>
+                                    <br>
+                                    <span class="sub-menu-phead">FANS</span><br>
+                                    Ceiling Fans<br>
+                                    Table Fans<br>
+                                    Pedestal Fans<br>
+                                    Exhaust Fans
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="sub-menu">
+                            <div>
+                                <p class="sub-menu-p"><span class="sub-menu-phead">FEATURED STORES</span><br>
+                                    SMALL APPLIANCES<br>
+                                    Microwaves & OTG<br>
+                                    Air Purifiers<br>
+                                    Vacuum Cleaners<br>
+                                    Irons<br>
+                                    Landline Phones<br>
+                                    Home Security Systems<br>
+                                    Sewing Machines<br>
+                                    <br>
+                                    <span class="sub-menu-phead">GROOMING APPLIANCES</span><br>
+                                    Trimmers<br>
+                                    Shavers<br>
+                                    Hair Dryers<br>
+                                    Hair Straighteners<br>
+                                    Hair Curlers & More<br>
+                                    <br>
+                                    <span class="sub-menu-phead">CAMERAS & ACCESSORIES</span><br>
+                                    DSLRs<br>
+                                    Camera Accessories<br>
+                                    Camera Lenses<br>
+                                    Action Cameras<br>
+                                    Binoculars and Telescopes<br>
+                                    Digital CAMERAS
+                                </p>
+                            </div>
+                        </div>
+                        <div class="sub-menu">
+                            <div>
+                                <img src="https://n4.sdlcdn.com/imgs/i/1/o/electronics-7e68c.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="sidebar-main"><a href="">
+                        <span class="inside-sidebarmain"><img src="images/quantum-computing.png" width="28px"></span>
+                        <span class="inside-sidebarmain2">
+                            <p class="in">Toys.Kid's Fashion</p>
+                        </span></a>
+
+                    <div class="sub-nav">
+                        <div class="sub-menu">
+                            <div>
+                                <p class="sub-menu-p"><span class="sub-menu-phead">LAPTOPS</span><br>
+                                    Core i3 Laptops<br>
+                                    Core i5/i7 Laptops<br>
+                                    Budget Laptops<br>
+                                    Thin & Light Laptops<br>
+                                    <span class="viewall"><a href="category_product_page.html"
+                                            style="color: #337ab7; padding-left: 1px;">View All ></a></span><br>
+                                    <br>
+                                    <span class="sub-menu-phead">PRINTERS & INKS</span><br>
+                                    Printers<br>
+                                    Scanners<br>
+                                    Inks & Toners<br>
+                                    <span class="viewall">View All ></span><br>
+                                    <br>
+                                    <span class="sub-menu-phead">STORAGE</span><br>
+                                    External Hard Drives<br>
+                                    Memory cards<br>
+                                    Pen Drives<br>
+                                    SSD<br>
+                                    <br>
+                                    <span class="sub-menu-phead">NETWORKING DEVICES</span><br>
+                                    Data Cards<br>
+                                    Dongles<br>
+                                    Routers
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="sub-menu">
+                            <div>
+                                <p class="sub-menu-p"><span class="sub-menu-phead">TOP LAPTOP BRANDS</span><br>
+                                    HP<br>
+                                    Dell<br>
+                                    Lenovo<br>
+                                    Apple<br>
+                                    Acer<br>
+                                    Asus<br>
+                                    MSI<br>
+                                    <br>
+                                    <span class="sub-menu-phead">COMPUTER ACCESSORIES</span><br>
+                                    Keyboards<br>
+                                    Mouse<br>
+                                    Webcams<br>
+                                    Laptop Skins<br>
+                                    Cooling Pads<br>
+                                    Extension Cords<br>
+                                    Warranty Insurance<br>
+                                    <span class="viewall">View All ></span><br>
+                                    <br>
+                                    <span class="sub-menu-phead">DESKTOPS</span><br>
+                                    All in One<br>
+                                    Mini Desktop<br>
+                                    Tower Desktop<br>
+                                    Assembled Desktops<br>
+                                    <span class="viewall">View All ></span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="sub-menu">
+                            <div>
+                                <p class="sub-menu-p"><span class="sub-menu-phead">GAMING</span><br>
+                                    Gaming Consoles<br>
+                                    Gaming Accessories<br>
+                                    Gaming Titles<br>
+                                    <span class="viewall">View All ></span><br>
+                                    <br>
+                                    <span class="sub-menu-phead">COMPUTER COMPONENTS</span><br>
+                                    CPU<br>
+                                    Motherboard<br>
+                                    RAM<br>
+                                    Graphic Card<br>
+                                    Internal Hard Drive<br>
+                                    UPS<br>
+                                    <span class="viewall">View All ></span><br>
+                                    <br>
+                                    <span class="sub-menu-phead">SOFTWARE</span><br>
+                                    Antivirus<br>
+                                    Operating System<br>
+                                    Office<br>
+                                    <span class="viewall">View All ></span><br>
+                                    <br>
+                                    <span class="sub-menu-phead">MONITORS</span><br>
+                                    Full HD<br>
+                                    HD<br>
+                                    Wide XGA<br>
+                                    <span class="viewall">View All ></span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="sub-menu">
+                            <div>
+                                <img src="https://n1.sdlcdn.com/imgs/i/1/r/Laptopacc_28oct-581f8.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="sidebar-main"><a href="#">
+                        <span class="inside-sidebarmain"><img src="images/kitchen-tools.png" width="28px"></span>
+                        <span class="inside-sidebarmain2">
+                            <p class="in">Beauty,Health & Daily</p>
+                        </span></a>
+
+                    <div class="sub-nav">
+                        <div class="sub-menu">
+                            <div>
+                                <p class="sub-menu-p"><span class="sub-menu-phead">KITCHEN APPLIANCES</span><br>
+                                    Juicer Mixer Grinders<br>
+                                    Water Purifiers<br>
+                                    Gas Stoves & Hobs<br>
+                                    Chimneys<br>
+                                    Induction Cooktops<br>
+                                    Kettles & Coffee Makers<br>
+                                    Choppers & Blenders<br>
+                                    Sandwich Makers<br>
+                                    Roti Makers<br>
+                                    Electric Cookers<br>
+                                    Air Fryers<br>
+                                    <span class="viewall">View All ></span><br>
+                                    <br>
+                                    <span class="sub-menu-phead">KITCHENWARE</span><br>
+                                    Cookware & Bakeware<br>
+                                    Kitchen Storage<br>
+                                    Dining & Serving<br>
+                                    Kitchen Tools<br>
+                                    Pressure Cookers<br>
+                                    Water Bottles<br>
+                                    Tea & Coffeeware<br>
+                                    Bar Accessories<br>
+                                    <span class="viewall">View All ></span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="sub-menu">
+                            <div>
+                                <p class="sub-menu-p"><span class="sub-menu-phead">HOME FURNISHING</span><br>
+                                    Bed Linen<br>
+                                    Bath Linen<br>
+                                    Blankets & Quilts<br>
+                                    Curtains & Accessories<br>
+                                    Mattresses<br>
+                                    <span class="viewall">View All ></span><br>
+                                    <br>
+                                    <span class="sub-menu-phead">FURNITURE</span><br>
+                                    Living Room<br>
+                                    Bedroom<br>
+                                    Dining Sets & Bar Units<br>
+                                    Chairs<br>
+                                    Storage & Display<br>
+                                    Bean Bags<br>
+                                    Tables & Desks<br>
+                                    <span class="viewall">View All ></span><br>
+                                    <br>
+                                    <span class="sub-menu-phead">HOME DÉCOR</span><br>
+                                    Lighting Fixtures<br>
+                                    Wall Decor<br>
+                                    Gifts & Decor<br>
+                                    Religion & Spirituality<br>
+                                    LED Bulbs<br>
+                                    <span class="viewall">View All ></span><br>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="sub-menu">
+                            <div>
+                                <p class="sub-menu-p"><span class="sub-menu-phead">FEATURED STORES</span><br>
+                                    HOME IMPROVEMENT<br>
+                                    Home Utility<br>
+                                    Cleaning Mops<br>
+                                    Plants & Gardening<br>
+                                    Ironing Boards<br>
+                                    Home Cleaning<br>
+                                    Laundry Accessories<br>
+                                    <span class="viewall">View All ></span><br>
+                                    <br>
+                                    <span class="sub-menu-phead">TOOLS & HARDWARE</span><br>
+                                    Power & Hand Tools<br>
+                                    Bathroom Accessories<br>
+                                    Electrical<br>
+                                    Taps & Showers<br>
+                                    Safes Lock & Door Fitting<br>
+                                    Sanitaryware<br>
+                                    <span class="viewall">View All ></span><br>
+                                    <br>
+                                    <span class="sub-menu-phead">PET SUPPLIES</span><br>
+                                    Dog Supplies<br>
+                                    Cat Supplies<br>
+                                    Fish & Aquatic Supplies<br>
+                                    Bird Supplies<br>
+                                    <span class="viewall">View All ></span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="sub-menu">
+                            <div>
+                                <img src="https://n1.sdlcdn.com/imgs/i/1/r/GM_28oct-e8cd1.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <p class="sidebar-heading">MORE CATEGORIES</p>
+                <li><a href="">Automotives</a></li>
+                <li><a href="">Mobile & Accessories</a></li>
+                <li><a href="">Electronics</a></li>
+                <li><a href="">Beauty,Health & Daily Needs</a></li>
+                <li><a href="">Sports, Fitness & Outdoor</a></li>
+                <li><a href="">Car & Motorbike</a></li>
+                <li><a href="">Computer & Gaming</a></li>
+                <li><a href="">Books,Media & Music</a></li>
+                <li><a href="">See All Categories</a></li>
+                <p class="sidebar-heading">TRENDING SEARCHES</p>
+                <p class="sidebar-nohover"><a href=""><span class="material-icons">search</span><span>&nbsp; Men
+                            Watch</span></a></p>
+                <p class="sidebar-nohover"><a href=""><span class="material-icons">search</span><span>&nbsp;
+                            Slipper</span></a></p>
+                <p class="sidebar-nohover"><a href=""><span class="material-icons">search</span><span>&nbsp; Jacket
+                            Men</span></a></p>
+                <p class="sidebar-nohover"><a href=""><span class="material-icons">search</span><span>&nbsp; Mens
+                            Shirt</span></a></p>
+                <p class="sidebar-nohover"><a href=""><span class="material-icons">search</span><span>&nbsp;
+                            Torch</span></a></p>
+            </ul>
+        </div>
+
+        <!-- </div> -->
+        <div id="slideshow">
+
+        </div>
+        <!--  -->
+
+        <div id="login_cards">
+            <div class="sideDiv">
+                <img id="snap" src="images/snapdeal pic.png" alt="">
+                <p class="sidedivPare">Login to your</p>
+                <p class="sidedivPare">Snapdeal account</p>
+                <button id="sidedivBtn" onclick="showLogin()">LOG IN</button>
+                <div>
+                    <label for="">New user? <a href="">Register</a></label>
+                    <button onclick="nextSideDiv()" class="sidedivNextbtn">NEXT</button>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+        <div id="trending_products">
+            <h2>RECENTLY VIEWED PRODUCTS</h2>
+            <div id="recent_view">
+
+            </div>
+        </div>
+    </section>
+
+    <!-- <div id="productsDisplay">
+
+    </div>
+
+    <div id="loadMore">
+        <button>Load More</button>
+    </div> -->
+
+
+    <!-- Go to top Button -->
+    <div id="go_to_top" onclick="goToTop()">
+        <img src="https://img.icons8.com/material-rounded/24/ffffff/thick-arrow-pointing-up.png" />
+    </div>
+
+    <!-- Footer Area -->
+    <div id="imagecontainer">
+        <div id="imagephone">
+            <img id="image1" src="images/image1.png" alt="Phone Image" height="500px" />
+        </div>
+        <div id="downloadapp">
+            <h1 id="image-head">Download Snapdeal<br>
+                App now</h1>
+            <p id="image-para">Fast, Simple & Delightful.<br>
+                All it takes is 30 seconds to Download.</p>
+            <button class="button buttonApp"></button>
+            <button class="button buttonPlay"></button>
+        </div>
+    </div>
+
+    <div id="four-flex">
+        <div class="inside-flex">
+            <div class="icons">
+                <img src="images/lock.png" height="50px">
+            </div>
+            <p class="inside-flex-fonthead">100% SECURE PAYMENTS</p>
+            <p class="inside-flex-fontbody">Moving your card details to a much more<br>secured place</p>
+        </div>
+        <div class="inside-flex">
+            <div class="icons">
+                <img src="images/secure.png" height="50px">
+            </div>
+            <p class="inside-flex-fonthead">TRUSTPAY</p>
+            <p class="inside-flex-fontbody">100% Payment Protection. Easy <br>Return Policy</p>
+        </div>
+        <div class="inside-flex">
+            <div class="icons">
+                <img src="images/help.png" height="50px">
+            </div>
+            <p class="inside-flex-fonthead">HELP CENTER</p>
+            <p class="inside-flex-fontbody">Got a question? Look no further. <br>Browse our FAQs or submit your query
+                here.</p>
+        </div>
+        <div class="inside-flex">
+            <div class="icons">
+                <img src="images/shop.png" height="50px">
+            </div>
+            <p class="inside-flex-fonthead">SHOP ON THE GO</p>
+            <p class="inside-flex-fontbody">Download the app and get exciting <br>app only offers at your fingertips</p>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div>
+            <p class="footer-fonthead">POLICY INFO</p>
+            <p class="inside-flex-fontbody">Privay Policy <br>
+                Terms of Sale <br>
+                Terms of USe <br>
+                Report Abuse & Tkedown Policy</p>
+        </div>
+        <div>
+            <p class="footer-fonthead">COMPANY</p>
+            <p class="inside-flex-fontbody">About Us <br>
+                Core Values <br>
+                Careers <br>
+                Blog <br>
+                Sitemap</p>
+        </div>
+        <div>
+            <p class="footer-fonthead">SNAPDEAL BUSINESS</p>
+            <p class="inside-flex-fontbody">Shopping App <br>
+                Sell on Snapdeal <br>
+                Advertise on Snapdeal <br>
+                Media Enquiries <br>
+                Be an Affiliate</p>
+        </div>
+        <div>
+            <p class="footer-fonthead">NEED HELP ?</p>
+            <p class="inside-flex-fontbody">FAQ <br>
+                Contact Us <br>
+                Online Shopping</p>
+        </div>
+        <div>
+            <p class="footer-fonthead">SUBSCRIBE</p>
+            <div class="subs-box">
+                <input type="text" id="sub-text" placeholder="Your email address">
+                <input type="button" id="sub-button" value="SUBSCRIBE">
+            </div>
+            <p class="inside-flex-fontbody">Register now to get updates on promotions and <br>
+                coupons.Or Download App</p>
+        </div>
+    </div>
+
+    <div id="paymentconnect">
+        <div>
+            <p class="paymentconnect-fonthead">PAYMENT</p>
+            <div>
+                <img src="images/paymenticons.png" height="35px">
+            </div>
+        </div>
+        <div>
+            <p>CONNECT</p>
+            <div id="connecticons">
+                <div>
+                    <img src="images/facebook.png" height="30px">
+                </div>
+                <div>
+                    <img src="images/twitter.png" height="30px">
+                </div>
+                <div>
+                    <img src="images/youtube.png" height="30px">
+                </div>
+                <div>
+                    <img src="images/instagram.png" height="30px">
+                </div>
+                <div>
+                    <img src="images/pinterest.png" height="30px">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-description">
+        <p class="footer-desfont">Mobiles: 4G Mobiles / Smartphones / Samsung Mobiles / Micromax Mobiles / Lenovo
+            Mobiles / iPhones / Vivo Mobiles / Oppo Mobiles / Intex Mobiles / Asus Mobiles <br>
+            Mobiles Accessories: Mobile Covers / Leather Mobile Covers / Printed Back Covers / 10000mAh Power Banks /
+            Ambrane Power Banks / Intex Power Banks / VR Headsets / Smart Watches / Smart Bands / Fitness Bands /<br>
+            Tempered Glass / Wall Chargers / Feature Phones / Bluetooth Devices<br>
+            TVs, Audio & Video: Televisions / LED TVs / Smart Televisions / Ultra HD TV / FHD TV / 3D TV / HD Ready TV /
+            Speakers / Headphones / Earphones / Samsung Televisions / Micromax Televisions / LG Televisions /<br>
+            Home Theatre Systems<br>
+            Memory Cards: 8 GB Memory Cards / 16 GB Memory Cards / 32 GB Memory Cards / 64 GB Memory Cards / Sandisk
+            Memory Cards / Samsung Memory Cards / Strontium Memory Cards<br>
+            Computers: Lenovo Laptops / Acer Laptops / Apple Macbooks / Notebook / Laptops / External Hard Disks / Dell
+            Laptops / HP Laptops / Pen Drives<br>
+            Camera: DSLR Cameras / Canon Cameras / Nikon Coolpix / Nikon DSLR Cameras / Sony Cameras / Digital Cameras /
+            Panasonic Cameras / Samsung Cameras<br>
+            Watches: Mens Watches / Womens Watches / Casio Watches / Titan Watches / Fastrack Watches / Fossil watches /
+            Casio Edifice<br>
+            Fashion Accessories: Bags / Wildcraft / Skybags / Fastrack Bags / Shoes / Floaters & Sandals / Kurta /
+            Raymond<br>
+            Men's Clothing: Shirts / Casual Shirts / Formal Shirts / Party Wear Shirts / T Shirts / Polo T shirts / Low
+            Rise Jeans / Slim Jeans / Reversible Jackets / V Neck T shirts / Henley T shirts / Printed T shirts / Round
+            Neck T shirts /<br>
+            Chinos / Hooded Sweatshirts / Kurta Payjama Sets / Dhoti Kurta Sets / Cotton Shirts / Full Sleeves Casual
+            Shirts / Full Sleeves Formal Shirts / Regular Fit Formal Shirts / Silk Party Shirts<br>
+            Women's Clothing: Saree / Designer Saree / Cotton Sarees / Georgette Sarees / Chiffon Sarees / Net Sarees /
+            Anarkali Suits / Kurtis / Leggings & Churidars / Embroidered Lehengas / Bridal Lehengas / Black Dresses
+            /<br>
+            Jeggings / Jeans / A Line Skirts / Women's Gowns / Women's Dresses<br>
+            Home & Kitchen: Home Decor / Paintings / Clocks / Flasks & Thermos / Photo Frames / Tupperware Kitchenware /
+            Hawkins Kitchenware / Milton Kitchenware<br>
+            Books: Fiction / Non Fiction / Children & Young Adults / Competitive Exams / School Books / Academic Texts /
+            Reference / Self Help<br>
+            FMCG Offer - Top Brands: Revlon / Street Wear / St. Ives / Accu-Chek Health Monitoring Devices / Nutraj -
+            California Walnuts / JSB Massagers / Park Avenue / Gillette / Airwick / Veet / Livon / Mortein / Whisper /
+            KamaSutra /<br>
+            Durex / Bio Oil<br>
+            Appliances: Air Conditioners / Air Coolers / Refrigerators / Fans / Washing Machines / Mircowaves / Irons /
+            Trimmers / Hair Dryers / Shavers / Vacuum Cleaners / Air Purifiers / CCTV Cameras / Ceiling Fans / Table
+            Fans /<br>
+            Exhaust Fans / Pedestal Fans / Ceiling Fans with 4 Blades / Ceiling Fans with 6 Blades<br>
+            Home Furnishing: Bed Linen / Bed Sheets / Bath Linen / Mattresses / Curtains / Cushion Covers / Pillows /
+            Carpets / Kids Bedding<br>
+            Furniture Online: Sofa Set / Sofa Cum Beds / Chairs / Dining Sets / Bean Bags / Shoe Storage / Dining Chairs
+            / Storage Cabinets / Tables and Desks / Bedroom Furniture / Living Room Furniture / XXXL Bean Bags /<br>
+            Chair Shape Bean Bags / Lounger Shape Bean Bags / Muddha Shape Bean Bags / Black Color Bean Bags<br>
+            Toys & Games: Soft Toys / Dolls / Musical Toys / Kids Skates / Kids Skate Scooters / Barbie Games / Action
+            Figures / Electronic Toys / Action figures / Toddler Toys / Die Cast Vehicle / Ride Ons & Scooters<br>
+            Todays Deals: Bestsellers / Most Searched Products / Home Utility Offers / Laptops & Accessories Offers /
+            Men's Fashion / Women's Fashion / Price Point Store / Laptops & Accessories Offers<br>
+            Online Shopping: Everything below 299 / Mens Footwear / Lehenga / Dresses / Mobile Phones / Womens Watches /
+            Kurtis / Smartphones / Womens Footwear / Sarees / Casual Shoes / Laptops / Mens Watches /<br>
+            Womens Casual Shoes / 4G Mobiles / Frocks / Women Suits / Tops & Tunics / Gowns / Watches / Sports &
+            Bicycles / Water Geysers / Men's Sportswear / Multi Speed Bi-cycles / Mobile Batteries / Kids T-shirts /<br>
+            Girls Frocks & Junpsuits / Kids Watches / Stationery Supplies / Baby Care Products / Copper Water Bottles
+        </p>
+        <p id="aboutsnap">ABOUT SNAPDEAL</p>
+        <p class="footer-desfont">
+            About Snapdeal – India’s Ultimate Online Shopping Site Snapdeal’s vision is to create India’s most reliable
+            and frictionless commerce ecosystem that creates life-changing experiences for buyers and sellers. In
+            February 2010,
+            Kunal Bahl along with Rohit Bansal, started Snapdeal.com - India’s largest online shopping marketplace, with
+            the widest assortment of 35 million plus products across 800 plus diverse categories from over 125,000
+            regional,
+            national, and international brands and retailers. With millions of users and more than 300,000 sellers,
+            Snapdeal is the online shopping site for Internet users across the country, delivering to 6000+ cities and
+            towns in India. In its
+            journey till now, Snapdeal has partnered with several global marquee investors and individuals such as
+            SoftBank, BlackRock, Temasek, Foxconn, Alibaba, eBay Inc., Premji Invest, Intel Capital, Bessemer Venture
+            Partners, Mr. Ratan
+            Tata, among others. Online Shopping – A Boon The trend of online shopping is becoming a household name and
+            so is Snapdeal. Snapdeal is the preferred choice of hundreds of thousands of online shoppers given its
+            mammoth
+            assortment of 15 million+ products, quick delivery even to the remotest corners of the country, and daily
+            deals, discounts & offers to make products available at slashed down prices to our valuable customers. Get
+            Started! Shop
+            Online Today at Snapdeal If you have been missing out on all the fun of online shopping thinking it requires
+            one to be a technology aficionado then we have good news for you. Shopping online particularly at Snapdeal
+            is a child’s
+            play; all you need is a mobile phone or laptop or tablet with Internet connection to get started. Simply log
+            into Snapdeal.com and browse through the wide assortment of products across categories. Once you have zeroed
+            in on your
+            favorite products, simply place the order by filling in the details; the products will be delivered right at
+            your doorstep. Fulfill Your Entrepreneurial Dreams! Sell Today at Snapdeal Thanks to easy-to-understand,
+            flexible policies and SD
+            Advisors to help sellers at each step, anyone from a manufacturer to wholesaler to retailer can sell on
+            Snapdeal. Begin your entrepreneurial journey with Snapdeal as a seller by filling a simple registration form
+            here. Once the
+            registration process is done, you can start selling your products to the entire country by sitting at your
+            home or office. Doesn't it sound thrilling? Of course, it is and the excitement will build up with every
+            order you receive! Start
+            selling at Snapdeal today and see your business reach staggering heights. Shop on the Go – Install Snapdeal
+            App Today! You can shop for your favourite products at Snapdeal even on the go using Snapdeal App. Available
+            for both
+            Android and Apple users, the app can be downloaded from Google Play Store and Apple App Store respectively.
+            The app is quick, user-friendly, and enables shoppers buy products with a breeze. What's more, get timely
+            notifications
+            on your phone or tablet so that you don't miss amazing deals and offers. Download the app right now and
+            experience how fun it is to shop on your mobile!
+        </p>
+    </div>
+    <div id="lastfooter">
+        <div>
+            <p class="footer-desfont">Copyright © 2020, Snapdeal Private Limited (formerly Jasper Infotech Private
+                Limited). All Rights Reserved</p>
+        </div>
+        <div>
+            <p class="footer-desfont">Made with <span>❤️</span> in India</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script src="script.js"></script>
