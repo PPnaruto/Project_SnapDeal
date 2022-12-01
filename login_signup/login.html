@@ -1,12 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
+    <title>Shop Online for Men, Women & Kids clothing, Shoes, Home Decor Items - Snapdeal.com</title>
+
 </head>
+
 <body>
+
+   
+    <div id="overlay">
+        <div onclick="Overlayremover()">
+
+        </div>
+        <div id="login-box">
+            <div id="rec3" >
+                <div>
+                    <div style="border: 2px solid crimson;" >
+                        <img src="https://i2.sdlcdn.com/img/snapdeal/sprite/userAuthSpritev3.png"
+                            style=" object-fit: cover; object-position: 0px -378px;">
+                    </div>
+                    <div style="border: 2px solid crimson;" >
+                        <h4>MANAGE YOUR ORDERS</h4>
+                        <p>Track orders, manage cancellation & returns.</p>
+                    </div>
+                </div>
+                <div>
+                    <div style="border: 2px solid crimson;" >
+                        <img src="https://i2.sdlcdn.com/img/snapdeal/sprite/userAuthSpritev3.png"
+                            style=" object-fit: cover; object-position: -60px -378px;">
+                    </div>
+                    <div style="border: 2px solid crimson;" >
+                        <h4>SHORTLIST ITEMS YOU LOVE</h4>
+                        <p>Keep items you love on a watchlist.</p>
+                    </div>
+
+                </div>
+                <div>
+                    <div style="border: 2px solid crimson;" >
+                        <img src="https://i2.sdlcdn.com/img/snapdeal/sprite/userAuthSpritev3.png"
+                            style=" object-fit: cover; object-position: -128px -378px;">
+                    </div>
+                    <div style="border: 2px solid crimson;" >
+                        <h4>
+                            AWESOME OFFERS UPDATES FOR YOU
+                        </h4>
+                        <p>Be firs to know about great offers and save</p>
+                    </div>
+
+                </div>
+            </div>
+            
+
+            <!-- LOGIN -->
+            
+            
+            <div id="rec" >
+                <p>Login/Sign Up On Snapdeal</p>
+                <button onclick="Overlayremover()">X</button>
+                <p>Please provide your Mobile Number or Email to Login/Sign Up on Snapdeal</p>
+                <input type="text" id="login_number_email" placeholder="Mobile Number / Email">
+                <button onclick="authanticate()"  >CONTINUE</button>
+                <p>or Login using</p>
+                <div>
+                    
+                    <button class="social-btn">
+                        <div>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png"
+                                style="width: 16px;">
+                        </div>
+                        Google
+                    </button>
+                </div>
+            </div>
+            
+
+
+            <!-- SIGNUP -->
+            
+            
+            <div id="rec2" >
+                <p>Sign Up</p>
+                <button onclick="Overlayremover()">X</button>
+                <p>Create an account on Snapdeal</p>
+                <form onsubmit="addUser(event)">
+                    <input type="email" id="signup_email" placeholder="Email" required>
+                    <input type="tel" minlength="10" maxlength="10" placeholder="Mobile Number" id="signup_mobile"
+                        required>
+                    <input type="text" id="signup_name" placeholder="Name" required>
+                    <input type="date" id="signup_dob" placeholder="DOB" required>
+                    <input type="password" placeholder="Passwords" id="signup_password"
+                        pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$" required>
+                    <p>Password should have a minimum of 6 character, atleast 1 numeric and 1 alphabet</p>
+                    <div>
+                        <input type="checkbox" checked>
+                        <label>Keep me logged in</label>
+                    </div>
+                    <button>CONTINUE</button>
+                    <p>By registering, I agree to <span style="color: #25a8ed;">Terms & Conditions</span> </p>
+                </form>
+
+                <p>or Login using</p>
+                <div>
+                    
+                    <button class="social-btn">
+                        <div style="background-color:white" >
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png"
+                                style="width: 16px;">
+                        </div>
+                        Google
+                    </button>
+                </div>
+            </div>
+            
+
+
+            <!-- OTP FUNCTIONALITY -->
+            
+            
+            
+            <div>
+                <p>Login On Snapdeal</p>
+                <button onclick="Overlayremover()">X</button>
+                <div>
+                    <img src="https://i2.sdlcdn.com/img/snapdeal/sprite/userAuthSpritev3.png"
+                        style=" object-fit: cover; object-position: -245px -198px;">
+                </div>
+                <p>Please enter verification code (OTP) sent to:</p>
+                <p id="verification_email">email</p>
+                <form onsubmit="compvareLogin(event)">
+                    <input type="text" minlength="4" maxlength="4" placeholder="OTP" id="otp_code" required>
+                    <p>Resend OTP</p>
+                    <button>CONTINUE</button>
+                </form>
+
+
+            </div>
+
+
+
+        </div>
+        
+
+    </div>
+    
+    <nav>
+        <div>
+            
+            <div>
+                
+                <div class="signinButton">
+                    <div id="nav_signin">
+                        <p>Sign In</p>
+                        <ul>
+                            <li><img src="https://img.icons8.com/material-outlined/24/ffffff/user--v1.png" />Your
+                                Account</li>
+                            <li><img
+                                    src="https://img.icons8.com/external-those-icons-lineal-those-icons/24/ffffff/external-box-shipping-delivery-those-icons-lineal-those-icons-2.png" />
+                                Your Orders</li>
+                            <li><img src="https://img.icons8.com/material-outlined/24/ffffff/like--v1.png" />
+                                Shortlist
+                            </li>
+                            
+                            <hr>
+                            <div onclick="displayloginuser()">
+                                <p>If you are a new user</p>
+                                <p>Register</p>
+                                <button>LOGIN</button>
+                            </div>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <img src="https://img.icons8.com/material-rounded/24/ffffff/user.png" style="width: 24px;" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
     
 </body>
+
 </html>
+
+<script src="login.js" ></script>
+
+
+
