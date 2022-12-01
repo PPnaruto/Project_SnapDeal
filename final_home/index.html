@@ -13,6 +13,13 @@
     <title>Online Shopping Site India - Shop Electronics, Men & Women Clothing, Shoes - www.Snapdeal.com</title>
     <!-- <link rel="icon" href="https://www.snapdeal.com/img/icons/finalFavicon.ico"> -->
     <style>
+        /* div {
+            border: 1px solid red;
+        } */
+        /* div>div {
+            border: 1px solid green;
+        } */
+
         body {
             margin: 0;
             background-color: #f7f7f7;
@@ -323,6 +330,62 @@
             width: 200px;
         }
 
+        #trending_products>div {
+            display: flex;
+            overflow-y: hidden;
+        }
+
+        #trending_products>div>div {
+            min-width: 205px;
+            max-width: 232px;
+            box-sizing: border-box;
+            padding: 20px;
+            margin-bottom: 15px;
+            font-size: 13px;
+            color: #999;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+
+        #trending_products>div>div:hover {
+            box-shadow: 0px 0 10px 3px rgba(167, 165, 165, 0.253);
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #trending_products>div>div>img {
+            width: 100%;
+        }
+
+        #trending_products>div>div>div:nth-of-type(1) {
+            height: 36px;
+            /* white-space: nowrap; */
+            overflow: hidden;
+            /* text-overflow: ellipsis; */
+            line-height: 18px;
+        }
+
+        .star-rating {
+            font-size: 15px;
+            letter-spacing: 1px;
+        }
+
+        /* #slideshow {
+            max-width: 1140px;
+        } */
+
+        /* #slideshow img {
+            width: 100%;
+        } */
+
+        /* CSS for top content */
+
+
+
+        /* CSS for login starts */
+
         #overlay {
             display: none;
             position: fixed;
@@ -340,6 +403,456 @@
             width: 100%;
             height: 100%;
         }
+
+        #login-area {
+            width: 726px;
+            height: 360px;
+            border-radius: 5px;
+            margin: 15% 30%;
+            background-color: #edf1f4;
+            ;
+            position: absolute;
+            z-index: 10;
+            background-image: url("https://i2.sdlcdn.com/img/snapdeal/sprite/userAuthSpritev3.png");
+            display: flex;
+            align-items: center;
+            box-shadow: 0 10px 10px rgba(59, 57, 57, 0.472);
+        }
+
+        #login-area>div:nth-of-type(1) {
+            padding: 27px 34px 27px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 360px;
+            box-sizing: border-box;
+        }
+
+        #login-area>div>div {
+            display: flex;
+            align-items: center;
+        }
+
+        #login-area>div:nth-of-type(1)>div {
+            align-items: flex-start;
+        }
+
+        #login-area>div>div>div {
+            width: 200px;
+        }
+
+        #login-area>div>div>div:nth-of-type(1) {
+            width: 65px;
+            height: 63px;
+            overflow: hidden;
+        }
+
+        #login-area>div>div>div>h4 {
+            font-weight: 100;
+            margin: 2px;
+            font-size: 11px;
+        }
+
+        #login-area>div>div>div>p {
+            color: #666;
+            font-size: 11px;
+            margin: 0
+        }
+
+        #login-area>div:nth-of-type(2) {
+            padding: 25px 29px 29px 29px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            width: 340px;
+            height: 405px;
+            box-sizing: border-box;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 10px 10px rgba(59, 57, 57, 0.472);
+            display: none;
+        }
+
+        #login-area>div:nth-of-type(2)>p:nth-of-type(1) {
+            color: #333;
+            font-size: 18px;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        #login-area>div:nth-of-type(2)>p:nth-of-type(2) {
+            color: #333;
+            font-size: 11px;
+            margin: 0 0 20px;
+        }
+
+        #login-area>div:nth-of-type(2)>input {
+            color: #333;
+            font-size: 12px;
+            padding: 9px 10px;
+            border: 1px solid #d2d2d2;
+            height: 20px;
+        }
+
+        #login-area>div:nth-of-type(2)>button:nth-of-type(1) {
+            border: 0;
+            background: transparent;
+            color: #d2d2d2;
+            font-size: 20px;
+            position: absolute;
+            top: 5px;
+            left: 630px;
+            cursor: pointer;
+        }
+
+        #login-area>div:nth-of-type(2)>button:nth-of-type(2) {
+            color: #ffffff;
+            background-color: #e40046;
+            font-size: 13px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            cursor: pointer;
+            height: 40px;
+            border-radius: 3px;
+            border: 0;
+            font-weight: 400;
+        }
+
+        #login-area>div:nth-of-type(2)>p:nth-of-type(3) {
+            margin-top: 10px;
+            margin-bottom: 8px;
+            font-size: 12px;
+            color: #bbbbbb;
+            text-align: center;
+        }
+
+        #login-area>div:nth-of-type(2)>div {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 20px;
+        }
+
+        #login-area>div:nth-of-type(2)>div>button {
+            width: 141px;
+            height: 40px;
+            box-sizing: border-box;
+            border: 0;
+            font-size: 10px;
+            border-radius: 2px;
+            box-shadow: 0 2px 10px rgba(59, 57, 57, 0.239);
+        }
+
+        #login-area>div:nth-of-type(2)>div>button:nth-of-type(1) {
+            background-color: #4267B2;
+            color: #fff;
+        }
+
+        #login-area>div:nth-of-type(2)>div>button:nth-of-type(2) {
+            margin-left: 15px;
+            background-color: #fff;
+
+        }
+
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .social-btn>div {
+            width: 16.69px;
+            height: 16.69px;
+            overflow: hidden;
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        #login-area>div:nth-of-type(3) {
+            padding: 25px 29px 29px 29px;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: space-evenly; */
+            width: 340px;
+            height: 653px;
+            box-sizing: border-box;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 10px 10px rgba(59, 57, 57, 0.472);
+            display: none;
+        }
+
+        #login-area>div:nth-of-type(3)>button:nth-of-type(1) {
+            border: 0;
+            background: transparent;
+            color: #d2d2d2;
+            font-size: 20px;
+            position: absolute;
+            top: -125px;
+            left: 640px;
+            cursor: pointer;
+        }
+
+        #login-area>div:nth-of-type(3)>p:nth-of-type(1),
+        div:nth-of-type(4)>p:nth-of-type(1) {
+            color: #333;
+            font-size: 18px;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        #login-area>div:nth-of-type(3)>p:nth-of-type(2) {
+            color: #333;
+            font-size: 11px;
+            margin: 0 0 20px;
+        }
+
+        #login-area>div:nth-of-type(3)>form {
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+        }
+
+        #login-area>div:nth-of-type(3)>form>input {
+            color: #333;
+            font-size: 12px;
+            padding: 9px 10px;
+            border: 1px solid #d2d2d2;
+            height: 20px;
+        }
+
+        #login-area>div:nth-of-type(3)>form>p:nth-of-type(1) {
+            color: #999;
+            font-size: 10px;
+        }
+
+        #login-area>div:nth-of-type(3)>form>div {
+            display: flex;
+            align-content: center;
+            font-size: 11px;
+            margin-bottom: 0;
+        }
+
+        #login-area>div:nth-of-type(3)>form>div>input {
+            transform: scale(1.5);
+            margin-right: 15px;
+        }
+
+        #login-area>div:nth-of-type(3)>form>button,
+        div:nth-of-type(4)>form>button {
+            color: #ffffff;
+            background-color: #e40046;
+            font-size: 13px;
+            margin-top: 10px;
+            margin-bottom: 0px;
+            cursor: pointer;
+            height: 40px;
+            border-radius: 3px;
+            border: 0;
+            font-weight: 400;
+            width: 100%;
+        }
+
+        #login-area>div:nth-of-type(3)>form>p:nth-of-type(2) {
+            color: #999;
+            font-size: 10px;
+            text-align: center;
+            margin: 0;
+        }
+
+        #login-area>div:nth-of-type(3)>p:nth-of-type(3) {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 12px;
+            color: #bbbbbb;
+            text-align: center;
+        }
+
+        #login-area>div:nth-of-type(3)>div>button {
+            width: 141px;
+            height: 40px;
+            box-sizing: border-box;
+            border: 0;
+            font-size: 10px;
+            border-radius: 2px;
+            box-shadow: 0 2px 10px rgba(59, 57, 57, 0.239);
+        }
+
+        #login-area>div:nth-of-type(3)>div>button:nth-of-type(1) {
+            background-color: #4267B2;
+            color: #fff;
+        }
+
+        #login-area>div:nth-of-type(3)>div>button:nth-of-type(2) {
+            margin-left: 15px;
+            background-color: #fff;
+        }
+
+        #login-area>div:nth-of-type(4) {
+            padding: 20px 29px 50px 29px;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: space-evenly; */
+            width: 340px;
+            height: 424px;
+            box-sizing: border-box;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 10px 10px rgba(59, 57, 57, 0.472);
+            /* display: none; */
+        }
+
+        #login-area>div:nth-of-type(4)>div:nth-of-type(1) {
+            width: 208px;
+            height: 140px;
+            overflow: hidden;
+            align-self: center;
+        }
+
+        #login-area>div:nth-of-type(4)>button:nth-of-type(1) {
+            border: 0;
+            background: transparent;
+            color: #d2d2d2;
+            font-size: 20px;
+            position: absolute;
+            top: -15px;
+            left: 640px;
+            cursor: pointer;
+        }
+
+        #login-area>div:nth-of-type(4)>p:nth-of-type(2) {
+            color: #333;
+            font-size: 12px;
+            margin: 0;
+            text-align: center;
+        }
+
+        #login-area>div:nth-of-type(4)>p:nth-of-type(3) {
+            color: #333;
+            font-size: 13px;
+            margin-top: 5px;
+            text-align: center;
+        }
+
+        #login-area>div:nth-of-type(4)>form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #login-area>div:nth-of-type(4)>form>input {
+            width: 55%;
+            text-align: center;
+            border-radius: 2px;
+            margin-top: 10px;
+            border: 1px solid #e5e5e5;
+            background-color: #fbfbfb;
+            padding: 10px 20px;
+        }
+
+        #login-area>div:nth-of-type(4)>form>p {
+            text-align: center;
+            color: #25A8ED;
+            font-size: 12px;
+            margin-top: 8px;
+            margin-bottom: 15px;
+        }
+
+        /* CSS for login ends */
+
+
+        /* CSS from product_catalogue starts */
+        #productsDisplay {
+            max-width: 1402px;
+            display: grid;
+            grid-template-columns: repeat(5, auto);
+            justify-content: space-between;
+            margin: auto;
+        }
+
+        #productsDisplay>div {
+            min-width: 205px;
+            width: 16rem;
+            box-sizing: border-box;
+            padding: 20px;
+            margin: auto;
+            margin-bottom: 15px;
+            font-size: 13px;
+            color: #999;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+
+        #productsDisplay>div:hover {
+            box-shadow: 0 10px 20px 5px rgba(167, 165, 165, 0.253);
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #productsDisplay>div>img {
+            width: 100%;
+        }
+
+        #productsDisplay>div>div:nth-of-type(1) {
+            height: 36px;
+            /* white-space: nowrap; */
+            overflow: hidden;
+            /* text-overflow: ellipsis; */
+            line-height: 18px;
+        }
+
+        .star-rating {
+            font-size: 15px;
+            letter-spacing: 1px;
+        }
+
+        #loadMore {
+            max-width: 1600px;
+            margin: auto;
+            display: flex;
+            justify-content: center
+        }
+
+        #loadMore>button {
+            padding: 0 10px;
+            border: 0;
+            background-color: #333;
+            color: white;
+            font-size: 14px;
+            padding: 0 10px;
+            margin: 0 auto;
+            width: 340px;
+            height: 40px;
+            border-radius: 4px;
+            box-shadow: 0 0 5px rgba(128, 128, 128, 0.397);
+            margin-top: 10px;
+        }
+
+        #loadMore>button:hover {
+            cursor: pointer;
+        }
+
+        /* CSS from product_catalogue ends */
+
+        /* CSS for Go to top btn starts */
+
+        #go_to_top {
+            position: fixed;
+            top: 90%;
+            left: 96%;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background-color: #333;
+            opacity: 0.8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        /* CSS for Go to top btn ends */
 
         /* CSS for footer */
         #imagecontainer {
@@ -614,6 +1127,11 @@
             border-radius: 5px;
         }
 
+
+
+        /* CSS for login slider card starts*/
+
+        /* CSS for login slider card ends*/
 
         /* CSS for categories starts */
 
@@ -976,112 +1494,19 @@
 
             </div>
         </div>
-        <div id="cart-overlay">
-            <div class="cart-without-items">
-                <h4>Shopping Cart is empty!</h4>
-                <button onclick="removeOverlay()">X</button>
-                <p>BROWSE CATEGORIES</p>
-                <hr>
-                <ul>
-                    <li>- Appliances</li>
-                    <li>- Cameras & Accessories</li>
-                    <li>- Gaming</li>
-                    <li>- Men's Clothing</li>
-                    <li>- Tablets & Accessories</li>
-                    <li>- Baby & Kids</li>
-                    <li>- Daily Needs</li>
-                    <li>- Jewellery</li>
-                    <li>- Mobile Accessories</li>
-                    <li>- TV, Audio & Video</li>
-                    <li>- Beauty & Personal Care</li>
-                    <li>- Furnishing</li>
-                    <li>- Kitchenware</li>
-                    <li>- Mobile Phones</li>
-                    <li>- Women's Ethnic Wear</li>
-                    <li>- Books</li>
-                    <li>- Furniture</li>
-                    <li>- Laptops & Computers</li>
-                    <li>- Nutrition & Supplements</li>
-                    <li>- Women's Western Wear</li>
-                </ul>
-                <div>
-                    <button onclick="removeOverlay()">START SHOPPING NOW</button>
-                    <div>
-                        <p><img src="https://img.icons8.com/ios/50/000000/favorites-shield.png"
-                                style="width: 16px; margin-right: 10px;">
-                            Safe and Secure</p>
-                        <p><img src="https://img.icons8.com/ios-glyphs/24/000000/card-security.png"
-                                style="width: 16px; margin-right: 10px; " />
-                            100% Payment Protection, Easy Returns Policy</p>
-                    </div>
 
-                </div>
-
-            </div>
-            <div class="cart-with-items">
-                <div>
-                    <div>
-                        <div class="cart-content-area">
-                            <div>
-                                <h4>Shopping Cart <span id="total_items_overlay_cart">(5 Items)</span></h4>
-                                <button onclick="removeOverlay()">X</button>
-                            </div>
-                            <div>
-                                <p>Item Details</p>
-                                <p>Price</p>
-                                <p>Quantity</p>
-                                <p>Showing Availability</p>
-                                <p>Subtotal</p>
-                            </div>
-                            <div id="cart-contents">
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="cart-pricing-area">
-                            <div>
-                                <p>Delivery and payment options can be selected later</p>
-                                <p>
-                                    <img src="https://img.icons8.com/ios/50/ffffff/favorites-shield.png"
-                                        style="width: 16px; margin-right: 10px;">
-                                    Safe and Secure Payments
-                                </p>
-                                <p><img src="https://img.icons8.com/ios-glyphs/30/ffffff/card-security.png"
-                                        style="width: 16px; margin-right: 10px;" />
-                                    100% Payment Protection, Easy Returns Policy</p>
-                            </div>
-                            <div>
-                                <div>
-                                    <p>Sub Total:</p>
-                                    <p id="cart-sub-total-price">price</p>
-                                </div>
-                                <div>
-                                    <p>Delivery Charges:</p>
-                                    <p>FREE</p>
-                                </div>
-                            </div>
-                            <div>
-                                <button id="cart-sub-total-btn" onclick="goToPaymentPage()">PROCEED TO PAY
-                                    Rs.1,169</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
 
     </div>
     <!-- Login Signup Cart Overlay Ends -->
 
-    <!-- Top navigation starts -->
+    <!-- Top Thin bar starts -->
     <div class="topThinBar">
         <div>
             <div>
-                <p>Brand Waali Quality, Bazaar Waali Deal!</p>
+                <p> Brand Waali Quality, Bazaar Waali Deal!</p>
             </div>
             <div>
+                <p>impact@snapdeal</p>
                 <p>Gift Cards</p>
                 <p>Help Center</p>
                 <p>Sell On Snapdeal</p>
@@ -1123,9 +1548,7 @@
                             <li><img src="https://img.icons8.com/material-outlined/24/ffffff/like--v1.png" />
                                 Shortlist
                             </li>
-                            <li><img src="https://img.icons8.com/ios-glyphs/30/ffffff/get-cash.png" />
-                                SD Cash
-                            </li>
+
                             <hr>
                             <div onclick="showLogin()">
                                 <p>If you are a new user</p>
@@ -1149,8 +1572,11 @@
         <div class="sidemenu">
             <ul class="nav-area">
                 <p class="sidebar-heading">TOP CATEGORIES</p>
-                <li><a href="#">
-                        <span class="inside-sidebarmain"><img src="images/discount.png" width="28px"></span>
+                <!-- href for mens fashion product page put below -->
+                <li><a href="mens.html">
+                        <span class="inside-sidebarmain"><img
+                                src="https://n2.sdlcdn.com/imgs/j/o/6/large/Freecultr-Cotton-Blend-Grey-Solids-SDL038793560-1-2c70b.jpg"
+                                width="28px"></span>
                         <span class="inside-sidebarmain2">
                             <p class="in">Men's Fashion</p>
                         </span></a>
@@ -1241,9 +1667,11 @@
                         </div>
                     </div>
                 </li>
-
+                <!-- womens fashion product page href  -->
                 <li class="sidebar-main"><a href="">
-                        <span class="inside-sidebarmain"><img src="images/smartphone.png" width="28px"></span>
+                        <span class="inside-sidebarmain"><img
+                                src="https://n2.sdlcdn.com/imgs/j/s/h/230X258_sharpened/Frionkandy-Rayon-Blue-A-line-SDL287929644-1-75859.jpeg"
+                                width="28px"></span>
                         <span class="inside-sidebarmain2">
                             <p class="in">Women's Fashion</p>
                         </span></a>
@@ -1345,11 +1773,11 @@
                         </div>
                     </div>
                 </li>
-
+                <!--  -->
                 <li class="sidebar-main"><a href="">
                         <span class="inside-sidebarmain"><img src="images/fridge.png" width="28px"></span>
                         <span class="inside-sidebarmain2">
-                            <p class="in">Home & Kitchen</p>
+                            <p class="in">Electronics</p>
                         </span></a>
 
                     <div class="sub-nav">
@@ -1440,11 +1868,11 @@
                         </div>
                     </div>
                 </li>
-
+                <!--  -->
                 <li class="sidebar-main"><a href="">
                         <span class="inside-sidebarmain"><img src="images/quantum-computing.png" width="28px"></span>
                         <span class="inside-sidebarmain2">
-                            <p class="in">Toys.Kid's Fashion</p>
+                            <p class="in">Computer & Gaming</p>
                         </span></a>
 
                     <div class="sub-nav">
@@ -1547,11 +1975,10 @@
                         </div>
                     </div>
                 </li>
-
                 <li class="sidebar-main"><a href="#">
                         <span class="inside-sidebarmain"><img src="images/kitchen-tools.png" width="28px"></span>
                         <span class="inside-sidebarmain2">
-                            <p class="in">Beauty,Health & Daily</p>
+                            <p class="in">Home & Kitchen</p>
                         </span></a>
 
                     <div class="sub-nav">
@@ -1656,12 +2083,12 @@
 
                 <p class="sidebar-heading">MORE CATEGORIES</p>
                 <li><a href="">Automotives</a></li>
-                <li><a href="">Mobile & Accessories</a></li>
-                <li><a href="">Electronics</a></li>
+                <li><a href="">Mobile & Electronics</a></li>
+                <li><a href="">Toy's Kids' Fashion & more</a></li>
                 <li><a href="">Beauty,Health & Daily Needs</a></li>
                 <li><a href="">Sports, Fitness & Outdoor</a></li>
                 <li><a href="">Car & Motorbike</a></li>
-                <li><a href="">Computer & Gaming</a></li>
+                <li><a href="">Hobbies</a></li>
                 <li><a href="">Books,Media & Music</a></li>
                 <li><a href="">See All Categories</a></li>
                 <p class="sidebar-heading">TRENDING SEARCHES</p>
@@ -1677,13 +2104,10 @@
                             Torch</span></a></p>
             </ul>
         </div>
-
         <!-- </div> -->
         <div id="slideshow">
 
         </div>
-        <!--  -->
-
         <div id="login_cards">
             <div class="sideDiv">
                 <img id="snap" src="images/snapdeal pic.png" alt="">
@@ -1691,27 +2115,24 @@
                 <p class="sidedivPare">Snapdeal account</p>
                 <button id="sidedivBtn" onclick="showLogin()">LOG IN</button>
                 <div>
-                    <label for="">New user? <a href="">Register</a></label>
+                    <label for="">New user? Register</label>
                     <button onclick="nextSideDiv()" class="sidedivNextbtn">NEXT</button>
                 </div>
             </div>
         </div>
-        <!--  -->
         <div id="trending_products">
             <h2>RECENTLY VIEWED PRODUCTS</h2>
-            <div id="recent_view">
-
-            </div>
+            <div></div>
         </div>
     </section>
-
-    <!-- <div id="productsDisplay">
+    <!-- PRODUCT DISPLAY STARTS -->
+    <div id="productsDisplay">
 
     </div>
 
     <div id="loadMore">
         <button>Load More</button>
-    </div> -->
+    </div>
 
 
     <!-- Go to top Button -->
@@ -1949,4 +2370,5 @@
 </body>
 
 </html>
+
 <script src="script.js"></script>
