@@ -1,4 +1,5 @@
 let address = ()=>{
+    document.getElementById("ad_info").innerHTML = null;
     let name = document.getElementById("name").value;
     let mobile = document.getElementById("mob_no").value;
     let address = document.getElementById("address_box").value;
@@ -23,7 +24,8 @@ let address = ()=>{
     document.getElementById("address").style.display = "none";
     document.getElementById("delivery_ad").style.display = "block";
     document.getElementById("delivery_ad").style.display = "flex";
-
+    document.getElementById("review").style.display = "block";
+    order_data(order);
 }
 
 let btn = document.getElementById("address_button").addEventListener("click",address);
@@ -35,49 +37,39 @@ let showhidden_ad=()=>{
 }
 document.getElementById("delivery_ad").addEventListener("click",showhidden_ad);
 
-let order = [
-    {
-    img : "https://n3.sdlcdn.com/imgs/k/k/h/230X258_sharpened/Gritstones-Green-Cotton-Blend-Regular-SDL938884433-1-d24b4.webp",
-    name : "Gritstones - Green Cotton Blend Regular Fit Men's",
-    actual_price : 1599,
-    discount_price : 359,
-    size : "M",
-    rating : 4.1,
-    qty : 1,
-    },
-    {
-    img : "https://n2.sdlcdn.com/imgs/k/f/h/230X258_sharpened/Leotude-100-Cotton-Regular-Fit-SDL858624078-1-0d417.JPG",
-    name : "Leotude - Multi Cotton Regular Fit Men's T-Shirt ",
-    actual_price : 1099,
-    discount_price : 359,
-    size : "XL",
-    rating : 4.2,
-    qty : 1,
-    },
-    {
-        img : "https://n1.sdlcdn.com/imgs/k/k/p/230X258_sharpened/UrbanMark-Black-Cotton-Regular-Fit-SDL654394387-1-226c3.webp",
-        name : "UrbanMark - Black 100% Cotton Regular Fit Men's T-Shirt",
-        actual_price : 599,
-        discount_price : 259,
-        size : "S",
-        rating : 4.4,
-        qty : 1,
-        },
-        {
-        img : "https://n4.sdlcdn.com/imgs/k/g/1/230X258_sharpened/Bewakoof-Black-Cotton-Regular-Fit-SDL209460544-1-0f9f9.webp",
-        name : "Bewakoof - Black Cotton Regular Fit Men's T-Shirt",
-        actual_price : 1299,
-        discount_price : 439,
-        size : "L",
-        rating : 4.0,
-        qty : 1,
-        },
+let order  = JSON.parse(localStorage.getItem("Ordered_Data")) || [];
+let amt = JSON.parse(localStorage.getItem("TotalPrice"));
 
-]
+let total_pay = ()=>{
+    let sum = order.reduce((acc,ele)=>{
+        return (ele.actual_price*ele.qty) + acc;
+    },0);
+    localStorage.setItem("TotalPrice",JSON.stringify(sum));
+    // console.log(sum);
+    // document.getElementById("total").innerText = sum;
+}
+
+let getdiscount = ()=>{
+    let value = document.getElementById("promo_input").value;
+    if(value == "masai30"){
+        console.log(value);
+        let discount = Math.ceil(amt*(30/100));
+        console.log(discount);
+        document.getElementById("total").innerHTML = discount;
+    }    
+}
+
+let removedata=(index)=>{
+    order.splice(index,1);
+    localStorage.setItem("OrderedData",JSON.stringify(order));
+    total_pay();
+    order_data(order);
+}
 
 let order_data = (order)=>{
+    document.querySelector("tbody").innerHTML = null;
     console.log(order);
-    order.map((ele)=>{
+    order.map((ele,i)=>{
         let tr = document.createElement("tr");
 
         let td1 = document.createElement("td");
@@ -97,7 +89,9 @@ let order_data = (order)=>{
         let remove = document.createElement("button");
         remove.innerHTML = "Remove";
         remove.setAttribute("id","remove_order");
-
+        remove.addEventListener("click",()=>{
+            removedata(i);
+        })
         info_div.append(name_para,size_para,remove);
 
         div.append(img_div,info_div);
@@ -134,11 +128,66 @@ let order_data = (order)=>{
         h3_total.style.justifyContent = "center";
         tr.append(td1,td2,td3,td4);
         document.querySelector("tbody").append(tr);
-
+        
     })
-}
-order_data(order);
+    let amt = JSON.parse(localStorage.getItem("TotalPrice"));
+    document.getElementById("total").innerText = amt;
 
+}
+// order_data(order);
+
+
+let hiddendata=()=>{
+    // order_data(order);
+    document.getElementById("review_info").innerHTML = null;
+    document.getElementById("review").style.display = "none";
+    document.getElementById("review_box").style.display = "block";
+    document.getElementById("review_box").style.display = "flex";
+
+
+    let order_name = document.createElement("p");
+    order_name.innerText = order[0].name;
+
+    let review_div = document.createElement("div");
+    review_div.style.display = "flex";
+    review_div.style.alignItems = "center";
+    review_div.style.gap = "20px";
+    review_div.setAttribute("id","review_div");
+
+    let item = document.createElement("p");
+    item.innerText = order.length +" "+ "Items";
+    let span = document.createElement("span");
+    span.innerText = "Review";
+    span.style.cursor = "pointer";
+    span.style.color = "blue";
+    span.addEventListener("click",()=>{
+        document.getElementById("review").style.display = "block";
+        document.getElementById("review_box").style.display = "none";
+        document.getElementById("Payment").style.display = "none";
+    })
+
+    review_div.append(item,span);
+    document.getElementById("review_info").append(order_name,review_div);
+    document.getElementById("Payment").style.display = "block";
+
+}
+
+let pay = document.getElementById("btn_payment");
+pay.addEventListener("click",hiddendata)
+
+
+
+// let getdiscount = ()=>{
+//     let value = document.getElementById("promo_input").value;
+//     if(value == "masai30"){
+//         console.log(value);
+//         let discount = Math.ceil(amt*(30/100));
+//         console.log(discount);
+//         document.getElementById("total").innerHTML = discount;
+//     }    
+// }
+let promo = document.getElementById("apply");
+promo.addEventListener("click",getdiscount);
 
 document.getElementById("credit").addEventListener("click",()=>{
     document.getElementById("way").style.display = "block";
@@ -151,7 +200,25 @@ document.getElementById("debit").addEventListener("click",()=>{
     document.getElementById("card_type").innerText="Debit Card";
 })
 document.getElementById("CashOn").addEventListener("click",()=>{
-    console.log("Hi");
+    // console.log("Hi");
+    let sum_amt = JSON.parse(localStorage.getItem("TotalPrice"));
+    document.getElementById("amt").innerText = sum_amt;
     document.getElementById("way").style.display = "none";
     document.getElementById("cashon_way").style.display = "block";
 })
+
+document.querySelector("#btn_cashon").addEventListener("click",()=>{
+    alert("Your Order has been Placed Succesfully !");
+})
+let orderPlaced = document.querySelector(".btn_place");
+orderPlaced.addEventListener("click",()=>{
+    let credit = document.getElementById("credit").value;
+    let expiry = document.getElementById("exp_input").value;
+    let CVV = document.getElementById("CVV_input").value;
+   if(credit == "" || expiry == "" || CVV == ""){
+    alert("Please Enter Valid Information");
+   }else{
+    alert("Your Order has been Placed Succesfully !");
+   }   
+})
+btn_cashon

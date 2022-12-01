@@ -36,13 +36,13 @@
 
                 </div>  
             </div>
-            <!-- <div id="review_box"> 
+            <div id="review_box"> 
                 <i id="review_logo" class="fa-solid fa-check"></i>
-                <p id="review_tag">2.DELIVERY ADDRESS</p>
+                <p id="review_tag">3. REVIEW ORDER</p>
                 <div id="review_info">
 
                 </div>  
-            </div> -->
+            </div>
             <div id="address">
                 <div id="ad">2.Delivery Address</div>
                 <div class="details">
@@ -141,33 +141,29 @@
                         <hr id="hr">
                         <div class="pay_info">
                             <label for="">Card No.</label>
-                            <input type="number" placeholder="Card Number">
+                            <input id="card_input" type="text" placeholder="Card Number">
                         </div>
                         <div class="pay_info">
                             <label for="">Expiry Date</label>
-                            <input type="text" placeholder="MM/YY">
+                            <input id="exp_input" type="text" placeholder="MM/YY">
                         </div>
                         <div class="pay_info">
                             <label for="">CVV</label>
-                            <input type="text" placeholder="CVV">
+                            <input id="CVV_input" type="text" placeholder="CVV">
                         </div>
-                        <button id="btn_place">Place  Order</button>
+                        <button class="btn_place">Place  Order</button>
                     </div>
                     <div id="cashon_way">
                         <p>Pay using Cash on Delivery</p>
                         <hr id="hr">
-                        <button id="btn_place">Place  Order</button>
+                        <button id="btn_cashon" class="btn_place">Pay Rs. <span id="amt"></span></button>
                     </div>
                 </div>
             </div>
 
         </div>
-
-        <!-- cart_detail part -->
-        <div id="cart_detail">
-<h5></h5>
-        </div>
     </div>
 </body>
 </html>
 <script src="payment.js"></script>
+<script src="localdata.js"></script>
