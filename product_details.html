@@ -1,0 +1,2853 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://www.snapdeal.com/img/icons/finalFavicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title id="page_title">Product Details</title>
+    <style>
+        /* NAVBAR STYLES START */
+
+
+        body {
+            margin: 0;
+            background-color: #f7f7f7;
+            font-family: 'Open Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* CSS for nav top bar starts */
+
+        .topThinBar {
+            background-color: #c7363d;
+            color: white;
+            font-size: 12px;
+        }
+
+        .topThinBar>div {
+            display: flex;
+            justify-content: space-between;
+            line-height: 5px;
+            max-width: 1402px;
+            margin: auto;
+        }
+
+
+        .topThinBar>div>div:nth-of-type(2) {
+            display: flex;
+            gap: 10px;
+        }
+
+        .topThinBar>div>div:nth-of-type(2)>p {
+            cursor: pointer;
+        }
+
+        nav {
+            background-color: #e53f46;
+            height: 65px;
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0px;
+            display: flex;
+            align-items: center;
+            z-index: 2;
+        }
+
+        nav>div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+            max-width: 1402px;
+            margin: auto;
+            width: 100%;
+            height: 65px;
+        }
+
+        nav>div>div:nth-of-type(1) {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            color: #fff;
+            /* max-width: 1600px; */
+            /* margin: auto; */
+            width: 70%;
+        }
+
+        nav>div>div:nth-of-type(1)>a {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        nav>div>div:nth-of-type(2) {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            color: #fff;
+            /* max-width: 1600px; */
+            /* margin: auto; */
+            width: 25%;
+        }
+
+        .sd-logo {
+            width: 142px;
+            height: 30px;
+            margin-right: 58px;
+        }
+
+        nav>div>div:nth-of-type(2)>p {
+            font-size: 13px;
+        }
+
+        .searchBar {
+            min-width: 400px;
+            width: 100%;
+            max-width: 880px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .searchBar>input {
+            width: 78%;
+            padding: 0 10px 0 32px;
+            height: 37px;
+            border: 0;
+            border-radius: 2px;
+            background-color: rgb(244, 244, 244);
+        }
+
+        .searchBar>button {
+            /* padding: 10px 5%; */
+            width: 16.67%;
+            border: 0;
+            border-radius: 2px;
+            background-color: #333;
+            color: white;
+            font-size: 14px;
+            padding: 0 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .searchBar>button:hover {
+            background-color: #3f3f3f;
+        }
+
+        .cartButton {
+            border-left: 1px solid #ce3840;
+            border-right: 1px solid #ce3840;
+            min-width: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40%;
+            max-width: 150px;
+            /* margin-left: 9%; */
+            height: 100%;
+            font-size: 13px;
+            /* justify-self: flex-end; */
+            cursor: pointer;
+        }
+
+        .cartButton>img {
+            margin-left: 5px;
+        }
+
+        .signinButton {
+            min-width: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40%;
+            max-width: 180px;
+            font-size: 13px;
+            /* margin-left: 9%; */
+            height: 60px;
+            cursor: pointer;
+        }
+
+        .signinButton:hover {
+            background-color: #333;
+            border-radius: 5px;
+        }
+
+        .signinButton>div:nth-of-type(2) {
+            width: 37px;
+            height: 37px;
+            background-color: rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 25px;
+        }
+
+        #nav_signin {
+            position: relative;
+        }
+
+        #nav_signin>ul {
+            background-color: #333;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            list-style: none;
+            position: absolute;
+            left: -70px;
+            top: 34px;
+            width: 500%;
+            padding-top: 20px;
+            padding-left: 0;
+            border-radius: 5px;
+        }
+
+        #nav_signin>ul>li {
+            height: 40px;
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+            margin-bottom: 0;
+            cursor: pointer;
+        }
+
+        #nav_signin>ul>li>img {
+            width: 18px;
+            margin-right: 10px;
+        }
+
+        #nav_signin>ul>li:hover {
+            background-color: rgba(29, 28, 28, 0.356);
+        }
+
+        #nav_signin>ul>hr {
+            width: 99%;
+            border: 1px solid #555;
+
+        }
+
+        #nav_signin>ul>div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        #nav_signin>ul>div>p:nth-of-type(1) {
+            text-align: center;
+            font-size: 11px;
+            color: #b4b4b4;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        #nav_signin>ul>div>p:nth-of-type(2) {
+            text-align: center;
+            margin-top: 0;
+        }
+
+        #nav_signin>ul>div>button {
+            color: #ffffff;
+            background-color: #e40046;
+            font-size: 13px;
+            margin-bottom: 0px;
+            cursor: pointer;
+            height: 40px;
+            border-radius: 3px;
+            border: 0;
+            font-weight: 400;
+            width: 90%;
+            margin-bottom: 10px;
+        }
+
+        /* CSS for top nav bar ends */
+
+        /* CSS for login starts */
+        #overlay {
+            display: none;
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            z-index: 5;
+        }
+
+        #overlay>div:nth-child(1) {
+            background-color: #000000;
+            opacity: 0.7;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        #login-area {
+            width: 726px;
+            height: 360px;
+            border-radius: 5px;
+            margin: 15% 30%;
+            background-color: #edf1f4;
+            ;
+            position: absolute;
+            z-index: 10;
+            background-image: url("https://i2.sdlcdn.com/img/snapdeal/sprite/userAuthSpritev3.png");
+            display: flex;
+            align-items: center;
+            box-shadow: 0 10px 10px rgba(59, 57, 57, 0.472);
+        }
+
+        #login-area>div:nth-of-type(1) {
+            padding: 27px 34px 27px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 360px;
+            box-sizing: border-box;
+        }
+
+        #login-area>div>div {
+            display: flex;
+            align-items: center;
+        }
+
+        #login-area>div:nth-of-type(1)>div {
+            align-items: flex-start;
+        }
+
+        #login-area>div>div>div {
+            width: 200px;
+        }
+
+        #login-area>div>div>div:nth-of-type(1) {
+            width: 65px;
+            height: 63px;
+            overflow: hidden;
+        }
+
+        #login-area>div>div>div>h4 {
+            font-weight: 100;
+            margin: 2px;
+            font-size: 11px;
+        }
+
+        #login-area>div>div>div>p {
+            color: #666;
+            font-size: 11px;
+            margin: 0
+        }
+
+        #login-area>div:nth-of-type(2) {
+            padding: 25px 29px 29px 29px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            width: 340px;
+            height: 405px;
+            box-sizing: border-box;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 10px 10px rgba(59, 57, 57, 0.472);
+            display: none;
+        }
+
+        #login-area>div:nth-of-type(2)>p:nth-of-type(1) {
+            color: #333;
+            font-size: 18px;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        #login-area>div:nth-of-type(2)>p:nth-of-type(2) {
+            color: #333;
+            font-size: 11px;
+            margin: 0 0 20px;
+        }
+
+        #login-area>div:nth-of-type(2)>input {
+            color: #333;
+            font-size: 12px;
+            padding: 9px 10px;
+            border: 1px solid #d2d2d2;
+            height: 20px;
+        }
+
+        #login-area>div:nth-of-type(2)>button:nth-of-type(1) {
+            border: 0;
+            background: transparent;
+            color: #d2d2d2;
+            font-size: 20px;
+            position: absolute;
+            top: 5px;
+            left: 630px;
+            cursor: pointer;
+        }
+
+        #login-area>div:nth-of-type(2)>button:nth-of-type(2) {
+            color: #ffffff;
+            background-color: #e40046;
+            font-size: 13px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            cursor: pointer;
+            height: 40px;
+            border-radius: 3px;
+            border: 0;
+            font-weight: 400;
+        }
+
+        #login-area>div:nth-of-type(2)>p:nth-of-type(3) {
+            margin-top: 10px;
+            margin-bottom: 8px;
+            font-size: 12px;
+            color: #bbbbbb;
+            text-align: center;
+        }
+
+        #login-area>div:nth-of-type(2)>div {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 20px;
+        }
+
+        #login-area>div:nth-of-type(2)>div>button {
+            width: 141px;
+            height: 40px;
+            box-sizing: border-box;
+            border: 0;
+            font-size: 10px;
+            border-radius: 2px;
+            box-shadow: 0 2px 10px rgba(59, 57, 57, 0.239);
+        }
+
+        #login-area>div:nth-of-type(2)>div>button:nth-of-type(1) {
+            background-color: #4267B2;
+            color: #fff;
+        }
+
+        #login-area>div:nth-of-type(2)>div>button:nth-of-type(2) {
+            margin-left: 15px;
+            background-color: #fff;
+
+        }
+
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .social-btn>div {
+            width: 16.69px;
+            height: 16.69px;
+            overflow: hidden;
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        #login-area>div:nth-of-type(3) {
+            padding: 25px 29px 29px 29px;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: space-evenly; */
+            width: 340px;
+            height: 653px;
+            box-sizing: border-box;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 10px 10px rgba(59, 57, 57, 0.472);
+            display: none;
+        }
+
+        #login-area>div:nth-of-type(3)>button:nth-of-type(1) {
+            border: 0;
+            background: transparent;
+            color: #d2d2d2;
+            font-size: 20px;
+            position: absolute;
+            top: -125px;
+            left: 640px;
+            cursor: pointer;
+        }
+
+        #login-area>div:nth-of-type(3)>p:nth-of-type(1),
+        div:nth-of-type(4)>p:nth-of-type(1) {
+            color: #333;
+            font-size: 18px;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        #login-area>div:nth-of-type(3)>p:nth-of-type(2) {
+            color: #333;
+            font-size: 11px;
+            margin: 0 0 20px;
+        }
+
+        #login-area>div:nth-of-type(3)>form {
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+        }
+
+        #login-area>div:nth-of-type(3)>form>input {
+            color: #333;
+            font-size: 12px;
+            padding: 9px 10px;
+            border: 1px solid #d2d2d2;
+            height: 20px;
+        }
+
+        #login-area>div:nth-of-type(3)>form>p:nth-of-type(1) {
+            color: #999;
+            font-size: 10px;
+        }
+
+        #login-area>div:nth-of-type(3)>form>div {
+            display: flex;
+            align-content: center;
+            font-size: 11px;
+            margin-bottom: 0;
+        }
+
+        #login-area>div:nth-of-type(3)>form>div>input {
+            transform: scale(1.5);
+            margin-right: 15px;
+        }
+
+        #login-area>div:nth-of-type(3)>form>button,
+        div:nth-of-type(4)>form>button {
+            color: #ffffff;
+            background-color: #e40046;
+            font-size: 13px;
+            margin-top: 10px;
+            margin-bottom: 0px;
+            cursor: pointer;
+            height: 40px;
+            border-radius: 3px;
+            border: 0;
+            font-weight: 400;
+            width: 100%;
+        }
+
+        #login-area>div:nth-of-type(3)>form>p:nth-of-type(2) {
+            color: #999;
+            font-size: 10px;
+            text-align: center;
+            margin: 0;
+        }
+
+        #login-area>div:nth-of-type(3)>p:nth-of-type(3) {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 12px;
+            color: #bbbbbb;
+            text-align: center;
+        }
+
+        #login-area>div:nth-of-type(3)>div>button {
+            width: 141px;
+            height: 40px;
+            box-sizing: border-box;
+            border: 0;
+            font-size: 10px;
+            border-radius: 2px;
+            box-shadow: 0 2px 10px rgba(59, 57, 57, 0.239);
+        }
+
+        #login-area>div:nth-of-type(3)>div>button:nth-of-type(1) {
+            background-color: #4267B2;
+            color: #fff;
+        }
+
+        #login-area>div:nth-of-type(3)>div>button:nth-of-type(2) {
+            margin-left: 15px;
+            background-color: #fff;
+        }
+
+        #login-area>div:nth-of-type(4) {
+            padding: 20px 29px 50px 29px;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: space-evenly; */
+            width: 340px;
+            height: 424px;
+            box-sizing: border-box;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 10px 10px rgba(59, 57, 57, 0.472);
+            /* display: none; */
+        }
+
+        #login-area>div:nth-of-type(4)>div:nth-of-type(1) {
+            width: 208px;
+            height: 140px;
+            overflow: hidden;
+            align-self: center;
+        }
+
+        #login-area>div:nth-of-type(4)>button:nth-of-type(1) {
+            border: 0;
+            background: transparent;
+            color: #d2d2d2;
+            font-size: 20px;
+            position: absolute;
+            top: -15px;
+            left: 640px;
+            cursor: pointer;
+        }
+
+        #login-area>div:nth-of-type(4)>p:nth-of-type(2) {
+            color: #333;
+            font-size: 12px;
+            margin: 0;
+            text-align: center;
+        }
+
+        #login-area>div:nth-of-type(4)>p:nth-of-type(3) {
+            color: #333;
+            font-size: 13px;
+            margin-top: 5px;
+            text-align: center;
+        }
+
+        #login-area>div:nth-of-type(4)>form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #login-area>div:nth-of-type(4)>form>input {
+            width: 55%;
+            text-align: center;
+            border-radius: 2px;
+            margin-top: 10px;
+            border: 1px solid #e5e5e5;
+            background-color: #fbfbfb;
+            padding: 10px 20px;
+        }
+
+        #login-area>div:nth-of-type(4)>form>p {
+            text-align: center;
+            color: #25A8ED;
+            font-size: 12px;
+            margin-top: 8px;
+            margin-bottom: 15px;
+        }
+
+        /* CSS for login ends */
+
+        /* CSS for cart overlay starts */
+
+        .cart-without-items {
+            max-width: 1160px;
+            min-width: 960px;
+            background-color: white;
+            box-shadow: 0 10px 10px rgba(59, 57, 57, 0.472);
+            position: absolute;
+            z-index: 10;
+            top: 20%;
+            left: 15%;
+            padding: 20px;
+        }
+
+        .cart-without-items>h4 {
+            text-align: center;
+            color: #5a5a59;
+            font-size: 18px;
+        }
+
+        .cart-without-items>button:nth-of-type(1) {
+            border: 0;
+            background: transparent;
+            color: black;
+            font-size: 20px;
+            position: absolute;
+            top: 25px;
+            left: 950px;
+            cursor: pointer;
+        }
+
+        .cart-without-items>p:nth-of-type(1) {
+            text-align: center;
+            color: #344c55;
+            font-size: 16px;
+            margin-top: 40px;
+        }
+
+        .cart-without-items>hr {
+            border: 1px solid #f5f5f5;
+        }
+
+        .cart-without-items>ul {
+            height: 170px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            row-gap: 20px;
+            font-size: 13px;
+            color: #777;
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .cart-without-items>div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cart-without-items>div>button:nth-of-type(1) {
+            color: #ffffff;
+            background-color: #e40046;
+            font-size: 13px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            height: 40px;
+            border-radius: 3px;
+            border: 0;
+            font-weight: 400;
+            width: 280px;
+        }
+
+        .cart-without-items>div>div {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cart-without-items>div>div>p {
+            color: #b2b2b2;
+            font-size: 12px;
+            vertical-align: middle;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cart-with-items>div:nth-of-type(1) {
+            width: 100%;
+            position: absolute;
+            z-index: 10px;
+            bottom: 0;
+        }
+
+        .cart-with-items>div:nth-of-type(1)>div:nth-of-type(1) {
+            display: flex;
+            justify-content: center;
+        }
+
+        .cart-content-area {
+            max-height: 640px;
+            max-width: 1160px;
+            min-width: 960px;
+            background-color: white;
+            box-shadow: 0 10px 10px rgba(59, 57, 57, 0.472);
+            padding: 20px;
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 5px;
+            ;
+        }
+
+        .cart-with-items>div:nth-of-type(1)>div:nth-of-type(2) {
+            width: 100%;
+            height: 135px;
+            background-color: #222;
+            display: flex;
+            justify-content: center;
+            box-sizing: border-box;
+            padding: 20px 0;
+        }
+
+        .cart-pricing-area {
+            max-width: 1160px;
+            min-width: 960px;
+            width: 100%;
+            color: #ddd;
+            font-size: 13px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .cart-pricing-area>div:nth-of-type(2) {
+            width: 290px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .cart-pricing-area>div:nth-of-type(2)>div {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .cart-pricing-area>div:nth-of-type(2)>div p {
+            margin: 5px;
+        }
+
+        #cart-sub-total-price {
+            font-size: 13px;
+            color: white;
+        }
+
+        .cart-pricing-area>div:nth-of-type(2)>div:nth-of-type(2)>p:nth-of-type(2) {
+            color: #60bf79;
+        }
+
+        .cart-pricing-area>div:nth-of-type(3) {
+            display: flex;
+            align-items: center;
+        }
+
+        #cart-sub-total-btn {
+            color: #ffffff;
+            background-color: #e40046;
+            font-size: 13px;
+            cursor: pointer;
+            height: 40px;
+            border-radius: 3px;
+            border: 0;
+            font-weight: 400;
+            width: 240px;
+        }
+
+        .cart-content-area>div:nth-of-type(1) {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .cart-content-area>div:nth-of-type(1)>h4 {
+            font-size: 18px;
+            color: #5a5a59;
+        }
+
+        .cart-content-area>div:nth-of-type(1)>h4>span {
+            font-size: 14px;
+            color: #999;
+        }
+
+        .cart-content-area>div:nth-of-type(1)>button {
+            border: 0;
+            background: transparent;
+            color: black;
+            font-size: 25px;
+            position: relative;
+            top: 0px;
+            left: 0px;
+            cursor: pointer;
+        }
+
+        .cart-content-area>div:nth-of-type(2) {
+            display: flex;
+            justify-content: space-between;
+            height: 47px;
+            font-size: 14px;
+            color: #999;
+            background-color: #f7f7f7;
+            padding: 0px 10px;
+        }
+
+        .cart-content-area>div:nth-of-type(2)>p:nth-of-type(1) {
+            width: 30%;
+        }
+
+        .cart-content-area>div:nth-of-type(2)>p:nth-of-type(2) {
+            width: 10%;
+            text-align: center;
+        }
+
+        .cart-content-area>div:nth-of-type(2)>p:nth-of-type(3) {
+            width: 10%;
+            text-align: center;
+        }
+
+        .cart-content-area>div:nth-of-type(2)>p:nth-of-type(4) {
+            width: 25%;
+        }
+
+        .cart-content-area>div:nth-of-type(2)>p:nth-of-type(5) {
+            width: 10%;
+            text-align: center;
+        }
+
+        #cart-contents {
+            height: 327px;
+            overflow-y: scroll;
+            font-size: 14px;
+            color: #666;
+        }
+
+        #cart-contents>div {
+            display: flex;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgb(211, 209, 209);
+            height: 140px;
+            justify-content: space-between;
+        }
+
+        #cart-contents>div img {
+            width: 100%;
+        }
+
+        #cart-contents>div>div:nth-of-type(1) {
+            display: flex;
+            width: 30%;
+        }
+
+        #cart-contents>div>div:nth-of-type(1)>div:nth-of-type(1) {
+            width: 80px;
+            margin-right: 10px;
+        }
+
+        #cart-contents>div>div:nth-of-type(1)>div:nth-of-type(2)>p {
+            width: 175px;
+            height: 75px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 10 0px;
+        }
+
+        #cart-contents>div>div:nth-of-type(1)>div:nth-of-type(2)>button {
+            background-color: transparent;
+            border: 0;
+            color: #666;
+            cursor: pointer;
+        }
+
+        #cart-contents>div>div:nth-of-type(2) {
+            width: 10%;
+            display: flex;
+            justify-content: center;
+        }
+
+        #cart-contents>div>div:nth-of-type(3) {
+            width: 10%;
+            display: flex;
+            justify-content: center;
+        }
+
+        #cart-contents>div>div:nth-of-type(4) {
+            width: 25%;
+        }
+
+        #cart-contents>div>div:nth-of-type(4)>p {
+            font-size: 13px;
+            margin-top: 10px;
+        }
+
+        #cart-contents>div>div:nth-of-type(4)>p>span {
+            color: #60bf79;
+            margin-left: 5px;
+        }
+
+        #cart-contents>div>div:nth-of-type(5) {
+            width: 10%;
+            display: flex;
+            justify-content: center;
+        }
+
+
+
+        /* CSS for cart overlay ends */
+
+        /* CSS for Go to top btn starts */
+
+        #go_to_top {
+            position: fixed;
+            top: 90%;
+            left: 96%;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background-color: #333;
+            opacity: 0.8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        /* CSS for Go to top btn ends */
+
+
+        /* NAVBAR STYLES END */
+
+        body {
+            background-color: #F5F5F5;
+
+        }
+
+        .container {
+            /* border: 2px solid blue; */
+            max-width: 1402px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0px 0px 11px 0px;
+            background-color: white;
+            box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        #parent {
+            display: inline-block;
+            width: 35%;
+            border-right: 1px solid rgba(187, 185, 185, 0.171);
+            margin-right: 5%;
+        }
+
+        #parent>img {
+
+            height: 500px;
+            max-width: 100%;
+        }
+
+        #parent2 {
+            width: 48%;
+            display: inline-block;
+            vertical-align: top;
+            text-overflow: clip;
+        }
+
+        #parent2>hr {
+            background: rgba(187, 186, 186, 0.418);
+            border: none;
+            height: 1px;
+        }
+
+        .stars-outer {
+            display: inline-block;
+            position: relative;
+            font-family: FontAwesome;
+        }
+
+        .stars-outer::before {
+            content: "\f006 \f006 \f006 \f006 \f006";
+            font-size: 14px;
+        }
+
+        .stars-inner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            /* width: 50%; */
+        }
+
+        .stars-inner::before {
+            content: "\f005 \f005 \f005 \f005 \f005";
+            color: #f8ce0b;
+            font-size: 14px;
+        }
+
+        #offer {
+            border: 1px dashed rgba(128, 128, 128, 0.418);
+            width: 40%;
+            display: inline-grid;
+            margin-left: 30%;
+            text-align: inherit;
+            /* height: 241px; */
+            border-radius: 3px;
+            padding: 5px;
+
+        }
+
+        #offer>p {
+            margin: 0;
+
+        }
+
+
+
+        #offer>div>p {
+            margin: 8px;
+            font-size: 14px;
+        }
+
+
+        #addAndBuy {
+            margin-left: 5%;
+        }
+
+        #addAndBuy>button {
+            font-family: "font-regular";
+            width: 150px;
+            height: 50px;
+            margin: 11px;
+            color: white;
+            border-radius: 4px;
+        }
+
+        #addAndBuy>button:nth-child(1) {
+            background-color: #212121;
+            border: none;
+            cursor: pointer;
+        }
+
+        #addAndBuy>button:nth-child(1):hover {
+            background-color: #323232;
+            border: none;
+        }
+
+        #addAndBuy>button:nth-child(2) {
+            background-color: #e40046;
+            border: none;
+
+        }
+
+        #addAndBuy>button:nth-child(2):hover {
+            background-color: #d90040;
+        }
+
+        #returnDiv>h5,
+        h6 {
+            margin: 2px;
+            font-size: 12px;
+            color: #666666;
+            font-weight: 400;
+        }
+
+        #returnDiv>h5{
+            color: #444;
+        }
+
+        .gray_heading {
+            height: 30px;
+            max-width: 1402px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .gray_heading > p {
+            margin: 0 10px;
+            font-size: 1px;
+            text-align: left;
+            color: gray;
+            max-width: 1100px;
+        }
+
+        .gray_heading > p > span{
+            height: 12x;
+            text-overflow: ellipsis;
+        }
+
+        .highlights {
+            max-width: 1402px;
+            display: flex;
+            width: 100%;
+            margin: 34px auto;
+            background-color: white;
+            padding: 10px 0px;
+            box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.1);
+
+        }
+
+        .highlights>h3 {
+            font-size: 16px;
+            flex-basis: 15%;
+            color: gray;
+            margin: 5px;
+        }
+
+        .details {
+            max-width: 1402px;
+            width: 100%;
+            background-color: white;
+            /* height: 1000px; */
+            margin: 10px auto;
+            box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .accordion {
+            display: flex;
+            flex-direction: column;
+            margin: -33px 0px
+        }
+
+        .accordion>input[name="collapse"] {
+            position: absolute;
+            left: -100vw;
+            /* Behind the scene */
+        }
+
+        .accordion .content {
+            background: #fff;
+            overflow: hidden;
+            display: block;
+            margin: 0 100px;
+            height: 0;
+            transition: 0.5s;
+            gap: 5px;
+
+
+        }
+
+
+        .accordion label {
+            color: rgb(0, 0, 0);
+            cursor: pointer;
+            font-weight: normal;
+            padding: 10px;
+
+
+        }
+
+        .accordion label:hover,
+        .accordion label:focus {
+            border: none;
+        }
+
+        .accordion .handle label:before {
+            font-family: FontAwesome;
+            content: "\f196";
+            display: inline-block;
+            margin-right: 30px;
+            font-size: 1em;
+            line-height: 1px;
+            vertical-align: middle;
+            transition: 0.4s;
+
+        }
+
+        .accordion>input[name="collapse"]:checked~.handle label:before {
+            content: "\f147";
+            transform-origin: center;
+            transition: 0.4s;
+        }
+
+        .accordion>input[name="collapse"]:checked~.content {
+
+            height: 100%;
+            transition: height 0.5s;
+        }
+
+        .horizon {
+            margin: 0 100px;
+            display: flex;
+        }
+
+        .horizon1 {
+            margin: 0 100px;
+            display: flex;
+        }
+
+        .horizon2 {
+            margin: 0 100px;
+            display: flex;
+        }
+
+        .horizon>li {
+            flex-basis: 95%;
+        }
+
+        .horizon1>li {
+            flex-basis: 95%;
+        }
+
+        .horizon2>li {
+            flex-basis: 95%;
+        }
+
+
+
+        /* CSS from product_catalogue starts */
+        #productsDisplay {
+            max-width: 1402px;
+            display: grid;
+            grid-template-columns: 20% 20% 20% 20% 20%;
+            justify-content: space-between;
+            margin: 55px auto;
+        }
+
+        #productsDisplay>div {
+            min-width: 205px;
+            max-width: 242px;
+            box-sizing: border-box;
+            padding: 20px;
+            margin: auto;
+            margin-bottom: 15px;
+            font-size: 13px;
+            color: #999;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+
+        #productsDisplay>div:hover {
+            box-shadow: 0 10px 20px 5px rgba(167, 165, 165, 0.253);
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #productsDisplay>div>img {
+            width: 100%;
+        }
+
+        #productsDisplay>div>div:nth-of-type(1) {
+            height: 36px;
+            /* white-space: nowrap; */
+            overflow: hidden;
+            /* text-overflow: ellipsis; */
+            line-height: 18px;
+        }
+
+        .star-rating {
+            font-size: 15px;
+            letter-spacing: 1px;
+        }
+
+        #loadMore {
+            max-width: 1600px;
+            margin: auto;
+            display: flex;
+            justify-content: center
+        }
+
+        #loadMore>button {
+            padding: 0 10px;
+            border: 0;
+            background-color: #333;
+            color: white;
+            font-size: 14px;
+            padding: 0 10px;
+            margin: 0 auto;
+            width: 340px;
+            height: 40px;
+            border-radius: 4px;
+            box-shadow: 0 0 5px rgba(128, 128, 128, 0.397);
+            margin-top: 10px;
+        }
+
+        #loadMore>button:hover {
+            cursor: pointer;
+        }
+
+        /* CSS from product_catalogue ends */
+
+        /* CSS for footer */
+        #footer-area {
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        #imagecontainer {
+            display: flex;
+            margin: 3%;
+            background: #ffffff;
+            max-width: 1402px;
+        }
+
+        #imagephone {
+            flex-basis: 50%;
+            text-align: center;
+        }
+
+        #downloadapp {
+            flex-basis: 50%;
+            background-image: url("images/leave.png");
+            background-repeat: no-repeat;
+            background-position: right top;
+            vertical-align: top;
+            margin-right: 0px;
+            padding: 80px 0px;
+        }
+
+        #image-head {
+            font-size: 40.4px;
+            font-weight: bold;
+            line-height: 1.33;
+            color: #222222;
+        }
+
+        #image-para {
+            font-size: 17.6px;
+            font-weight: normal;
+            line-height: 1.84;
+            color: #777777;
+        }
+
+        .button {
+            margin-top: 20px;
+            width: 150px;
+            height: 45px;
+            border-radius: 5px;
+            border: 0px;
+        }
+
+        .buttonApp {
+            background: url("images/apple.png");
+            background-size: cover;
+            padding-left: -5px;
+        }
+
+        .buttonPlay {
+            background: url("images/android.png");
+            background-size: cover;
+            margin-left: 10px;
+        }
+
+        #four-flex {
+            background-color: #ffffff;
+            border-top: 1px solid #e2e2e2;
+            border-bottom: 1px solid #e2e2e2;
+            padding: 0% 5%;
+            display: flex;
+            max-width: 1402px;
+            width: 100%;
+        }
+
+        .inside-flex {
+            flex-basis: 23%;
+            border-right: 1px solid #e2e2e2;
+            border-left: 1px solid #e2e2e2;
+            padding: 45px 25px 0px;
+            height: 180px;
+            text-align: center;
+        }
+
+        .inside-flex-fonthead {
+            font-weight: normal;
+            font-size: 17.2px;
+            color: #4e4e4e;
+        }
+
+        .inside-flex-fontbody {
+            font-size: 13.2px;
+            color: #a4a3a3;
+            line-height: 1.7;
+        }
+
+        #footer {
+            border-bottom: 1px solid #e2e2e2;
+            background-color: #ffffff;
+            padding: 3% 5%;
+            display: flex;
+            max-width: 1402px;
+            width: 100%;
+        }
+
+        #footer>div:nth-child(1) {
+            flex-basis: 20%;
+        }
+
+        #footer>div:nth-child(2) {
+            flex-basis: 15%;
+        }
+
+        #footer>div:nth-child(3) {
+            flex-basis: 20%;
+        }
+
+        #footer>div:nth-child(4) {
+            flex-basis: 17%;
+        }
+
+        .subs-box {
+            display: flex;
+        }
+
+        #sub-text {
+            height: 37px;
+            font-size: 13px;
+            color: #999;
+            border: none;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            background-color: #f7f8fa;
+            padding-left: 10px;
+        }
+
+        .footer-fonthead {
+            font-size: 15px;
+            font-weight: 400;
+            color: #25363b;
+        }
+
+        #paymentconnect {
+            display: flex;
+            padding: 10px 5% 20px;
+            background-color: #ffffff;
+            max-width: 1402px;
+            width: 100%;
+            margin: auto;
+        }
+
+        #paymentconnect>div:nth-child(1) {
+            flex-basis: 40%;
+        }
+
+        .paymentconnect-fonthead {
+            font-weight: 300;
+        }
+
+        #connecticons {
+            display: flex;
+        }
+
+        #connecticons>div:nth-child(even) {
+            padding: 0px 25px;
+        }
+
+        #footer-description {
+            padding: 1.5% 5%;
+        }
+
+        .footer-desfont {
+            font-size: 13.5px;
+            color: #777;
+            line-height: 1.7;
+        }
+
+        #aboutsnap {
+            padding-top: 1%;
+            font-size: 18px;
+            font-weight: bold;
+            color: #344c55;
+        }
+
+        #lastfooter {
+            display: flex;
+            background-color: #ffffff;
+            padding: .5% 5%;
+            max-width: 1402px;
+            width: 100%;
+        }
+
+        #lastfooter>div:nth-child(1) {
+            flex-basis: 90%;
+        }
+
+        /* CSS for footer ends */
+        #offerimg {
+            height: 36px;
+            margin: 5px;
+        }
+
+        #discount_off {
+            border: 1px solid rgb(153, 153, 153);
+            padding: 4px;
+            font-size: 10px;
+            margin-left: 4px;
+            color: #999;
+            vertical-align: text-top;
+        }
+
+        #offer>p:nth-of-type(1) {
+            color: #999;
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+
+        #offer>div>p {
+            border-bottom: 1px solid rgba(187, 185, 185, 0.171);
+        }
+
+        .clr-lightGray {
+            color: #999;
+        }
+
+        #buyNowBtn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+
+        #returnDiv {
+            margin-top: 30px;
+            font-weight: 400;
+        }
+
+        #product_name_branch {
+            color: #777;
+        }
+
+        @media (min-width: 1582px) {
+
+            nav>div,
+            .topThinBar>div,
+            .highlights,
+            .details,
+            .container,
+            .gray_heading,
+            #container>div,
+            #paymentconnect,
+            #lastfooter,
+            #four-flex,
+            #footer {
+                max-width: 1600px;
+            }
+
+            #productsDisplay {
+                max-width: 1600px;
+                grid-template-columns: 16.67% 16.67% 16.67% 16.67% 16.67% 16.67%;
+                justify-content: space-between;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR BODY START -->
+
+    <!-- Login Signup Cart Overlay starts -->
+    <div id="overlay">
+        <div onclick="removeOverlay()">
+
+        </div>
+        <div id="login-area">
+            <div>
+                <div>
+                    <div>
+                        <img src="https://i2.sdlcdn.com/img/snapdeal/sprite/userAuthSpritev3.png"
+                            style=" object-fit: cover; object-position: 0px -378px;">
+                    </div>
+                    <div>
+                        <h4>MANAGE YOUR ORDERS</h4>
+                        <p>Track orders, manage cancellation & returns.</p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <img src="https://i2.sdlcdn.com/img/snapdeal/sprite/userAuthSpritev3.png"
+                            style=" object-fit: cover; object-position: -60px -378px;">
+                    </div>
+                    <div>
+                        <h4>SHORTLIST ITEMS YOU LOVE</h4>
+                        <p>Keep items you love on a watchlist.</p>
+                    </div>
+
+                </div>
+                <div>
+                    <div>
+                        <img src="https://i2.sdlcdn.com/img/snapdeal/sprite/userAuthSpritev3.png"
+                            style=" object-fit: cover; object-position: -128px -378px;">
+                    </div>
+                    <div>
+                        <h4>
+                            AWESOME OFFERS UPDATES FOR YOU
+                        </h4>
+                        <p>Be firs to know about great offers and save</p>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Login Panel -->
+            <div>
+                <p>Login/Sign Up On Snapdeal</p>
+                <button onclick="removeOverlay()">X</button>
+                <p>Please provide your Mobile Number or Email to Login/Sign Up on Snapdeal</p>
+                <input type="text" id="login_number_email" placeholder="Mobile Number / Email">
+                <button onclick="validateUser()">CONTINUE</button>
+                <p>or Login using</p>
+                <div>
+                    <button class="social-btn">
+                        <div>
+                            <div style="background-color: white;">
+                                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111393.png"
+                                    style="width: 16px; object-position: 0px 2px;">
+                            </div>
+                        </div>
+                        Facebook
+                    </button>
+                    <button class="social-btn">
+                        <div>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png"
+                                style="width: 16px;">
+                        </div>
+                        Google
+                    </button>
+                </div>
+            </div>
+            <!-- Sign up Panel -->
+            <div>
+                <p>Sign Up</p>
+                <button onclick="removeOverlay()">X</button>
+                <p>Create an account on Snapdeal</p>
+                <form onsubmit="addUser(event)">
+                    <input type="email" id="signup_email" placeholder="Email" required>
+                    <input type="tel" minlength="10" maxlength="10" placeholder="Mobile Number" id="signup_mobile"
+                        required>
+                    <input type="text" id="signup_name" placeholder="Name" required>
+                    <input type="date" id="signup_dob" placeholder="DOB" required>
+                    <input type="password" placeholder="Passwords" id="signup_password"
+                        pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$" required>
+                    <p>Password should have a minimum of 6 character, atleast 1 numeric and 1 alphabet</p>
+                    <div>
+                        <input type="checkbox" checked>
+                        <label>Keep me logged in</label>
+                    </div>
+                    <button>CONTINUE</button>
+                    <p>By registering, I agree to <span style="color: #25a8ed;">Terms & Conditions</span> </p>
+                </form>
+
+                <p>or Login using</p>
+                <div>
+                    <button class="social-btn">
+                        <div style="background-color: white;">
+                            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111393.png"
+                                style="width: 16px; object-position: 0px 2px;">
+                        </div>
+                        Facebook
+                    </button>
+                    <button class="social-btn">
+                        <div>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png"
+                                style="width: 16px;">
+                        </div>
+                        Google
+                    </button>
+                </div>
+            </div>
+            <!-- Otp panel -->
+            <div>
+                <p>Login On Snapdeal</p>
+                <button onclick="removeOverlay()">X</button>
+                <div>
+                    <img src="https://i2.sdlcdn.com/img/snapdeal/sprite/userAuthSpritev3.png"
+                        style=" object-fit: cover; object-position: -245px -198px;">
+                </div>
+                <p>Please enter verification code (OTP) sent to:</p>
+                <p id="verification_email">email</p>
+                <form onsubmit="completeLogin(event)">
+                    <input type="text" minlength="4" maxlength="4" placeholder="Code" id="otp_code" required>
+                    <p>Resend OTP</p>
+                    <button>CONTINUE</button>
+                </form>
+
+
+            </div>
+        </div>
+        <div id="cart-overlay">
+            <div class="cart-without-items">
+                <h4>Shopping Cart is empty!</h4>
+                <button onclick="removeOverlay()">X</button>
+                <p>BROWSE CATEGORIES</p>
+                <hr>
+                <ul>
+                    <li>- Appliances</li>
+                    <li>- Cameras & Accessories</li>
+                    <li>- Gaming</li>
+                    <li>- Men's Clothing</li>
+                    <li>- Tablets & Accessories</li>
+                    <li>- Baby & Kids</li>
+                    <li>- Daily Needs</li>
+                    <li>- Jewellery</li>
+                    <li>- Mobile Accessories</li>
+                    <li>- TV, Audio & Video</li>
+                    <li>- Beauty & Personal Care</li>
+                    <li>- Furnishing</li>
+                    <li>- Kitchenware</li>
+                    <li>- Mobile Phones</li>
+                    <li>- Women's Ethnic Wear</li>
+                    <li>- Books</li>
+                    <li>- Furniture</li>
+                    <li>- Laptops & Computers</li>
+                    <li>- Nutrition & Supplements</li>
+                    <li>- Women's Western Wear</li>
+                </ul>
+                <div>
+                    <button onclick="removeOverlay()">START SHOPPING NOW</button>
+                    <div>
+                        <p><img src="https://img.icons8.com/ios/50/000000/favorites-shield.png"
+                                style="width: 16px; margin-right: 10px;">
+                            Safe and Secure</p>
+                        <p><img src="https://img.icons8.com/ios-glyphs/24/000000/card-security.png"
+                                style="width: 16px; margin-right: 10px; " />
+                            100% Payment Protection, Easy Returns Policy</p>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="cart-with-items">
+                <div>
+                    <div>
+                        <div class="cart-content-area">
+                            <div>
+                                <h4>Shopping Cart <span id="total_items_overlay_cart">(5 Items)</span></h4>
+                                <button onclick="removeOverlay()">X</button>
+                            </div>
+                            <div>
+                                <p>Item Details</p>
+                                <p>Price</p>
+                                <p>Quantity</p>
+                                <p>Showing Availability</p>
+                                <p>Subtotal</p>
+                            </div>
+                            <div id="cart-contents">
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="cart-pricing-area">
+                            <div>
+                                <p>Delivery and payment options can be selected later</p>
+                                <p>
+                                    <img src="https://img.icons8.com/ios/50/ffffff/favorites-shield.png"
+                                        style="width: 16px; margin-right: 10px;">
+                                    Safe and Secure Payments
+                                </p>
+                                <p><img src="https://img.icons8.com/ios-glyphs/30/ffffff/card-security.png"
+                                        style="width: 16px; margin-right: 10px;" />
+                                    100% Payment Protection, Easy Returns Policy</p>
+                            </div>
+                            <div>
+                                <div>
+                                    <p>Sub Total:</p>
+                                    <p id="cart-sub-total-price">price</p>
+                                </div>
+                                <div>
+                                    <p>Delivery Charges:</p>
+                                    <p>FREE</p>
+                                </div>
+                            </div>
+                            <div>
+                                <button id="cart-sub-total-btn" onclick="goToPaymentPage()">PROCEED TO PAY
+                                    Rs.1,169</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+    <!-- Login Signup Cart Overlay Ends -->
+
+    <div class="topThinBar">
+        <div>
+            <div>
+                <p>Brand Waali Quality, Bazaar Waali Deal!</p>
+            </div>
+            <div>
+                <p>Gift Cards</p>
+                <p>Help Center</p>
+                <p>Sell On Snapdeal</p>
+                <img src="https://i4.sdlcdn.com/img/platinum09/downloadappicon2ndsep.png"
+                    style="width: 13px; height:18px; margin: 5px 0 0 5px;">
+                <p>
+
+                    Download App
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <nav>
+        <div>
+            <div>
+                <a href=" ">
+                    <img class="sd-logo" src="https://i3.sdlcdn.com/img/snapdeal/darwin/logo/sdLatestLogo.svg">
+                </a>
+
+                <div class="searchBar">
+                    <input type="text/" placeholder="Search products & brands">
+                    <button class="black-btn"><img src="https://img.icons8.com/material-outlined/24/ffffff/search.png"
+                            style="width: 20px; padding-right: 10px;" />Search</button>
+                </div>
+
+            </div>
+            <div>
+                <div onclick="showCart()" class="cartButton">
+                    <p>Cart</p>
+                    <img src="https://img.icons8.com/windows/32/ffffff/shopping-cart.png">
+                </div>
+                <div class="signinButton">
+                    <div id="nav_signin">
+                        <p>Sign In</p>
+                        <ul>
+                            <li><img src="https://img.icons8.com/material-outlined/24/ffffff/user--v1.png" />Your
+                                Account</li>
+                            <li><img
+                                    src="https://img.icons8.com/external-those-icons-lineal-those-icons/24/ffffff/external-box-shipping-delivery-those-icons-lineal-those-icons-2.png" />
+                                Your Orders</li>
+                            <li><img src="https://img.icons8.com/material-outlined/24/ffffff/like--v1.png" />
+                                Shortlist
+                            </li>
+                            <li><img src="https://img.icons8.com/ios-glyphs/30/ffffff/get-cash.png" />
+                                SD Cash
+                            </li>
+                            <hr>
+                            <div onclick="showLogin()">
+                                <p>If you are a new user</p>
+                                <p>Register</p>
+                                <button>LOGIN</button>
+                            </div>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <img src="https://img.icons8.com/material-rounded/24/ffffff/user.png" style="width: 24px;" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Go to top Button -->
+    <div id="go_to_top" onclick="goToTop()">
+        <img src="https://img.icons8.com/material-rounded/24/ffffff/thick-arrow-pointing-up.png" />
+    </div>
+
+    <!-- NAVBAR BODY END -->
+    <div class="gray_heading">
+        <p style="font-size: 12px; margin: 10px;">Home&nbsp; /&nbsp; Top Categories&nbsp; /&nbsp; Products&nbsp; /&nbsp; <span id="product_name_branch"></span>&nbsp; </p>
+
+    </div>
+    <div class="container">
+    </div>
+    <div class="highlights">
+        <h3>Item Details</h3>
+        <h3>Ratings & Reviews</h3>
+        <h3>Questions & Answers</h3>
+
+    </div>
+    <div class="details">
+        <section class="accordion">
+            <input type="checkbox" name="collapse" id="handle1" checked="checked">
+            <h2 class="handle">
+                <label for="handle1" style="font-size: 17px;">
+                    Highlights
+                </label>
+            </h2>
+
+            <div class="content">
+                <div class="horizon">
+                    <li>segfdrgfdr</li>
+                    <li> fgfdgfd</li>
+                    <li>fdhfhft</li>
+                    <li>fhfhtfgh </li>
+                </div>
+                <div class="horizon1">
+                    <li>dfghfdgdr</li>
+                    <li>dghdfghdf</li>
+                    <li>dfgdfgtf</li>
+                    <li>Sdfhgfhffh</li>
+                </div>
+                <div class="horizon2">
+                    <li>Udfhfhtfh</li>
+                    <li>Bdrgdrgrd </li>
+                    <li>Bdfhdfhftgh</li>
+                    <li>Sdfghfdhgtfh</li>
+                </div>
+
+            </div>
+
+
+
+
+            <input type="checkbox" name="collapse" id="handle2">
+            <h2 class="handle">
+                <label for="handle2" style="font-size: 17px;">
+                    Other Specification
+                </label>
+            </h2>
+            <div class="content">
+                <p>Brand</p>
+                <p>Replacement</p>
+                <p>OVERVIEW</p>
+                <p>Country of Origin or Manufacture or Assembly</p>
+                <p>Manufacturer's Name & Address</p>
+                <p>Packer's Name & Address</p>
+            </div>
+            <input type="checkbox" name="collapse" id="handle3">
+            <h2 class="handle">
+                <label for="handle3" style="font-size: 17px;">
+                    Useful Links
+                </label>
+            </h2>
+            <div class="content">
+                <p style="display: block;">Snapdeal</p>
+                <p style="display: block;">Snapdeal </p>
+            </div>
+            <input type="radio" name="collapse" id="handle4">
+            <h2 class="handle">
+                <label for="handle4" style="font-size: 17px;">
+                    Terms & Conditions
+                </label>
+            </h2>
+            <div class="content">
+
+                <p>The images represent actual product though color of the image and product may slightly differ.
+
+                    For warranty-related claims, please contact the brand service centre.
+
+                    Snapdeal does not select, edit, modify, alter, add or supplement the information, description and
+                    other specifications provided by the Seller.</p>
+            </div>
+        </section>
+    </div>
+
+    <div id="productsDisplay">
+
+    </div>
+
+    <div id="loadMore">
+        <button>Load More</button>
+    </div>
+
+    <!-- Footer Area -->
+
+    <div id="footer-area">
+        <div id="four-flex">
+            <div class="inside-flex">
+                <div class="icons">
+                    <img src="images/lock.png" height="50px">
+                </div>
+                <p class="inside-flex-fonthead">100% SECURE PAYMENTS</p>
+                <p class="inside-flex-fontbody">Moving your card details to a much more secured place</p>
+            </div>
+            <div class="inside-flex">
+                <div class="icons">
+                    <img src="images/secure.png" height="50px">
+                </div>
+                <p class="inside-flex-fonthead">TRUSTPAY</p>
+                <p class="inside-flex-fontbody">100% Payment Protection. Easy Return Policy</p>
+            </div>
+            <div class="inside-flex">
+                <div class="icons">
+                    <img src="images/help.png" height="50px">
+                </div>
+                <p class="inside-flex-fonthead">HELP CENTER</p>
+                <p class="inside-flex-fontbody">Got a question? Look no further. Browse our FAQs or submit your
+                    query
+                    here.</p>
+            </div>
+            <div class="inside-flex">
+                <div class="icons">
+                    <img src="images/shop.png" height="50px">
+                </div>
+                <p class="inside-flex-fonthead">SHOP ON THE GO</p>
+                <p class="inside-flex-fontbody">Download the app and get exciting app only offers at your fingertips
+                </p>
+            </div>
+        </div>
+
+        <div id="footer">
+            <div>
+                <p class="footer-fonthead">POLICY INFO</p>
+                <p class="inside-flex-fontbody">Privay Policy
+                    Terms of Sale
+                    Terms of USe
+                    Report Abuse & Tkedown Policy</p>
+            </div>
+            <div>
+                <p class="footer-fonthead">COMPANY</p>
+                <p class="inside-flex-fontbody">About Us
+                    Core Values
+                    Careers
+                    Blog
+                    Sitemap</p>
+            </div>
+            <div>
+                <p class="footer-fonthead">SNAPDEAL BUSINESS</p>
+                <p class="inside-flex-fontbody">Shopping App
+                    Sell on Snapdeal
+                    Advertise on Snapdeal
+                    Media Enquiries
+                    Be an Affiliate</p>
+            </div>
+            <div>
+                <p class="footer-fonthead">NEED HELP ?</p>
+                <p class="inside-flex-fontbody">FAQ
+                    Contact Us
+                    Online Shopping</p>
+            </div>
+            <div>
+                <p class="footer-fonthead">SUBSCRIBE</p>
+                <div class="subs-box">
+                    <input type="text" id="sub-text" placeholder="Your email address">
+                    <input type="button" id="sub-button" value="SUBSCRIBE">
+                </div>
+                <p class="inside-flex-fontbody">Register now to get updates on promotions and
+                    coupons.Or Download App</p>
+            </div>
+        </div>
+
+        <div id="paymentconnect">
+            <div>
+                <p class="paymentconnect-fonthead">PAYMENT</p>
+                <div>
+                    <img src="images/paymenticons.png" height="35px">
+                </div>
+            </div>
+            <div>
+                <p>CONNECT</p>
+                <div id="connecticons">
+                    <div>
+                        <img src="images/facebook.png" height="30px">
+                    </div>
+                    <div>
+                        <img src="images/twitter.png" height="30px">
+                    </div>
+                    <div>
+                        <img src="images/youtube.png" height="30px">
+                    </div>
+                    <div>
+                        <img src="images/instagram.png" height="30px">
+                    </div>
+                    <div>
+                        <img src="images/pinterest.png" height="30px">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="lastfooter">
+            <div>
+                <p class="footer-desfont">Copyright © 2020, Snapdeal Private Limited (formerly Jasper Infotech Private
+                    Limited). All Rights Reserved</p>
+            </div>
+            <div>
+                <p class="footer-desfont">Made with <span>❤️</span> in India</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    let product = JSON.parse(localStorage.getItem("productdetails"));
+
+
+    let parent = document.createElement("div");
+    parent.id = "parent";
+    document.querySelector(".container").append(parent);
+
+    let product_image1 = document.createElement("img")
+    product_image1.src = product.image1
+
+    
+    document.getElementById("product_name_branch").innerText = product.name;
+
+
+    let parent2 = document.createElement("div");
+    parent2.id = "parent2";
+    document.querySelector(".container").append(parent2);
+
+    let product_name = document.createElement("p")
+    product_name.textContent = product.name
+
+    let starouter = document.createElement("div");
+    starouter.className = "stars-outer"
+
+    let starinner = document.createElement("div");
+    starinner.className = "stars-inner"
+
+    let iconstar = document.createElement("i");
+    iconstar.className = "fa fa-star"
+
+    let rating = product.rating * 20 + "%";
+    starinner.style.width = rating;
+
+    starinner.append(iconstar)
+    starouter.append(starinner)
+
+    let rating_number = document.createElement("span");
+    rating_number.innerText = `(${product.rating})`;
+    rating_number.className = "clr-lightGray";
+    rating_number.style.marginLeft = "10px";
+
+    let hr = document.createElement("hr");
+
+    let pricing = document.createElement("div");
+
+    
+
+    let mrp = document.createElement("span");
+    mrp.innerText = "MRP ";
+    let mrp_amount = document.createElement("span");
+    mrp_amount.innerText = "Rs. " + product.price;
+    mrp_amount.style.textDecoration = "line-through";
+    mrp.append(mrp_amount);
+    mrp.append(" (Inclusive of all taxes) \n");
+    mrp.style.marginRight = "2px";
+    mrp.style.color = "#bbbbbb"
+
+
+    let discountPrice = document.createElement("span");
+    discountPrice.innerText = "\nRs. " + Math.floor(product.price * (1 - (product.discount * 0.01)));
+    discountPrice.style.marginRight = "5px";
+    discountPrice.style.color = "red";
+    discountPrice.style.fontSize = "24px";
+
+    let discount = document.createElement("span");
+    discount.id = "discount_off";
+    discount.style.display = "inline-block";
+    discount.innerText = product.discount + "% OFF" + "\n";
+   
+
+    pricing.style.display = "inline"
+    pricing.style.width = "10%"
+    pricing.append(mrp, discountPrice, discount);
+
+
+
+    let offer = document.createElement("div");
+    let headpara = document.createElement("p")
+    offer.id = "offer";
+    headpara.textContent = "(3) Offers | Applicable on cart";
+   
+
+    let offer1 = document.createElement("div")
+    let offerimg = document.createElement('img')
+    offerimg.id = 'offerimg'
+    offerimg.src = "https://i2.sdlcdn.com/img/newOffersIcon.png"
+    let para1 = document.createElement("p")
+    para1.textContent = "15% Instant Discount Using Rupay Debit & Credit Cards T&C"
+
+
+    offer1.append(offerimg, para1)
+    offer1.style.display = 'flex'
+
+    let offer2 = document.createElement("div")
+    let offerimg2 = document.createElement('img')
+    offerimg2.id = 'offerimg'
+    offerimg2.src = "https://i2.sdlcdn.com/img/newOffersIcon.png"
+
+    let para2 = document.createElement("p")
+
+    para2.textContent = "25% Instant Discount Using IDBI Bank Credit Cards T&C"
+    offer2.append(offerimg2, para2)
+    offer2.style.display = 'flex'
+
+    let offer3 = document.createElement("div")
+    let offerimg3 = document.createElement('img')
+    offerimg3.id = 'offerimg'
+    offerimg3.src = "https://i2.sdlcdn.com/img/newOffersIcon.png"
+    let para3 = document.createElement("p")
+    para3.textContent = "20% Cashback Using Dhani Cards. Min. Order: Rs. 100 T&C"
+    offer3.append(offerimg3, para3)
+    offer3.style.display = 'flex'
+
+
+    offer.append(headpara, offer1, offer2, offer3)
+    offer.style.margin = "0 400px"
+   
+
+    let addAndBuy = document.createElement('div')
+    addAndBuy.id = "addAndBuy";
+    let addtoCartBtn = document.createElement('button')
+    addtoCartBtn.textContent = 'ADD TO CART';
+
+    let buyNowBtn = document.createElement('button');
+    buyNowBtn.id = "buyNowBtn";
+    let logo_box = document.createElement("img");
+    logo_box.src = "images/sdLogoBox.png";
+    logo_box.style.width = "1rem";
+    logo_box.style.marginRight = "5px";
+    buyNowBtn.append(logo_box);
+    buyNowBtn.append('BUY NOW');
+
+    addAndBuy.append(addtoCartBtn, buyNowBtn)
+
+    let returnDiv = document.createElement('div')
+    let head5 = document.createElement('h5');
+    let shield_img = document.createElement("img");
+    shield_img.src = "images/shield-50.png";
+    shield_img.style.width = "0.8rem";
+    head5.append(shield_img);
+    head5.append(" 7 Days Easy Returns");
+    head5.style.fontWeight = "400";
+    head5.style.fontSize = "0.8rem";
+
+
+
+    let head6 = document.createElement('h6');
+    head6.textContent = " Trustpay: 100% Payment Protection. Return or Replacement is applicable for 7 days after delivery.";
+    returnDiv.id = "returnDiv"
+
+    returnDiv.append(head5, head6)
+    parent.append(product_image1)
+    parent2.append(product_name, starouter, rating_number, hr, pricing, offer, addAndBuy, returnDiv)
+
+    addtoCartBtn.onclick = function () {
+        addtoCart(product)
+    }
+
+    buyNowBtn.onclick = function () {
+        buyNow(product)
+    }
+
+    if (localStorage.getItem("mycart") == null) {
+        localStorage.setItem("mycart", JSON.stringify([]))
+    }
+
+    function addtoCart(product) {
+
+        window.location.href = "myCart.html"
+
+        let mycart = JSON.parse(localStorage.getItem("mycart"))
+        mycart.push(product)
+        localStorage.setItem("mycart", JSON.stringify(mycart))
+
+    }
+
+    function buyNow(product) {
+
+        window.location.href = "payment.html"
+
+    }
+
+    // console.log(product)
+</script>
+
+<script>
+
+    //*****code for login and signup starts*****
+
+    function showLogin() {
+        let overlay = document.getElementById("overlay");
+        overlay.style.display = "block";
+        displayLoginAttribute(1);
+        document.getElementById("login-area").style.display = "flex";
+        document.getElementById("cart-overlay").style.display = "none";
+    }
+
+    function removeOverlay() {
+        let overlay = document.getElementById("overlay");
+        overlay.style.display = "none";
+        document.getElementById("otp_code").value = null;
+        document.getElementById("signup_email").value = null;
+        document.getElementById("signup_mobile").value = null;
+        document.getElementById("signup_name").value = null;
+        document.getElementById("signup_dob").value = null;
+        document.getElementById("signup_password").value = null;
+
+        // window.onscroll = function(){};
+    }
+
+    let user = null; //User is defined here so that every function can access it.
+
+    if (localStorage.getItem("logged_user") === null) {
+        localStorage.setItem("logged_user", "");
+    }
+
+
+    if (localStorage.getItem("logged_user") != "") {
+        let logged_user = JSON.parse(localStorage.getItem("logged_user"));
+        user = logged_user;
+        // console.log(user);
+        completeLogin();
+    }
+
+    function validateUser() {
+        if (localStorage.getItem("users") === null) {
+            localStorage.setItem("users", JSON.stringify([]));
+        };
+        let users = JSON.parse(localStorage.getItem("users"));
+        let entry = document.getElementById("login_number_email");
+
+        if (entry.value === "") {
+            alert("Please enter a valid mobile number or email");
+            return;
+        }
+
+        let user_found = false;
+        users.forEach(e => {
+            if (e.number == entry.value || e.email == entry.value) {
+                user = e;
+                user_found = true;
+            }
+        })
+
+        //if user not found then showing signup area instead of login.
+        if (!user_found) {
+            displayLoginAttribute(2);
+        } else {
+            displayLoginAttribute(3);
+            setEmailForOtp(user.email);
+        }
+        entry.value = "";
+
+    }
+
+    function completeLogin(e) {
+        if (e != undefined) {
+            e.preventDefault();
+        }
+        // alert("Logged in successfully.");
+        let nav_login = document.querySelector("#nav_signin > p:nth-of-type(1)");
+        // console.log(user);
+        let first_name = user.name.split(" ");
+        nav_login.textContent = first_name[0];
+        document.querySelector("#nav_signin > ul").style.left = "-60px";
+        removeOverlay();
+        localStorage.setItem("logged_user", JSON.stringify(user));
+        let login_btn = document.querySelector("#nav_signin > ul > div > button");
+        login_btn.style.backgroundColor = "#555";
+        login_btn.textContent = "LOGOUT";
+        let login_top_txt = document.querySelectorAll("#nav_signin > ul > div > p");
+        login_top_txt[0].style.display = "none";
+        login_top_txt[1].style.display = "none";
+        document.querySelector("#nav_signin > ul > div").onclick = function () {
+            logout();
+        }
+
+    }
+
+    function logout() {
+        let login_btn = document.querySelector("#nav_signin > ul > div > button");
+        login_btn.style.backgroundColor = "#e40046";
+        login_btn.textContent = "LOGIN";
+        let login_top_txt = document.querySelectorAll("#nav_signin > ul > div > p");
+        login_top_txt[0].style.display = "block";
+        login_top_txt[1].style.display = "block";
+        localStorage.setItem("logged_user", "");
+        document.querySelector("#nav_signin > ul > div").onclick = function () {
+            showLogin();
+        }
+        document.querySelector("#nav_signin > p:nth-of-type(1)").textContent = "Sign in";
+        document.querySelector("#nav_signin > ul").style.left = "-70px";
+    }
+
+    //This function will take number and change display attribute of login and signup.
+    function displayLoginAttribute(b) {
+        let login = document.querySelector("#login-area>div:nth-of-type(2)");
+        let signup = document.querySelector("#login-area>div:nth-of-type(3)");
+        let otp = document.querySelector("#login-area>div:nth-of-type(4)");
+
+
+        if (b == 1) {
+            login.style.display = "flex";
+            signup.style.display = "none";
+            otp.style.display = "none";
+        } else if (b == 2) {
+            login.style.display = "none";
+            signup.style.display = "flex";
+            otp.style.display = "none";
+
+        } else if (b == 3) {
+            login.style.display = "none";
+            signup.style.display = "none";
+            otp.style.display = "flex";
+        }
+
+    }
+
+    function setEmailForOtp(e) {
+        let email = document.getElementById("verification_email");
+        email.textContent = e;
+    }
+
+    function addUser(e) {
+        e.preventDefault();
+
+        let email = document.getElementById("signup_email");
+        let number = document.getElementById("signup_mobile");
+        let name = document.getElementById("signup_name");
+        let dob = document.getElementById("signup_dob");
+        let password = document.getElementById("signup_password");
+
+        if (localStorage.getItem("users") === null) {
+            localStorage.setItem("users", JSON.stringify([]));
+        };
+
+        let users = JSON.parse(localStorage.getItem("users"));
+
+        let obj = {
+            email: email.value,
+            number: number.value,
+            name: name.value,
+            dob: dob.value,
+            password: password.value
+        }
+
+        // console.log(users);
+
+        let user_exists = false;
+
+        users.forEach(e => {
+            if (e.email == email.value || e.number == number.value) {
+                alert("User already exists");
+                user_exists = true;
+            };
+        });
+
+        if (!user_exists) {
+            users.push(obj);
+            localStorage.setItem("users", JSON.stringify(users));
+            removeOverlay();
+        }
+    }
+
+    //code for login and signup stops
+
+    //Code for overlay cart starts
+    if (localStorage.getItem(" ") === null) {
+        localStorage.setItem(" ", JSON.stringify([]));
+    }
+
+    function showCart() {
+        let overlay = document.getElementById("overlay");
+        overlay.style.display = "block";
+        document.getElementById("login-area").style.display = "none";
+        document.getElementById("cart-overlay").style.display = "block";
+        if (JSON.parse(localStorage.getItem
+            (" ")).length == 0) {
+            document.querySelector(".cart-without-items").style.display = "block";
+            document.querySelector(".cart-with-items").style.display = "none";
+        } else {
+            document.querySelector(".cart-without-items").style.display = "none";
+            document.querySelector(".cart-with-items").style.display = "block";
+            fillCartContent();
+        }
+    }
+
+    function fillCartContent() {
+        let cart_contents = document.getElementById("cart-contents");
+        let cart_items = JSON.parse(localStorage.getItem("mycart"));
+        let items = {};
+        cart_items.forEach(e => {
+            if (items[e.name] == undefined) {
+                items[e.name] = [1, e];
+            } else {
+                items[e.name][0]++;
+            }
+        })
+        total_items_overlay_cart.innerText = "(" + cart_items.length + " Items)"
+        // console.log(items);
+        cart_contents.innerHTML = "";
+        let sum = 0;
+        for (let k in items) {
+
+            let data = items[k][1];
+            let container = document.createElement("div");
+
+            sum += Math.floor((data.price * (1 - (data.discount * 0.01))) * (items[k][0]));
+
+            let div1 = document.createElement("div");
+            let div1_0 = document.createElement("div");
+            let img = document.createElement("img");
+            img.src = data.image1;
+            div1_0.append(img);
+            let div1_1 = document.createElement("div");
+            let name = document.createElement("p");
+            name.textContent = data.name;
+            let remove = document.createElement("button");
+            remove.textContent = "X REMOVE";
+
+            //try to add remove item from the cart
+            remove.onclick = function () {
+                removeItem(k);
+            }
+
+            div1_1.append(name, remove);
+            div1.append(div1_0, div1_1);
+
+            let div2 = document.createElement("div");
+            let price = document.createElement("p");
+            price.textContent = "Rs." + Math.floor(data.price * (1 - (data.discount * 0.01)));
+            div2.append(price);
+
+            let div3 = document.createElement("div");
+            let quantity = document.createElement("p");
+            quantity.textContent = items[k][0];
+            div3.append(quantity);
+
+            let div4 = document.createElement("div");
+            let availability = document.createElement("p");
+            availability.textContent = "Standard Delivery By 08 Oct";
+            let free = document.createElement("span");
+            free.textContent = "FREE";
+            availability.append(free);
+            div4.append(availability);
+
+            let div5 = document.createElement("div");
+            let sub = document.createElement("p");
+            sub.textContent = "Rs." + Math.floor((data.price * (1 - (data.discount * 0.01))) * (items[k][0]));
+            div5.append(sub);
+            container.append(div1, div2, div3, div4, div5)
+            cart_contents.append(container);
+        }
+
+        document.getElementById("cart-sub-total-price").textContent = "Rs." + sum;
+        document.getElementById("cart-sub-total-btn").textContent = "PROCEED TO PAY Rs. " + sum;
+
+    }
+
+    function removeItem(r) {
+        let cart_items = JSON.parse(localStorage.getItem("mycart"));
+        let new_cart_items = [];
+        let found = false;
+        for (let i = 0; i < cart_items.length; i++) {
+            if (cart_items[i].name == r && !found) {
+                found = true;
+            } else {
+                new_cart_items.push(cart_items[i]);
+            }
+        }
+        // console.log(new_cart_items);
+        localStorage.setItem("mycart", JSON.stringify(new_cart_items));
+        if (new_cart_items.length == 0) {
+            showCart();
+        } else {
+            fillCartContent();
+        }
+    }
+
+    function goToPaymentPage() {
+        window.location.href = "  ";
+    }
+
+
+    //Code for overlay cart ends
+
+    //Code for signin dropdown starts
+    let signin_btn = document.querySelector(".signinButton")
+    signin_btn.onmouseenter = function () { showSigninDropDown(1) };
+    signin_btn.onmouseleave = function () { showSigninDropDown(2) };
+
+    function showSigninDropDown(b) {
+        let menu = document.querySelector("#nav_signin > ul");
+        if (b == 1) {
+            menu.style.display = "flex";
+        } else {
+            menu.style.display = "none";
+        }
+    }
+    //Code for signin dropdown ends
+
+
+
+    //Code for going to top of page
+    function goToTop() {
+        window.scrollTo(0, 0);
+    }
+
+
+    //Code to set title of page
+    function setPageTitle() {
+        let product = JSON.parse(localStorage.getItem("productdetails"));
+        let title = document.getElementById("page_title");
+        page_title.textContent = product.name;
+    }
+    setPageTitle();
+
+
+
+    //Product catalogue code
+    //Code from product_catalogue starts
+    let products = [
+    {
+            name: "Levis - Blue Cotton Regular Fit Men's T-Shirt ( Pack of 1 )",
+            image1: "https://n3.sdlcdn.com/imgs/k/e/h/Dillinger-100-Percent-Cotton-Regular-SDL126908079-1-cf78e.jpg",
+            image2: "https://n3.sdlcdn.com/imgs/k/e/h/Dillinger-100-Percent-Cotton-Regular-SDL126908079-1-cf78e.jpg",
+            price: 649,
+            rating: 4.4,
+            discount: 39,
+            discription: "Levis Mens T-Shirts",
+           
+        },
+        {
+            name: "Aeropostale- Cotton Shirt",
+            image1: "https://n2.sdlcdn.com/imgs/g/t/8/Duke-Red-Slim-Fit-Shirt-SDL066261281-1-dde65.jpg",
+            image2: "https://n2.sdlcdn.com/imgs/g/t/8/Duke-Red-Slim-Fit-Shirt-SDL066261281-1-dde65.jpg",
+            price: 750,
+            rating: 4.4,
+            discount: 24,
+            discription: "Cotton Shirt",
+           
+
+        },
+        {
+            name: "Wrangler -Stylish Mens Shirt",
+            image1: "https://n2.sdlcdn.com/imgs/k/h/c/Campus-Sutra-White-Cotton-Regular-SDL487720632-1-b742a.jpg",
+            image2: "https://n2.sdlcdn.com/imgs/k/h/c/Campus-Sutra-White-Cotton-Regular-SDL487720632-1-b742a.jpg",
+            price: 559,
+            rating: 3.7,
+            discount: 40,
+            discription: "Stylish Mens Shirt",
+           
+        },
+        {
+            name: "Lee Cooper -Slim Fit",
+            image1: "https://n4.sdlcdn.com/imgs/k/h/c/Campus-Sutra-Blue-Cotton-Regular-SDL401410273-1-05089.jpg",
+            image2: "https://n4.sdlcdn.com/imgs/k/h/c/Campus-Sutra-Blue-Cotton-Regular-SDL401410273-1-05089.jpg",
+            price: 459,
+            rating: 4.4,
+            discount: 20,
+            discription: "Slim fit ",
+          
+
+        },
+        {
+            name: "Roadster Casuals ",
+            image1: "https://n2.sdlcdn.com/imgs/k/a/z/Aish-N-Ridh-100-Percent-SDL436758148-1-bcd9f.jpeg",
+            image2: "https://n2.sdlcdn.com/imgs/k/a/z/Aish-N-Ridh-100-Percent-SDL436758148-1-bcd9f.jpeg",
+            price: 679,
+            rating: 4.5,
+            discount: 6,
+            discription: "Roadster ",
+          
+
+        },
+        {
+            name: "Parx",
+            image1: "https://n4.sdlcdn.com/imgs/g/n/d/Duke-Peach-Slim-Fit-Shirt-SDL050335943-1-b7285.jpg",
+            image2: "https://n4.sdlcdn.com/imgs/g/n/d/Duke-Peach-Slim-Fit-Shirt-SDL050335943-1-b7285.jpg",
+            price: 495,
+            rating: 4.2,
+            discount: 12,
+            discription: "Parx- peach color fit",
+           
+
+        },
+
+        {
+            name: "Mufti",
+            image1: "https://n2.sdlcdn.com/imgs/k/j/s/Campus-Sutra-Black-Cotton-Regular-SDL757352566-1-782f4.jpg",
+            image2: "https://n2.sdlcdn.com/imgs/k/j/s/Campus-Sutra-Black-Cotton-Regular-SDL757352566-1-782f4.jpg",
+            price: 1050,
+            rating: 3.4,
+            discount: 22,
+            discription: "Mufti Checks Shirt",
+           
+        },
+        {
+            name: "H&M Summer Wear",
+            image1: "https://n2.sdlcdn.com/imgs/j/y/j/Aish-N-Ridh-100-Percent-SDL277523895-1-d2b06.jpg",
+            image2: "https://n2.sdlcdn.com/imgs/j/y/j/Aish-N-Ridh-100-Percent-SDL277523895-1-d2b06.jpg",
+            price: 1076,
+            rating: 4.3,
+            discount: 42,
+            discription: "Summer Wear",
+         
+        },
+        {
+            name: "Reebok",
+            image1: "https://n1.sdlcdn.com/imgs/f/1/9/Duke-Green-Casual-Regular-Fit-SDL549402279-1-9f9ce.jpg",
+            image2: "https://n1.sdlcdn.com/imgs/f/1/9/Duke-Green-Casual-Regular-Fit-SDL549402279-1-9f9ce.jpg",
+            price: 1048,
+            rating: 4.1,
+            discount: 32,
+            discription: "Slim Fit Reebok",
+           
+        }
+       
+    ];
+
+    let load_btn = document.getElementById("loadMore");
+    load_btn.onclick = function () {
+        showProducts(products);
+    }
+
+    let productsDisplay = document.getElementById("productsDisplay");
+
+    let counter = 0;
+
+
+    //This is only for home page.
+    function showProducts(p) {
+        let temp = 15;
+        while (temp > 0) {
+            if (counter >= products.length) {
+                counter = 0;
+            }
+            let div = document.createElement("div");
+            let img = document.createElement("img");
+            img.src = p[counter].image1;
+            let name = document.createElement("div");//
+            name.innerText = p[counter].name;
+           
+
+            let star = document.createElement("div");
+            star.innerText = getStar(p[counter].rating);
+            star.style.color = "#ffc544";
+            star.className = "star-rating";
+           
+
+            let pricing = document.createElement("div");
+
+            let mrp = document.createElement("span");
+            mrp.innerText = "Rs " + p[counter].price + " ";
+            mrp.style.textDecoration = "line-through";
+            mrp.style.marginRight = "2px";
+
+            let discountPrice = document.createElement("span");
+            discountPrice.innerText = "Rs " + Math.floor(p[counter].price * (1 - (p[counter].discount * 0.01)));
+            discountPrice.style.marginRight = "5px";
+            discountPrice.style.color = "black";
+
+            let discount = document.createElement("div");
+            discount.style.display = "inline-block";
+            discount.innerText = p[counter].discount + "% OFF";
+            discount.style.border = "1px solid #999";
+            discount.style.boxSizing = "border-box";
+            discount.style.padding = "4px";
+            discount.style.fontSize = "10px";
+            discount.style.marginLeft = "4px";
+
+            pricing.append(mrp, discountPrice, discount);
+            div.append(img, name, star, pricing);
+            productsDisplay.append(div);
+
+            let n = counter;
+            div.onclick = function () {
+                details(p[n]);
+            }
+
+            temp--;
+            counter++;
+        }
+
+
+    }
+
+    showProducts(products);
+
+    function getStar(r) {
+        switch (Math.floor(r)) {
+            case 0:
+                return "☆☆☆☆☆";
+            case 1:
+                return "★☆☆☆☆";
+            case 2:
+                return "★★☆☆☆";
+            case 3:
+                return "★★★☆☆";
+            case 4:
+                return "★★★★☆";
+            case 5:
+                return "★★★★★";
+        }
+    }
+
+    function details(p) {
+        // console.log(p)
+
+
+        localStorage.setItem("productdetails", JSON.stringify(p))
+
+        window.location.href = "product_details.html"
+
+    }
+
+    //Code from product_catalogue ends
+
+</script>
