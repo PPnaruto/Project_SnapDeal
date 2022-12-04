@@ -1,3 +1,6 @@
+// let login = JSON.parse(localStorage.getItem(""));
+// document.getElementById("login_id").innerText = login;
+
 let address = ()=>{
     document.getElementById("ad_info").innerHTML = null;
     let name = document.getElementById("name").value;
@@ -42,19 +45,21 @@ let amt = JSON.parse(localStorage.getItem("TotalPrice"));
 
 let total_pay = ()=>{
     let sum = order.reduce((acc,ele)=>{
-        return (ele.actual_price*ele.qty) + acc;
+        return (ele.discount_price*ele.qty) + acc;
     },0);
     localStorage.setItem("TotalPrice",JSON.stringify(sum));
     // console.log(sum);
-    // document.getElementById("total").innerText = sum;
+    document.getElementById("total").innerText = sum;
 }
 
 let getdiscount = ()=>{
     let value = document.getElementById("promo_input").value;
     if(value == "masai30"){
         console.log(value);
-        let discount = Math.ceil(amt*(30/100));
+        let amt_price = JSON.parse(localStorage.getItem("TotalPrice"));
+        let discount = Math.ceil(amt_price*(30/100));
         console.log(discount);
+        localStorage.setItem("TotalPrice",JSON.stringify(discount));
         document.getElementById("total").innerHTML = discount;
     }    
 }
@@ -77,7 +82,7 @@ let order_data = (order)=>{
         div.setAttribute("id","div_order");
         let img_div = document.createElement("div");
         let img = document.createElement("img");
-        img.src = ele.img;
+        img.src = ele.image;
         img.setAttribute("id","order_img");
         img_div.append(img);
 
@@ -122,7 +127,7 @@ let order_data = (order)=>{
         let td4 = document.createElement("td");
         // let div_total = document.createElement("div");
         let h3_total = document.createElement("h3");
-        h3_total.innerText = ele.actual_price;
+        h3_total.innerText = (ele.qty*ele.discount_price);
         td4.append(h3_total);
         h3_total.style.display = "flex";
         h3_total.style.justifyContent = "center";
@@ -130,15 +135,13 @@ let order_data = (order)=>{
         document.querySelector("tbody").append(tr);
         
     })
-    let amt = JSON.parse(localStorage.getItem("TotalPrice"));
-    document.getElementById("total").innerText = amt;
+    total_pay()
+    // let amt = JSON.parse(localStorage.getItem("TotalPrice"));
+    // document.getElementById("total").innerText = amt;
 
 }
-// order_data(order);
-
 
 let hiddendata=()=>{
-    // order_data(order);
     document.getElementById("review_info").innerHTML = null;
     document.getElementById("review").style.display = "none";
     document.getElementById("review_box").style.display = "block";
