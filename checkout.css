@@ -137,6 +137,7 @@ body
 }
 #footer-1 > div
 {
+    height: 225px;
     border: 1px solid #999999;
     padding: 20px 20px 15px 20px;
 }
@@ -205,12 +206,16 @@ body
 }
 #footer-3 > div
 {
+    
     width: 50%;
 }
 #credit-card i
 {
     font-size: 35px;
     padding:20px 5px;
+}
+#credit-card>img{
+    width: 60%;
 }
 #social-site img
 {
@@ -295,9 +300,16 @@ table th,td
 {
     text-align: left;
 }
+#tr{
+    /* border: 2px solid red; */
+    /* display: flex; */
+    margin-top: 15px; 
+}
 #td-1
 {
+    margin-top: 10px; 
     display: flex;
+    align-items: center;
 }
 td
 {
@@ -305,6 +317,24 @@ td
     line-height: 16px;
     font-weight: 400;
     color: #666666;    
+}
+#remove{
+    margin-top: 30px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.qtybox{
+    display: flex;
+    border: 1px solid gray;
+    color: #5c5a5a;
+    height: 27px;
+    width: 100px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+}
+#minus,#plus{
+    cursor: pointer;
 }
 .view-c-f
 {

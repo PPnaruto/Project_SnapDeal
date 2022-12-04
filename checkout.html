@@ -67,7 +67,7 @@
       <div class="modal-content">
             <section id="view-cart" class="view-c">
                 <div id="shopping-cart">
-                    <div id="shop">Shopping Cart(1 Item)</div>
+                    <div id="shop">Shopping Cart( <span class="total_item">1</span> Item)</div>
                     <div><i class="fa-solid fa-xmark" id="close-popup" type="button" class="btn btn-secondary" data-bs-dismiss="modal"></i></div>
                 </div>
                 <table>
@@ -78,20 +78,7 @@
                         <th>Subtotal</th>
                     </thead>
                     <tbody id="table-body">
-                        <!-- <tr>
-                            <td id="td-1"> -->
-                                <!-- <img id="img1" src="https://n1.sdlcdn.com/imgs/k/l/n/130x152/FITMonkey-Navy-Men-s-Sneakers-SDL074875093-1-68190.jpg" alt=""> -->
-                                <!-- <p>FITMonkey - Navy Men's Sneakers</p></td> -->
-                            <!-- <td id="price">487</td>   
-                            <td> -->
-                                <!-- <select name="qntty" id="qntty" onchange="qntty()">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                            </select> -->
-                        <!-- </td> 
-                            <td id="total-price">100</td>
-                        </tr> -->
+                        <!-- Append your cart items here -->
                     </tbody>
                 </table>
             </section>
@@ -106,11 +93,11 @@
                     <p>Delivery Charges:</p>
                 </div>
                 <div>
-                    <p id="pr">Rs. 5,635</p>
+                    <p id="pr">-</p>
                     <p>FREE</p>
                 </div>
                 <div>
-                    <button id="price-button">PROCEED TO PAY Rs. 5635</button>
+                    <button id="price-button">PROCEED TO PAY Rs. <span id="overall_price"> </span></button>
                 </div>
             </section>
       </div>
@@ -144,13 +131,13 @@
             </div>
             <div id="discription-Price">
                 <div>
-                    <div id="your-order">Your Order 1 item</div>
+                    <div id="your-order">Your Order <span id="total_item1">1</span> item</div>
                     <div id="pay">You Pay Rs.<span id="rupee2"></span></div>
                     <div id="tax">(Including delivery and other charges. View Cart for details)</div>
                 </div>
                 <div id="proceedtocheckout">
                     <button id="checkout-button">PROCEED TO CHECKOUT</button>
-                    <button id="cart-button" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="cartdata()">VIEW CART</button>
+                    <button id="cart-button" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" >VIEW CART</button>
                 </div>
             </div>
         </div>
@@ -159,22 +146,26 @@
     <footer>
         <section id="footer-1">
             <div>
-                <i class="fa-solid fa-vault"></i>
+                <img src="https://snapdeal-clone.netlify.app/images/lock.png" alt="">
+                <!-- <i class="fa-solid fa-vault"></i> -->
                 <p>100% SECURE PAYMENTS</p>
                 <p>Moving your card details to a much more secured place</p>
             </div>
             <div>
-                <i class="fa-solid fa-shield-cat"></i>
+                <img src="https://snapdeal-clone.netlify.app/images/secure.png" alt="">
+                <!-- <i class="fa-solid fa-shield-cat"></i> -->
                 <p>TRUSTPAY</p>
                 <p>100% Payment Protection. Easy Return Policy &nbsp;&nbsp;&nbsp;&nbsp;</p>
             </div>
             <div>
-                <i class="fa-solid fa-message"></i>
+                <img src="https://snapdeal-clone.netlify.app/images/help.png" alt="">
+                <!-- <i class="fa-solid fa-message"></i> -->
                 <p>HELP CENTER</p>
                 <p>Got a question? Look no further. Browse our FAQs or submit your query here.</p>
             </div>
             <div>
-                <i class="fa-solid fa-mobile"></i>
+                <img src="https://snapdeal-clone.netlify.app/images/shop.png" alt="">
+                <!-- <i class="fa-solid fa-mobile"></i> -->
                 <p>SHOP ON THE GO</p>
                 <p>Download the app and get exciting app only offers at your fingertips</p>
             </div>
@@ -221,12 +212,13 @@
             <div>
                 <div>PAYMENT</div>                
                 <div id="credit-card">
-                    <i class="fa-brands fa-cc-amazon-pay"></i>
-                    <i class="fa-brands fa-cc-apple-pay"></i>
+                    <img src="https://snapdeal-clone.netlify.app/images/paymenticons.png" alt="">
+                    <!-- <i class="fa-brands fa-cc-amazon-pay"></i> -->
+                    <!-- <i class="fa-brands fa-cc-apple-pay"></i>
                     <i class="fa-brands fa-cc-paypal"></i>
                     <i class="fa-brands fa-cc-visa"></i>
                     <i class="fa-brands fa-cc-diners-club"></i>
-                    <i class="fa-brands fa-cc-amex"></i>
+                    <i class="fa-brands fa-cc-amex"></i> -->
                 </div>
             </div>
 
