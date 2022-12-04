@@ -1425,6 +1425,7 @@
         div.addEventListener("click",()=>{
             console.log("Hi");
             localStorage.setItem("single_product",JSON.stringify(ele));
+            window.location.href = "./single_product_details_page.html";
         })
         let img = document.createElement("img");
         img.src = ele.image;
