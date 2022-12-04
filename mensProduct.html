@@ -1,0 +1,1685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's Products</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+         /* CSS for nav top bar starts */
+
+         .topThinBar {
+            background-color: #c7363d;
+            color: white;
+            font-size: 12px;
+        }
+
+        .topThinBar>div {
+            display: flex;
+            justify-content: space-between;
+            line-height: 5px;
+            max-width: 1402px;
+            margin: auto;
+        }
+
+
+        .topThinBar>div>div:nth-of-type(2) {
+            display: flex;
+            gap: 10px;
+        }
+
+        .topThinBar>div>div:nth-of-type(2)>p {
+            cursor: pointer;
+        }
+
+        nav {
+            background-color: #e53f46;
+            height: 65px;
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0px;
+            display: flex;
+            align-items: center;
+            z-index: 2;
+        }
+
+        nav>div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+            max-width: 1402px;
+            margin: auto;
+            width: 100%;
+            height: 65px;
+        }
+
+        nav>div>div:nth-of-type(1) {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            color: #fff;
+            /* max-width: 1600px; */
+            /* margin: auto; */
+            width: 70%;
+        }
+
+        nav>div>div:nth-of-type(1)>a {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        nav>div>div:nth-of-type(2) {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            color: #fff;
+            /* max-width: 1600px; */
+            /* margin: auto; */
+            width: 25%;
+        }
+
+        .sd-logo {
+            width: 142px;
+            height: 30px;
+            margin-right: 58px;
+        }
+
+        nav>div>div:nth-of-type(2)>p {
+            font-size: 13px;
+        }
+
+        .searchBar {
+            min-width: 400px;
+            width: 100%;
+            max-width: 880px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .searchBar>input {
+            width: 78%;
+            padding: 0 10px 0 32px;
+            height: 37px;
+            border: 0;
+            border-radius: 2px;
+            background-color: rgb(244, 244, 244);
+        }
+
+        .searchBar>button {
+            /* padding: 10px 5%; */
+            width: 16.67%;
+            border: 0;
+            border-radius: 2px;
+            background-color: #333;
+            color: white;
+            font-size: 14px;
+            padding: 0 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .searchBar>button:hover {
+            background-color: #3f3f3f;
+        }
+
+        .cartButton {
+            border-left: 1px solid #ce3840;
+            border-right: 1px solid #ce3840;
+            min-width: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40%;
+            max-width: 150px;
+            /* margin-left: 9%; */
+            height: 100%;
+            font-size: 13px;
+            /* justify-self: flex-end; */
+            cursor: pointer;
+        }
+
+        .cartButton>img {
+            margin-left: 5px;
+        }
+
+        .signinButton {
+            min-width: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40%;
+            max-width: 180px;
+            font-size: 13px;
+            /* margin-left: 9%; */
+            height: 60px;
+            cursor: pointer;
+        }
+
+        .signinButton:hover {
+            background-color: #333;
+            border-radius: 5px;
+        }
+
+        .signinButton>div:nth-of-type(2) {
+            width: 37px;
+            height: 37px;
+            background-color: rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 25px;
+        }
+
+        #nav_signin {
+            position: relative;
+        }
+
+        #nav_signin>ul {
+            background-color: #333;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            list-style: none;
+            position: absolute;
+            left: -70px;
+            top: 34px;
+            width: 500%;
+            padding-top: 20px;
+            padding-left: 0;
+            border-radius: 5px;
+        }
+
+        #nav_signin>ul>li {
+            height: 40px;
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+            margin-bottom: 0;
+            cursor: pointer;
+        }
+
+        #nav_signin>ul>li>img {
+            width: 18px;
+            margin-right: 10px;
+        }
+
+        #nav_signin>ul>li:hover {
+            background-color: rgba(29, 28, 28, 0.356);
+        }
+
+        #nav_signin>ul>hr {
+            width: 99%;
+            border: 1px solid #555;
+
+        }
+
+        #nav_signin>ul>div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        #nav_signin>ul>div>p:nth-of-type(1) {
+            text-align: center;
+            font-size: 11px;
+            color: #b4b4b4;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        #nav_signin>ul>div>p:nth-of-type(2) {
+            text-align: center;
+            margin-top: 0;
+        }
+
+        #nav_signin>ul>div>button {
+            color: #ffffff;
+            background-color: #e40046;
+            font-size: 13px;
+            margin-bottom: 0px;
+            cursor: pointer;
+            height: 40px;
+            border-radius: 3px;
+            border: 0;
+            font-weight: 400;
+            width: 90%;
+            margin-bottom: 10px;
+        }
+
+        /* CSS for top nav bar ends */
+        .ontopbtn button
+        {
+            padding: 10px 10px;
+            margin-right: 10px;
+            background-color: #ffffff;
+            border:1px solid #cbbfbf;
+        }
+        .ontopbtn button:hover
+        {
+            border:1px solid grey;
+            transition: .01s ease-in;
+        }
+        .trnd
+        {
+            display: flex;
+            align-items: center;
+            gap:6px;
+            color: #5a5a59;
+            font-size: 14px;
+        }
+
+        #trnding
+        {
+            display: flex;
+            align-items: center;
+            gap:10px;
+        }
+        a
+        {
+            text-decoration: none;
+            color: #5a5a59;
+            font-size: 12px;
+        }
+        .star
+        {
+            color: #FFC315;
+        }
+        #line
+        {
+            width: 100%;
+        }
+        #go
+        {
+            height: 35px;
+            color: #5a5a59;
+        }
+        #go:hover
+        {
+            color: white;
+            background-color: #191917;
+            transition: 0.2s ease-in-out;
+        }
+        #price-range,#custumer-rating,#color,#size
+        {
+            margin-top: 30px;
+           
+        }
+        .filter-title
+        {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 14px;
+            color: #5a5a59;
+        }
+        .plus
+        {
+            color: #cbbfbf;
+            font-size: 21px;
+            font-weight:bolder;
+        }
+        hr
+        {
+            color: #cbbfbf;
+            
+        }
+        #pr-min,#pr-max
+        {
+            width: 65%;
+            height:35px;
+            border: 1px solid #cbbfbf;
+        }
+        *
+        {
+            font-family: 'Roboto', sans-serif;
+            box-sizing: border-box;
+        }
+        body
+        {
+            background-color: #f7f7f7;
+        }
+        #page-details,#trnding
+        {
+            padding:5px 80px;
+        }
+        #display-product
+        {
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+            margin: auto;
+            /* border: 2px solid cornflowerblue; */
+        }
+        #filter-part
+        {
+            /* border: 2px solid rgb(109, 196, 46); */
+            width: 20%;
+            background-color: #ffffff;
+        }
+        
+       /* price tag */
+       .price-input{
+            width: 100%;
+            display: flex;
+            margin: 30px 0 35px;
+            align-items: center;
+            /* border: 2px solid rgb(223, 140, 14); */
+        }
+        .price-input .field{
+            display: flex;
+            /* width: 100%; */
+            height: 35px;
+            align-items: center;
+            /* border: 2px solid rebeccapurple; */
+            
+            justify-content: space-between;
+        }
+        #price_btn{
+            margin-left: 20px;
+            height: 35px;
+            padding: 0px 15px;
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        #price_btn:hover{
+            background-color: black;
+            color: white;
+        }
+        .field input{
+        width: 100%;
+        height: 100%;
+        outline: none;
+        font-size: 15px;
+        margin-left: 12px;
+        border-radius: 5px;
+        text-align: center;
+        border: 1px solid #999;
+        -moz-appearance: textfield;
+        }
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        }
+        .price-input .separator{
+        width: 130px;
+        display: flex;
+        font-size: 19px;
+        align-items: center;
+        justify-content: center;
+        }
+        .slider{
+        height: 5px;
+        position: relative;
+        background: #ddd;
+        border-radius: 5px;
+        margin-top: 25px;
+        }
+        .slider .progress{
+        height: 100%;
+        left: 3%;
+        right: 52%;
+        position: absolute;
+        border-radius: 5px;
+        background: #17A2B8;
+        }
+        .range-input{
+        position: relative;
+        }
+        .range-input input{
+        position: absolute;
+        width: 100%;
+        height: 5px;
+        top: -5px;
+        background: none;
+        pointer-events: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        }
+        input[type="range"]::-webkit-slider-thumb{
+        height: 17px;
+        width: 17px;
+        border-radius: 50%;
+        background: #17A2B8;
+        pointer-events: auto;
+        -webkit-appearance: none;
+        box-shadow: 0 0 6px rgba(0,0,0,0.05);
+        }
+        input[type="range"]::-moz-range-thumb{
+        height: 17px;
+        width: 17px;
+        border: none;
+        border-radius: 50%;
+        background: #17A2B8;
+        pointer-events: auto;
+        -moz-appearance: none;
+        box-shadow: 0 0 6px rgba(0,0,0,0.05);
+        }
+
+       /* end here */
+        #filter-part
+        {
+            padding: 10px 15px;
+        }
+        #product-div
+        {
+            /* border: 2px solid rgb(230, 194, 19); */
+            width: 70%;
+            background-color: #ffffff;
+            /* border: 2px solid red; */
+        }
+        .flex
+        {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 100;
+            font-size: 12px;
+            line-height: 30px;
+            color: #5a5a59;
+            /* margin-top: 30px; */
+            align-items: center;
+        }
+        .flex > .flex div
+        {
+            padding:4px;
+        }
+        #ad_div{
+            /* border: 2px solid yellow; */
+        }
+        #ad_div>img{
+            width: 100%;
+            height: 200px;
+            padding: 8px;
+        }
+        #section_name{
+            margin-top: 30px;
+        }
+        #tag{
+            font-size: 25px;
+        }
+        #tag span{
+            font-size: 13px;
+            margin-left: 10px;
+        }
+        #sort{
+            padding: 10px 20px;
+            width: 200px;
+        }
+        #hr-break{
+            margin-top: 15px;
+            color: gray;
+        }
+        /* All Products */
+        #productsDisplay {
+            /* border: 2px solid black; */
+            max-width: 1402px;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 6px;
+            justify-content: space-between;
+            margin: auto;
+            margin-top: 20px;
+        }
+
+        #productsDisplay>div {
+            min-width: 205px;
+            width: 16rem;
+            box-sizing: border-box;
+            padding: 20px;
+            margin: auto;
+            margin-bottom: 15px;
+            font-size: 13px;
+            color: #999;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            /* border: 2px solid blue; */
+        }
+
+        #productsDisplay>div:hover {
+            box-shadow: 0 10px 20px 5px rgba(167, 165, 165, 0.253);
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #productsDisplay>div>img {
+            width: 100%;
+        }
+
+        #productsDisplay>div>div:nth-of-type(1) {
+            height: 36px;
+            /* white-space: nowrap; */
+            overflow: hidden;
+            /* text-overflow: ellipsis; */
+            line-height: 18px;
+        }
+        /* #Products{
+            border: 2px solid red;
+            height: 400px;
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 15px;
+        } */
+        /* #price_div{
+            display: flex;
+            gap: 20px;
+        } */
+        /* #img_div{
+            border: 2px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        } */
+
+        /* CSS for footer */
+        #imagecontainer {
+            display: flex;
+            margin: 3%;
+            background: #ffffff;
+        }
+
+        #imagephone {
+            flex-basis: 50%;
+            text-align: center;
+        }
+
+        #downloadapp {
+            flex-basis: 50%;
+            background-image: url("images/leave.png");
+            background-repeat: no-repeat;
+            background-position: right top;
+            vertical-align: top;
+            margin-right: 0px;
+            padding: 80px 0px;
+        }
+
+        #image-head {
+            font-size: 40.4px;
+            font-weight: bold;
+            line-height: 1.33;
+            color: #222222;
+        }
+
+        #image-para {
+            font-size: 17.6px;
+            font-weight: normal;
+            line-height: 1.84;
+            color: #777777;
+        }
+
+        .button {
+            margin-top: 20px;
+            width: 150px;
+            height: 45px;
+            border-radius: 5px;
+            border: 0px;
+        }
+
+        .buttonApp {
+            background: url("images/apple.png");
+            background-size: cover;
+            padding-left: -5px;
+        }
+
+        .buttonPlay {
+            background: url("images/android.png");
+            background-size: cover;
+            margin-left: 10px;
+        }
+
+        #four-flex {
+            background-color: #ffffff;
+            border-top: 1px solid #e2e2e2;
+            border-bottom: 1px solid #e2e2e2;
+            padding: 0% 5%;
+            display: flex;
+
+        }
+
+        .inside-flex {
+            flex-basis: 23%;
+            border-right: 1px solid #e2e2e2;
+            border-left: 1px solid #e2e2e2;
+            padding: 45px 25px 0px;
+            height: 180px;
+            text-align: center;
+        }
+
+        .inside-flex-fonthead {
+            font-weight: normal;
+            font-size: 17.2px;
+            color: #4e4e4e;
+        }
+
+        .inside-flex-fontbody {
+            font-size: 13.2px;
+            color: #a4a3a3;
+            line-height: 1.7;
+        }
+
+        #footer {
+            border-bottom: 1px solid #e2e2e2;
+            background-color: #ffffff;
+            padding: 3% 5%;
+            display: flex;
+        }
+
+        #footer>div:nth-child(1) {
+            flex-basis: 20%;
+        }
+
+        #footer>div:nth-child(2) {
+            flex-basis: 15%;
+        }
+
+        #footer>div:nth-child(3) {
+            flex-basis: 20%;
+        }
+
+        #footer>div:nth-child(4) {
+            flex-basis: 17%;
+        }
+
+        .subs-box {
+            display: flex;
+        }
+
+        #sub-text {
+            height: 37px;
+            font-size: 13px;
+            color: #999;
+            border: none;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            background-color: #f7f8fa;
+            padding-left: 10px;
+        }
+
+        #sub-button {
+            background-color: black;
+            color: #ffffff;
+            border: none;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+        .footer-fonthead {
+            font-size: 15px;
+            font-weight: 400;
+            color: #25363b;
+        }
+
+        #paymentconnect {
+            display: flex;
+            padding: 10px 5% 20px;
+            background-color: #ffffff;
+        }
+
+        #paymentconnect>div:nth-child(1) {
+            flex-basis: 40%;
+        }
+
+        .paymentconnect-fonthead {
+            font-weight: 300;
+        }
+
+        #connecticons {
+            display: flex;
+        }
+
+        #connecticons>div:nth-child(even) {
+            padding: 0px 25px;
+        }
+
+        #footer-description {
+            padding: 1.5% 5%;
+        }
+
+        .footer-desfont {
+            font-size: 13.5px;
+            color: #777;
+            line-height: 1.7;
+        }
+
+        #aboutsnap {
+            padding-top: 1%;
+            font-size: 18px;
+            font-weight: bold;
+            color: #344c55;
+        }
+
+        #lastfooter {
+            display: flex;
+            background-color: #ffffff;
+            padding: .5% 5%;
+        }
+
+        #lastfooter>div:nth-child(1) {
+            flex-basis: 90%;
+        }
+
+        /* CSS for footer ends */
+    </style>
+</head>
+<body>
+     <!-- Top Thin bar starts -->
+     <div class="topThinBar">
+        <div>
+            <div>
+                <p> Brand Waali Quality, Bazaar Waali Deal!</p>
+            </div>
+            <div>
+                <p>impact@snapdeal</p>
+                <p>Gift Cards</p>
+                <p>Help Center</p>
+                <p>Sell On Snapdeal</p>
+                <img src="https://i4.sdlcdn.com/img/platinum09/downloadappicon2ndsep.png"
+                    style="width: 13px; height:18px; margin: 5px 0 0 5px;">
+                <p>Download App</p>
+            </div>
+        </div>
+
+    </div>
+    <nav>
+        <div>
+            <div>
+                <a href="home.html">
+                    <img class="sd-logo" src="https://i3.sdlcdn.com/img/snapdeal/darwin/logo/sdLatestLogo.svg">
+                </a>
+
+                <div class="searchBar">
+                    <input type="text/" placeholder="Search products & brands">
+                    <button class="black-btn"><img src="https://img.icons8.com/material-outlined/24/ffffff/search.png"
+                            style="width: 20px; padding-right: 10px;" />Search</button>
+                </div>
+
+            </div>
+            <div>
+                <div onclick="showCart()" class="cartButton">
+                    <p>Cart</p>
+                    <img src="https://img.icons8.com/windows/32/ffffff/shopping-cart.png">
+                </div>
+                <div class="signinButton">
+                    <div id="nav_signin">
+                        <p>Sign In</p>
+                        <ul>
+                            <li><img src="https://img.icons8.com/material-outlined/24/ffffff/user--v1.png" />Your
+                                Account</li>
+                            <li><img
+                                    src="https://img.icons8.com/external-those-icons-lineal-those-icons/24/ffffff/external-box-shipping-delivery-those-icons-lineal-those-icons-2.png" />
+                                Your Orders</li>
+                            <li><img src="https://img.icons8.com/material-outlined/24/ffffff/like--v1.png" />
+                                Shortlist
+                            </li>
+
+                            <hr>
+                            <div onclick="showLogin()">
+                                <p>If you are a new user</p>
+                                <p>Register</p>
+                                <button>LOGIN</button>
+                            </div>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <img src="https://img.icons8.com/material-rounded/24/ffffff/user.png" style="width: 24px;" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Top navigation ends -->
+    <!-- page details -->
+    <section id="page-details">
+        <div>
+            <a href="#">Home &nbsp;/&nbsp;</a>
+            <a href="#">Men's Clothing &nbsp;/&nbsp;</a>
+            <a href="#">Men's T-Shirts & Polos</a>
+        </div>
+    </section>
+    <section id="trnding">
+        <div class="trnd">
+            <i class="fa-solid fa-arrow-trend-up"></i>
+            <p>Trending searches:</p>
+        </div>
+
+        <div class="ontopbtn">
+            <button>kitchen product</button>
+            <button>shoes for men</button>
+            <button>kurti set</button>
+            <button>sandal men</button>
+            <button>sport shoe men</button>
+            <button>saree</button>
+            <button>tshirt</button>
+            <button>wall stickers</button>
+        </div>   
+    </section>
+    <!-- append your products api here -->
+    <section id="display-product">
+        <div id="filter-part">
+            <div id="mens-clothing">
+                <p class="filter-title"><span>-</span> Men's Clothing</p> 
+                <div class="flex">
+                    <div><span>-</span>Men's T-Shirts & Polos</div>
+                    <div>14302</div>            
+                </div>
+                <div class="flex">
+                        <div>Polo T Shirt For Men</div>
+                        <div>2819</div>
+                </div>
+                <div class="flex">
+                        <div>T Shirt For Men</div>
+                        <div>11265</div>
+                </div>
+                <div class="flex">
+                        <div>Couple Combos</div>
+                        <div>218</div>
+                </div>
+            </div> <hr>
+
+            <div id="price-range">
+                <div class="flex">
+                    <div class="filter-title">Price</div>
+                    <div><span class="plus">+</span></div>
+                </div> <hr>
+                <div>
+
+                      <div class="slider">
+                        <div class="progress"></div>
+                      </div>
+                      <div class="range-input">
+                        <input type="range" class="range-min" min="350" max="5000" value="400" step="100">
+                        <input type="range" class="range-max" min="350" max="5000" value="2400" step="100">
+                      </div>
+
+                      <div class="price-input">
+                        <div class="field">
+                          <input placeholder="Rs." type="number" class="input-min" value="400">
+                        </div>
+                        <div class="separator">-</div>
+                        <div class="field">
+                          
+                          <input placeholder="Rs." type="number" class="input-max" value="2400">
+                        </div>
+                        <div>
+                            <button id="price_btn">Go</button>
+                        </div>
+                      </div>   
+                </div>
+            </div>
+            <div id="custumer-rating">
+                <div class="flex">
+                    <div class="filter-title">Customer Rating</div>
+                    <div><span class="plus">+</span></div> 
+                </div><hr>
+                <div>
+                    <div class="flex">
+                        <div class="flex">
+                            <div> <input type="radio" name="rating" id="rating_5" value = "5" onclick="ratefilter()"> </div>
+                            <div id="5_rating"> <span class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span></div>
+                            <div>& Up</div>
+                        </div>
+                        <div>12071</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex">
+                        <div class="flex">
+                            <div> <input type="radio" name="rating" id="rating_4" value = "4" onclick="ratefilter()"> </div>
+                            <div id="4_rating"> <span class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span><span><i class="fa-solid fa-star"></i></span></div>
+                            <div>& Up</div>
+                        </div>
+                        <div>12071</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex">
+                        <div class="flex">
+                            <div> <input type="radio" name="rating" id="rating_3" value = "3" onclick="ratefilter()"> </div>
+                            <div id="3_rating"> <span class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span><span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span></div>
+                            <div>& Up</div>
+                        </div>
+                        <div>12071</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex">
+                        <div class="flex">
+                            <div> <input type="radio" name="rating" id="rating_2" value = "2" onclick="ratefilter()"> </div>
+                            <div id="2_rating"> <span class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span><span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span></div>
+                            <div>& Up</div>
+                        </div>
+                        <div>12071</div>
+                    </div>
+                </div>
+            </div>
+            <div id="color">
+                <div class="flex">
+                    <div class="filter-title">Color</div>
+                    <div><span class="plus">+</span></div>
+                </div> <hr>
+                <div class="flex">
+                    <div class="flex">
+                        <div><input type="checkbox" name="" id=""></div>
+                        <div>box</div>
+                        <div>Beige</div>
+                    </div>
+                    <div>673</div>
+                </div>
+                <div class="flex">
+                    <div class="flex">
+                        <div><input type="checkbox" name="" id=""></div>
+                        <div>box</div>
+                        <div>Beige</div>
+                    </div>
+                    <div>673</div>
+                </div>
+                <div class="flex">
+                    <div class="flex">
+                        <div><input type="checkbox" name="" id=""></div>
+                        <div>box</div>
+                        <div>Beige</div>
+                    </div>
+                    <div>673</div>
+                </div>
+                <div class="flex">
+                    <div class="flex">
+                        <div><input type="checkbox" name="" id=""></div>
+                        <div>box</div>
+                        <div>Beige</div>
+                    </div>
+                    <div>673</div>
+                </div>
+            </div>
+            <div id="size">
+                <div class="flex">
+                    <div class="filter-title">Size</div>
+                    <div><span class="plus">+</span></div>
+                </div> <hr>
+                <div class="flex">
+                    <div class="flex">
+                        <div><input type="checkbox" name="pl" id="small" value="S" onclick="sizefilter()"></div>
+                        <div>S</div>
+                    </div>
+                    <div>60</div>
+                </div>
+                <div class="flex">
+                    <div class="flex">
+                        <div><input type="checkbox" name="pl" id="medium" value="M" onclick="sizefilter()"></div>
+                        <div>M</div>
+                    </div>
+                    <div>50</div>
+                </div>
+                <div class="flex">
+                    <div class="flex">
+                        <div><input type="checkbox" name="pl" id="large" value="L" onclick="sizefilter()"></div>
+                        <div>L</div>
+                    </div>
+                    <div>49</div>
+                </div>
+                <div class="flex">
+                    <div class="flex">
+                        <div><input type="checkbox" name="pl" id="xl" value="XL" onclick="sizefilter()"></div>
+                        <div>XL</div>
+                    </div>
+                    <div>20</div>
+                </div>
+                <div class="flex">
+                    <div class="flex">
+                        <div><input type="checkbox" name="pl" id="xxl" value="XXL" onclick="sizefilter()"></div>
+                        <div>XXL</div>
+                    </div>
+                    <div>12</div>
+                </div>
+            </div>   
+         </div>
+        <div id="product-div">
+            <div id="ad_div">
+                <img id="ad_img" src="https://tpc.googlesyndication.com/simgad/940391160117405060" alt="">
+            </div>
+            <div id="section_name" class="flex">
+                <div id="tag">Men's Clothing <span>(500+items)</span></div>
+                <div>
+                    <select name="" id="sort"  >
+                        <option value="popularity">Popularity</option>
+                        <option value="lowtohigh">Low To High</option>
+                        <option value="hightolow">High to Low</option>
+                        <option value="discount">Discount</option>
+                    </select>
+                </div>
+            </div>
+            <hr id="hr-break">
+            <div id="productsDisplay">
+                <!-- <h1>Show Your Products here</h1> -->
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer Area -->
+    <div id="imagecontainer">
+        <div id="imagephone">
+            <img id="image1" src="images/image1.png" alt="Phone Image" height="500px" />
+        </div>
+        <div id="downloadapp">
+            <h1 id="image-head">Download Snapdeal<br>
+                App now</h1>
+            <p id="image-para">Fast, Simple & Delightful.<br>
+                All it takes is 30 seconds to Download.</p>
+            <button class="button buttonApp"></button>
+            <button class="button buttonPlay"></button>
+        </div>
+    </div>
+
+    <div id="four-flex">
+        <div class="inside-flex">
+            <div class="icons">
+                <img src="images/lock.png" height="50px">
+            </div>
+            <p class="inside-flex-fonthead">100% SECURE PAYMENTS</p>
+            <p class="inside-flex-fontbody">Moving your card details to a much more<br>secured place</p>
+        </div>
+        <div class="inside-flex">
+            <div class="icons">
+                <img src="images/secure.png" height="50px">
+            </div>
+            <p class="inside-flex-fonthead">TRUSTPAY</p>
+            <p class="inside-flex-fontbody">100% Payment Protection. Easy <br>Return Policy</p>
+        </div>
+        <div class="inside-flex">
+            <div class="icons">
+                <img src="images/help.png" height="50px">
+            </div>
+            <p class="inside-flex-fonthead">HELP CENTER</p>
+            <p class="inside-flex-fontbody">Got a question? Look no further. <br>Browse our FAQs or submit your query
+                here.</p>
+        </div>
+        <div class="inside-flex">
+            <div class="icons">
+                <img src="images/shop.png" height="50px">
+            </div>
+            <p class="inside-flex-fonthead">SHOP ON THE GO</p>
+            <p class="inside-flex-fontbody">Download the app and get exciting <br>app only offers at your fingertips</p>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div>
+            <p class="footer-fonthead">POLICY INFO</p>
+            <p class="inside-flex-fontbody">Privay Policy <br>
+                Terms of Sale <br>
+                Terms of USe <br>
+                Report Abuse & Tkedown Policy</p>
+        </div>
+        <div>
+            <p class="footer-fonthead">COMPANY</p>
+            <p class="inside-flex-fontbody">About Us <br>
+                Core Values <br>
+                Careers <br>
+                Blog <br>
+                Sitemap</p>
+        </div>
+        <div>
+            <p class="footer-fonthead">SNAPDEAL BUSINESS</p>
+            <p class="inside-flex-fontbody">Shopping App <br>
+                Sell on Snapdeal <br>
+                Advertise on Snapdeal <br>
+                Media Enquiries <br>
+                Be an Affiliate</p>
+        </div>
+        <div>
+            <p class="footer-fonthead">NEED HELP ?</p>
+            <p class="inside-flex-fontbody">FAQ <br>
+                Contact Us <br>
+                Online Shopping</p>
+        </div>
+        <div>
+            <p class="footer-fonthead">SUBSCRIBE</p>
+            <div class="subs-box">
+                <input type="text" id="sub-text" placeholder="Your email address">
+                <input type="button" id="sub-button" value="SUBSCRIBE">
+            </div>
+            <p class="inside-flex-fontbody">Register now to get updates on promotions and <br>
+                coupons.Or Download App</p>
+        </div>
+    </div>
+
+    <div id="paymentconnect">
+        <div>
+            <p class="paymentconnect-fonthead">PAYMENT</p>
+            <div>
+                <img src="images/paymenticons.png" height="35px">
+            </div>
+        </div>
+        <div>
+            <p>CONNECT</p>
+            <div id="connecticons">
+                <div>
+                    <img src="images/facebook.png" height="30px">
+                </div>
+                <div>
+                    <img src="images/twitter.png" height="30px">
+                </div>
+                <div>
+                    <img src="images/youtube.png" height="30px">
+                </div>
+                <div>
+                    <img src="images/instagram.png" height="30px">
+                </div>
+                <div>
+                    <img src="images/pinterest.png" height="30px">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-description">
+        <p class="footer-desfont">Mobiles: 4G Mobiles / Smartphones / Samsung Mobiles / Micromax Mobiles / Lenovo
+            Mobiles / iPhones / Vivo Mobiles / Oppo Mobiles / Intex Mobiles / Asus Mobiles <br>
+            Mobiles Accessories: Mobile Covers / Leather Mobile Covers / Printed Back Covers / 10000mAh Power Banks /
+            Ambrane Power Banks / Intex Power Banks / VR Headsets / Smart Watches / Smart Bands / Fitness Bands /<br>
+            Tempered Glass / Wall Chargers / Feature Phones / Bluetooth Devices<br>
+            TVs, Audio & Video: Televisions / LED TVs / Smart Televisions / Ultra HD TV / FHD TV / 3D TV / HD Ready TV /
+            Speakers / Headphones / Earphones / Samsung Televisions / Micromax Televisions / LG Televisions /<br>
+            Home Theatre Systems<br>
+            Memory Cards: 8 GB Memory Cards / 16 GB Memory Cards / 32 GB Memory Cards / 64 GB Memory Cards / Sandisk
+            Memory Cards / Samsung Memory Cards / Strontium Memory Cards<br>
+            Computers: Lenovo Laptops / Acer Laptops / Apple Macbooks / Notebook / Laptops / External Hard Disks / Dell
+            Laptops / HP Laptops / Pen Drives<br>
+            Camera: DSLR Cameras / Canon Cameras / Nikon Coolpix / Nikon DSLR Cameras / Sony Cameras / Digital Cameras /
+            Panasonic Cameras / Samsung Cameras<br>
+            Watches: Mens Watches / Womens Watches / Casio Watches / Titan Watches / Fastrack Watches / Fossil watches /
+            Casio Edifice<br>
+            Fashion Accessories: Bags / Wildcraft / Skybags / Fastrack Bags / Shoes / Floaters & Sandals / Kurta /
+            Raymond<br>
+            Men's Clothing: Shirts / Casual Shirts / Formal Shirts / Party Wear Shirts / T Shirts / Polo T shirts / Low
+            Rise Jeans / Slim Jeans / Reversible Jackets / V Neck T shirts / Henley T shirts / Printed T shirts / Round
+            Neck T shirts /<br>
+            Chinos / Hooded Sweatshirts / Kurta Payjama Sets / Dhoti Kurta Sets / Cotton Shirts / Full Sleeves Casual
+            Shirts / Full Sleeves Formal Shirts / Regular Fit Formal Shirts / Silk Party Shirts<br>
+            Women's Clothing: Saree / Designer Saree / Cotton Sarees / Georgette Sarees / Chiffon Sarees / Net Sarees /
+            Anarkali Suits / Kurtis / Leggings & Churidars / Embroidered Lehengas / Bridal Lehengas / Black Dresses
+            /<br>
+            Jeggings / Jeans / A Line Skirts / Women's Gowns / Women's Dresses<br>
+            Home & Kitchen: Home Decor / Paintings / Clocks / Flasks & Thermos / Photo Frames / Tupperware Kitchenware /
+            Hawkins Kitchenware / Milton Kitchenware<br>
+            Books: Fiction / Non Fiction / Children & Young Adults / Competitive Exams / School Books / Academic Texts /
+            Reference / Self Help<br>
+            FMCG Offer - Top Brands: Revlon / Street Wear / St. Ives / Accu-Chek Health Monitoring Devices / Nutraj -
+            California Walnuts / JSB Massagers / Park Avenue / Gillette / Airwick / Veet / Livon / Mortein / Whisper /
+            KamaSutra /<br>
+            Durex / Bio Oil<br>
+            Appliances: Air Conditioners / Air Coolers / Refrigerators / Fans / Washing Machines / Mircowaves / Irons /
+            Trimmers / Hair Dryers / Shavers / Vacuum Cleaners / Air Purifiers / CCTV Cameras / Ceiling Fans / Table
+            Fans /<br>
+            Exhaust Fans / Pedestal Fans / Ceiling Fans with 4 Blades / Ceiling Fans with 6 Blades<br>
+            Home Furnishing: Bed Linen / Bed Sheets / Bath Linen / Mattresses / Curtains / Cushion Covers / Pillows /
+            Carpets / Kids Bedding<br>
+            Furniture Online: Sofa Set / Sofa Cum Beds / Chairs / Dining Sets / Bean Bags / Shoe Storage / Dining Chairs
+            / Storage Cabinets / Tables and Desks / Bedroom Furniture / Living Room Furniture / XXXL Bean Bags /<br>
+            Chair Shape Bean Bags / Lounger Shape Bean Bags / Muddha Shape Bean Bags / Black Color Bean Bags<br>
+            Toys & Games: Soft Toys / Dolls / Musical Toys / Kids Skates / Kids Skate Scooters / Barbie Games / Action
+            Figures / Electronic Toys / Action figures / Toddler Toys / Die Cast Vehicle / Ride Ons & Scooters<br>
+            Todays Deals: Bestsellers / Most Searched Products / Home Utility Offers / Laptops & Accessories Offers /
+            Men's Fashion / Women's Fashion / Price Point Store / Laptops & Accessories Offers<br>
+            Online Shopping: Everything below 299 / Mens Footwear / Lehenga / Dresses / Mobile Phones / Womens Watches /
+            Kurtis / Smartphones / Womens Footwear / Sarees / Casual Shoes / Laptops / Mens Watches /<br>
+            Womens Casual Shoes / 4G Mobiles / Frocks / Women Suits / Tops & Tunics / Gowns / Watches / Sports &
+            Bicycles / Water Geysers / Men's Sportswear / Multi Speed Bi-cycles / Mobile Batteries / Kids T-shirts /<br>
+            Girls Frocks & Junpsuits / Kids Watches / Stationery Supplies / Baby Care Products / Copper Water Bottles
+        </p>
+        <p id="aboutsnap">ABOUT SNAPDEAL</p>
+        <p class="footer-desfont">
+            About Snapdeal – India’s Ultimate Online Shopping Site Snapdeal’s vision is to create India’s most reliable
+            and frictionless commerce ecosystem that creates life-changing experiences for buyers and sellers. In
+            February 2010,
+            Kunal Bahl along with Rohit Bansal, started Snapdeal.com - India’s largest online shopping marketplace, with
+            the widest assortment of 35 million plus products across 800 plus diverse categories from over 125,000
+            regional,
+            national, and international brands and retailers. With millions of users and more than 300,000 sellers,
+            Snapdeal is the online shopping site for Internet users across the country, delivering to 6000+ cities and
+            towns in India. In its
+            journey till now, Snapdeal has partnered with several global marquee investors and individuals such as
+            SoftBank, BlackRock, Temasek, Foxconn, Alibaba, eBay Inc., Premji Invest, Intel Capital, Bessemer Venture
+            Partners, Mr. Ratan
+            Tata, among others. Online Shopping – A Boon The trend of online shopping is becoming a household name and
+            so is Snapdeal. Snapdeal is the preferred choice of hundreds of thousands of online shoppers given its
+            mammoth
+            assortment of 15 million+ products, quick delivery even to the remotest corners of the country, and daily
+            deals, discounts & offers to make products available at slashed down prices to our valuable customers. Get
+            Started! Shop
+            Online Today at Snapdeal If you have been missing out on all the fun of online shopping thinking it requires
+            one to be a technology aficionado then we have good news for you. Shopping online particularly at Snapdeal
+            is a child’s
+            play; all you need is a mobile phone or laptop or tablet with Internet connection to get started. Simply log
+            into Snapdeal.com and browse through the wide assortment of products across categories. Once you have zeroed
+            in on your
+            favorite products, simply place the order by filling in the details; the products will be delivered right at
+            your doorstep. Fulfill Your Entrepreneurial Dreams! Sell Today at Snapdeal Thanks to easy-to-understand,
+            flexible policies and SD
+            Advisors to help sellers at each step, anyone from a manufacturer to wholesaler to retailer can sell on
+            Snapdeal. Begin your entrepreneurial journey with Snapdeal as a seller by filling a simple registration form
+            here. Once the
+            registration process is done, you can start selling your products to the entire country by sitting at your
+            home or office. Doesn't it sound thrilling? Of course, it is and the excitement will build up with every
+            order you receive! Start
+            selling at Snapdeal today and see your business reach staggering heights. Shop on the Go – Install Snapdeal
+            App Today! You can shop for your favourite products at Snapdeal even on the go using Snapdeal App. Available
+            for both
+            Android and Apple users, the app can be downloaded from Google Play Store and Apple App Store respectively.
+            The app is quick, user-friendly, and enables shoppers buy products with a breeze. What's more, get timely
+            notifications
+            on your phone or tablet so that you don't miss amazing deals and offers. Download the app right now and
+            experience how fun it is to shop on your mobile!
+        </p>
+    </div>
+    <div id="lastfooter">
+        <div>
+            <p class="footer-desfont">Copyright © 2020, Snapdeal Private Limited (formerly Jasper Infotech Private
+                Limited). All Rights Reserved</p>
+        </div>
+        <div>
+            <p class="footer-desfont">Made with <span>❤️</span> in India</p>
+        </div>
+    </div>
+    
+</body>
+</html>
+
+<script>
+//     let Shirts = [
+//     {
+//     img : "https://n3.sdlcdn.com/imgs/k/k/h/230X258_sharpened/Gritstones-Green-Cotton-Blend-Regular-SDL938884433-1-d24b4.webp",
+//     name : "Gritstones - Green Cotton Blend Regular Fit Men's",
+//     actual_price : 1599,
+//     discount_price : 359,
+//     size : "M",
+//     rating : 4.1,
+//     qty : 1,
+//     },
+//     {
+//     img : "https://n2.sdlcdn.com/imgs/k/f/h/230X258_sharpened/Leotude-100-Cotton-Regular-Fit-SDL858624078-1-0d417.JPG",
+//     name : "Leotude - Multi Cotton Regular Fit Men's T-Shirt ",
+//     actual_price : 1099,
+//     discount_price : 359,
+//     size : "XL",
+//     rating : 4.2,
+//     qty : 1,
+//     },
+//     {
+//         img : "https://n1.sdlcdn.com/imgs/k/k/p/230X258_sharpened/UrbanMark-Black-Cotton-Regular-Fit-SDL654394387-1-226c3.webp",
+//         name : "UrbanMark - Black 100% Cotton Regular Fit Men's T-Shirt",
+//         actual_price : 599,
+//         discount_price : 259,
+//         size : "S",
+//         rating : 4.4,
+//         qty : 1,
+//         },
+//         {
+//         img : "https://n4.sdlcdn.com/imgs/k/g/1/230X258_sharpened/Bewakoof-Black-Cotton-Regular-Fit-SDL209460544-1-0f9f9.webp",
+//         name : "Bewakoof - Black Cotton Regular Fit Men's T-Shirt",
+//         actual_price : 1299,
+//         discount_price : 439,
+//         size : "L",
+//         rating : 4.0,
+//         qty : 1,
+//         },
+//         {
+//     img : "https://n3.sdlcdn.com/imgs/k/k/h/230X258_sharpened/Gritstones-Green-Cotton-Blend-Regular-SDL938884433-1-d24b4.webp",
+//     name : "Gritstones - Green Cotton Blend Regular Fit Men's",
+//     actual_price : 1599,
+//     discount_price : 359,
+//     size : "M",
+//     rating : 4.1,
+//     qty : 1,
+//     },
+//     {
+//     img : "https://n2.sdlcdn.com/imgs/k/f/h/230X258_sharpened/Leotude-100-Cotton-Regular-Fit-SDL858624078-1-0d417.JPG",
+//     name : "Leotude - Multi Cotton Regular Fit Men's T-Shirt ",
+//     actual_price : 1099,
+//     discount_price : 359,
+//     size : "XL",
+//     rating : 4.2,
+//     qty : 1,
+//     },
+//     {
+//         img : "https://n1.sdlcdn.com/imgs/k/k/p/230X258_sharpened/UrbanMark-Black-Cotton-Regular-Fit-SDL654394387-1-226c3.webp",
+//         name : "UrbanMark - Black 100% Cotton Regular Fit Men's T-Shirt",
+//         actual_price : 599,
+//         discount_price : 259,
+//         size : "S",
+//         rating : 4.4,
+//         qty : 1,
+//         },
+//         {
+//         img : "https://n4.sdlcdn.com/imgs/k/g/1/230X258_sharpened/Bewakoof-Black-Cotton-Regular-Fit-SDL209460544-1-0f9f9.webp",
+//         name : "Bewakoof - Black Cotton Regular Fit Men's T-Shirt",
+//         actual_price : 1299,
+//         discount_price : 439,
+//         size : "L",
+//         rating : 4.0,
+//         qty : 1,
+//         },
+//         {
+//     img : "https://n3.sdlcdn.com/imgs/k/k/h/230X258_sharpened/Gritstones-Green-Cotton-Blend-Regular-SDL938884433-1-d24b4.webp",
+//     name : "Gritstones - Green Cotton Blend Regular Fit Men's",
+//     actual_price : 1599,
+//     discount_price : 359,
+//     size : "M",
+//     rating : 4.1,
+//     qty : 1,
+//     },
+//     {
+//     img : "https://n2.sdlcdn.com/imgs/k/f/h/230X258_sharpened/Leotude-100-Cotton-Regular-Fit-SDL858624078-1-0d417.JPG",
+//     name : "Leotude - Multi Cotton Regular Fit Men's T-Shirt ",
+//     actual_price : 1099,
+//     discount_price : 359,
+//     size : "XL",
+//     rating : 4.2,
+//     qty : 1,
+//     },
+//     {
+//         img : "https://n1.sdlcdn.com/imgs/k/k/p/230X258_sharpened/UrbanMark-Black-Cotton-Regular-Fit-SDL654394387-1-226c3.webp",
+//         name : "UrbanMark - Black 100% Cotton Regular Fit Men's T-Shirt",
+//         actual_price : 599,
+//         discount_price : 259,
+//         size : "S",
+//         rating : 4.4,
+//         qty : 1,
+//         },
+//         {
+//         img : "https://n4.sdlcdn.com/imgs/k/g/1/230X258_sharpened/Bewakoof-Black-Cotton-Regular-Fit-SDL209460544-1-0f9f9.webp",
+//         name : "Bewakoof - Black Cotton Regular Fit Men's T-Shirt",
+//         actual_price : 1299,
+//         discount_price : 439,
+//         size : "L",
+//         rating : 4.0,
+//         qty : 1,
+//         },
+
+// ]
+    let arr = [];
+    let data = fetch(`https://api.jsonbin.io/v3/b/6388c0e1003d6444ce5fff5c`);
+    console.log(data);
+    data.then((res)=>{
+        return res.json();
+    }).then((response)=>{
+        console.log(response.record.mens_data);
+        arr = response.record.mens_data;
+        displaydata(response.record.mens_data);
+    })
+
+    let displaydata = (data)=>{
+        document.getElementById("productsDisplay").innerHTML = null;
+        data.map((ele)=>{
+        let div = document.createElement("div");
+        div.addEventListener("click",()=>{
+            console.log("Hi");
+            localStorage.setItem("single_product",JSON.stringify(ele));
+        })
+        let img = document.createElement("img");
+        img.src = ele.image;
+        img.style.height = "255px";
+        let name = document.createElement("div");//
+        name.innerText = ele.name;
+        // name.style.textOverflow = "ellipsis";
+        // name.style.height = "36px";
+
+        let star = document.createElement("div");
+        star.innerText = getStar(ele.rating);
+        star.style.color = "#ffc544";
+        star.className = "star-rating";
+
+
+        let pricing = document.createElement("div");
+
+        let mrp = document.createElement("span");
+        mrp.innerText = "Rs " + ele.discount_price + " ";
+        mrp.style.textDecoration = "line-through";
+        mrp.style.marginRight = "2px";
+
+        let discountPrice = document.createElement("span");
+        discountPrice.innerText = "Rs" + Math.floor((ele.discount_price * 0.3));
+        discountPrice.style.marginRight = "5px";
+        discountPrice.style.color = "black";
+
+        let discount = document.createElement("div");
+        discount.style.display = "inline-block";
+        // discount.innerText = ele.discount + "% OFF";
+        discount.innerText = "30%" + "OFF";
+        discount.style.border = "1px solid #999";
+        discount.style.boxSizing = "border-box";
+        discount.style.padding = "4px";
+        discount.style.fontSize = "10px";
+        discount.style.marginLeft = "4px";
+
+        pricing.append(mrp, discountPrice, discount);
+        div.append(img, name, star, pricing);
+        let productsDisplay = document.getElementById("productsDisplay");
+        productsDisplay.append(div);
+        })
+    //         let div = document.createElement("div");
+    //         div.setAttribute("id","item_div");
+
+    //         let img_div = document.createElement("div");
+    //         img_div.setAttribute("id","img_div");
+    //         let img = document.createElement("img");
+    //         img.src = ele.image;
+    //         img_div.append(img);
+
+    //         let name_div = document.createElement("div");
+    //         let name = document.createElement("h3"); 
+    //         name.innerText = ele.name;
+    //         name_div.append(name);
+    //         name_div.style.height = "60px";
+
+    //         let price_div = document.createElement("div");
+    //         price_div.setAttribute("id","price_div");
+
+    //         let price = document.createElement("h4"); 
+    //         price.innerText = ele.price;
+
+    //         let discount_price = document.createElement("h4"); 
+    //         discount_price.innerText = ele.discount_price;
+
+    //         let size = document.createElement("h4"); 
+    //         size.innerText = ele.size;
+    //         price_div.append(price,discount_price,size)
+
+    //         let start_div = document.createElement("div");
+    //         start_div.innerHTML = '<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>';
+    //         if(ele.rating == "5"){
+    //             start_div.innerHTML = document.getElementById("5_rating").innerHTML;
+    //         }
+    //         else if(ele.rating == "4"){
+    //             // start_div.innerHTML = '<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>';
+    //             start_div.innerHTML = document.getElementById("4_rating").innerHTML;
+    //         }
+    //         else if(ele.rating == "3"){
+    //             // start_div.innerHTML = '<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>';
+    //             start_div.innerHTML = document.getElementById("3_rating").innerHTML;
+    //         }
+    //         else if(ele.rating == "2"){
+    //             // start_div.innerHTML = '<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>';
+    //             start_div.innerHTML = document.getElementById("2_rating").innerHTML;
+    //         }
+
+    //         div.append(img_div,name_div,price_div,start_div);
+    //         document.getElementById("Products").append(div);
+    //     })   
+    }
+// displaydata(Shirts);
+function getStar(r) {
+    switch (Math.floor(r)) {
+        case 0:
+            return "☆☆☆☆☆";
+        case 1:
+            return "★☆☆☆☆";
+        case 2:
+            return "★★☆☆☆";
+        case 3:
+            return "★★★☆☆";
+        case 4:
+            return "★★★★☆";
+        case 5:
+            return "★★★★★";
+    }
+}
+let sortdata = ()=>{
+        // console.log("Sorting is working...");
+        // console.log(sh);
+        let value = document.getElementById("sort").value;
+        if(value == "popularity"){
+            displaydata(arr);
+        }
+        if(value == "lowtohigh"){
+            arr.sort((a,b)=>{
+            return a.discount_price - b.discount_price;
+        })
+        displaydata(arr);
+        }
+        else if(value == "hightolow"){
+            arr.sort((a,b)=>{
+            return b.discount_price - a.discount_price;
+        })
+        displaydata(arr);
+        }
+        
+}
+document.getElementById("sort").addEventListener("change",sortdata);
+
+
+let sizefilter = ()=>{
+    // let size = document.getElementById("")
+    // let size  = document.querySelector('input[type = checkbox]:checked');
+    // console.log(size.value);
+    let markedCheckbox = document.getElementsByName('pl');  
+    console.log(markedCheckbox);
+    let size_arr = [];
+    for (var checkbox of markedCheckbox) {  
+        
+        if (checkbox.checked){
+            
+            // console.log(checkbox.value);
+
+            let checked_size = arr.filter((ele)=>{
+                // console.log(ele.size);
+                return ele.size === checkbox.value;
+            }) 
+            // checked_size += checked_size;
+           
+            checked_size.forEach((ele)=>{
+                size_arr.push(ele)
+            })
+            console.log(size_arr);
+            displaydata(size_arr);
+            // arr = null;
+        }  
+        // console.log(checkbox.value);  
+    } 
+}
+
+let ratefilter = ()=>{
+    console.log("Yeah, you are in rate filtering...");
+    let rate_value = document.getElementsByName("rating");
+    
+    for(var checkvalue of rate_value){
+        if(checkvalue.checked){
+            let rate_arr = arr.filter((ele)=>{
+                 return ele.rating == checkvalue.value;
+            });
+            displaydata(rate_arr);
+        }
+    }
+}
+
+
+let show = ()=>{
+    Console.log("Hi");
+}
+// document.getElementById("range").addEventListener("range",show);
+
+const rangeInput = document.querySelectorAll(".range-input input"),
+priceInput = document.querySelectorAll(".price-input input"),
+range = document.querySelector(".slider .progress");
+let priceGap = 1000;
+priceInput.forEach(input =>{
+    input.addEventListener("input", e =>{
+        let minPrice = parseInt(priceInput[0].value),
+        maxPrice = parseInt(priceInput[1].value);
+        
+        if((maxPrice - minPrice >= priceGap) && maxPrice <= rangeInput[1].max){
+            if(e.target.className === "input-min"){
+                rangeInput[0].value = minPrice;
+                range.style.left = ((minPrice / rangeInput[0].max) * 100) + "%";
+            }else{
+                rangeInput[1].value = maxPrice;
+                range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + "%";
+            }
+        }
+    });
+});
+rangeInput.forEach(input =>{
+    input.addEventListener("input", e =>{
+        let minVal = parseInt(rangeInput[0].value),
+        maxVal = parseInt(rangeInput[1].value);
+        if((maxVal - minVal) < priceGap){
+            if(e.target.className === "range-min"){
+                rangeInput[0].value = maxVal - priceGap
+            }else{
+                rangeInput[1].value = minVal + priceGap;
+            }
+        }else{
+            priceInput[0].value = minVal;
+            priceInput[1].value = maxVal;
+            range.style.left = ((minVal / rangeInput[0].max) * 100) + "%";
+            range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+        }
+    });
+});
+rangeInput.forEach(input =>{
+    input.addEventListener("input", e =>{
+        let minVal = parseInt(rangeInput[0].value),
+        maxVal = parseInt(rangeInput[1].value);
+        if((maxVal - minVal) < priceGap){
+            if(e.target.className === "range-min"){
+                rangeInput[0].value = maxVal - priceGap
+            }else{
+                rangeInput[1].value = minVal + priceGap;
+            }
+        }else{
+            priceInput[0].value = minVal;
+            priceInput[1].value = maxVal;
+            range.style.left = ((minVal / rangeInput[0].max) * 100) + "%";
+            range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+        }
+    });
+});
+
+//Price Button filter functionality :-
+let price_filter =()=>{
+    let minval = document.querySelector(".input-min").value;
+    let maxval = document.querySelector(".input-max").value;
+    console.log(minval);
+    console.log(maxval);
+
+    let price_filtered_data = arr.filter((ele)=>{
+        return ((parseInt(ele.discount_price * 0.3) >= minval) && (parseInt(ele.discount_price * 0.3) <= maxval));
+    })
+    displaydata(price_filtered_data);
+
+}
+document.getElementById("price_btn").addEventListener("click",price_filter);
+
+
+
+</script>

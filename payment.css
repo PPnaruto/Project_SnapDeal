@@ -185,9 +185,6 @@ thead{
     height: 47px;
     background-color: #f7f7f7;
 }
-thead,th{
-    /* border: 1px solid black; */
-}
 table>*{
     font-family: sans-serif;
     color: gray;
