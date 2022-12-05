@@ -125,7 +125,7 @@ function completeLogin(e) {
     if (e != undefined) {
         e.preventDefault();
     }
-    alert("Logged in successfully.");
+    // alert("Logged in successfully.");
     let nav_login = document.querySelector("#nav_signin > p:nth-of-type(1)");
     // console.log(user);
     let first_name = user.name.split(" ");
@@ -808,6 +808,6 @@ function nextSideDiv11() {
 }
 
 document.getElementById("men_section").addEventListener("click",()=>{
-    window.location.href = "../mensProduct.html";
+    window.location.href = "./mensProduct.html";
 })
 // Code for login slider card ends

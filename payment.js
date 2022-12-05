@@ -213,7 +213,7 @@ document.getElementById("CashOn").addEventListener("click",()=>{
 
 document.querySelector("#btn_cashon").addEventListener("click",()=>{
     alert("Your Order has been Placed Succesfully !");
-    window.location.href = "./final_home/index.html";
+    window.location.href = "./index.html";
 })
 let orderPlaced = document.querySelector(".btn_place");
 orderPlaced.addEventListener("click",()=>{
@@ -224,7 +224,7 @@ orderPlaced.addEventListener("click",()=>{
     alert("Please Enter Valid Information");
    }else{
     alert("Your Order has been Placed Succesfully !");
-    window.location.href = "./final_home/index.html";
+    window.location.href = "./index.html";
    }   
 })
 btn_cashon
