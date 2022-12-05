@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="icon"
+    href="https://upload.wikimedia.org/wikipedia/en/3/35/Snapdeal_Logo_new.png"
+    type="image/x-icon"
+    />
+    <script src="https://kit.fontawesome.com/d6f74ce538.js" crossorigin="anonymous"></script>
+    <title>Snapdeal cart checkout</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+    
+    <div id="header">
+        <div id="logo">
+            <img src="https://i3.sdlcdn.com/img/snapdeal/darwin/logo/sdLatestLogo.svg" alt="">
+        </div>
+        <span id="info">100% Payment Protection,Easy Returns Policy</span>
+    </div>
+
+    <div id="payment_parent">
+        <div id="payment_detail">
+            <div id="login">
+                <i id="right_logo" class="fa-solid fa-check"></i>
+                <p id="login_name">1.LOGIN</p>
+                <p id="login_id">pratik@gmail.com</p>
+            </div>
+            <div id="delivery_ad"> 
+                <i id="ad_logo" class="fa-solid fa-check"></i>
+                <p id="ad_tag">2.DELIVERY ADDRESS</p>
+                <div id="ad_info">
+
+                </div>  
+            </div>
+            <div id="review_box"> 
+                <i id="review_logo" class="fa-solid fa-check"></i>
+                <p id="review_tag">3. REVIEW ORDER</p>
+                <div id="review_info">
+
+                </div>  
+            </div>
+            <div id="address">
+                <div id="ad">2.Delivery Address</div>
+                <div class="details">
+                    <label for="">Pincode</label>
+                    <input id="pincode" class="input_box" type="number" placeholder="6 digit pincode">
+                </div>
+                <div class="details">
+                    <label for="">Name</label>
+                    <input id="name" class="input_box" type="text" placeholder="Full name">
+                </div>
+                <div class="details">
+                    <label for="">Address</label>
+                    <input id="address_box" type="text" placeholder="Flat/House No.">
+                </div>
+                <div class="details">
+                    <label for="">Locality</label>
+                    <input id="locality" class="input_box" type="text" placeholder="e.g.Near Noble Hospital">
+                </div>
+                <div class="details">
+                    <label for="">City</label>
+                    <input id="city" class="input_box" type="text" placeholder="City">
+                </div>
+                <div class="details">
+                    <label for="">State</label>
+                    <input id="state" class="input_box" type="text" placeholder="State">
+                </div>
+                <div id="mobile">
+                    <label for="">Mobile No.</label>
+                    <div id="checkbox"><input type="checkbox" name="" id="">
+                        <label for="">Same as registered mobile </label>
+                    </div>     
+                </div>
+                <div id="mobile_no_div">
+                    <input id="mob_no" type="number" placeholder="10 digit mobile no">
+                </div>
+                <div class="details">
+                    <label for="">Alternate Mobile no.</label>
+                    <div id="alt_no">
+                        <input type="number" placeholder="10 digit mobile no">
+                    </div> 
+                </div>
+                <div id="place">
+                    <label for="">Address type</label>
+                    <div>
+                        <input type="checkbox">
+                        <label for="">Home/Personal</label>
+                    </div>
+                    <div>
+                        <input type="checkbox">
+                        <label for="">office/commercial</label>
+                    </div>
+                </div>
+                <div id="default_ad">
+                    <input type="checkbox">
+                    <label for="">Mark this my default address</label>
+                </div>
+
+                <button id="address_button">SAVE AND CONTINUE</button>
+            </div>
+            
+            <div id="review">
+                <div id="review_bar">3.Review Order</div>
+                <table>
+                    <thead>
+                        <th>Item Details</th>
+                        <th>Quantity</th>
+                        <th>Delivery Options</th>
+                        <th>Subtotal</th>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+                <div id="promo">
+                    <div id="promo_child">
+                        <p><input id="promo_input" type="text" placeholder="Have Promo Code ?"> <span id="apply">Apply</span></p>
+                        <p id="pay_total">You Pay : </p>
+                        <p id="total"></p>
+                    </div>
+                    <div>
+                        <button id="btn_payment">PROCEED TO PAYMENT</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="Payment">
+                <div id="payment_bar">4.Make Payment</div>
+                <div id="payment_child">
+                    <div id="payment_way">
+                        <p id="credit">Credit Card</p>
+                        <p id="debit">Debit Card</p>
+                        <p id="CashOn">Cash On Delivery</p>
+                    </div>
+                    <div id="way">
+                        <p>Pay using <span id="card_type">Credit Card</span> </p>
+                        <hr id="hr">
+                        <div class="pay_info">
+                            <label for="">Card No.</label>
+                            <input id="card_input" type="text" placeholder="Card Number">
+                        </div>
+                        <div class="pay_info">
+                            <label for="">Expiry Date</label>
+                            <input id="exp_input" type="text" placeholder="MM/YY">
+                        </div>
+                        <div class="pay_0info">
+                            <label for="">CVV</label>
+                            <input id="CVV_input" type="text" placeholder="CVV">
+                        </div>
+                        <button class="btn_place">Place  Order</button>
+                    </div>
+                    <div id="cashon_way">
+                        <p>Pay using Cash on Delivery</p>
+                        <hr id="hr">
+                        <button id="btn_cashon" class="btn_place">Pay Rs. <span id="amt"></span></button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
+<script src="payment.js"></script>
+<script src="localdata.js"></script>
