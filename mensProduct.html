@@ -424,8 +424,8 @@
         }
         .slider .progress{
         height: 100%;
-        left: 3%;
-        right: 52%;
+        left: 5%;
+        right: 53%;
         position: absolute;
         border-radius: 5px;
         background: #17A2B8;
@@ -897,8 +897,8 @@
                         <div class="progress"></div>
                       </div>
                       <div class="range-input">
-                        <input type="range" class="range-min" min="350" max="5000" value="400" step="100">
-                        <input type="range" class="range-max" min="350" max="5000" value="2400" step="100">
+                        <input type="range" class="range-min" min="150" max="5000" value="400" step="200">
+                        <input type="range" class="range-max" min="150" max="5000" value="2400" step="200">
                       </div>
 
                       <div class="price-input">
@@ -1408,7 +1408,7 @@
 
 // ]
     let arr = [];
-    let data = fetch(`https://api.jsonbin.io/v3/b/6388c0e1003d6444ce5fff5c`);
+    let data = fetch(`https://api.jsonbin.io/v3/b/638cfd60003d6444ce62f05c`);
     console.log(data);
     data.then((res)=>{
         return res.json();
@@ -1444,19 +1444,20 @@
         let pricing = document.createElement("div");
 
         let mrp = document.createElement("span");
-        mrp.innerText = "Rs " + ele.discount_price + " ";
+        mrp.innerText = "Rs " + ele.price + " ";
         mrp.style.textDecoration = "line-through";
         mrp.style.marginRight = "2px";
 
         let discountPrice = document.createElement("span");
-        discountPrice.innerText = "Rs" + Math.floor((ele.discount_price * 0.3));
+        // discountPrice.innerText = "Rs" + Math.floor((ele.price * 0.3));
+        discountPrice.innerText = "Rs" + ele.discount_price;
         discountPrice.style.marginRight = "5px";
         discountPrice.style.color = "black";
 
         let discount = document.createElement("div");
         discount.style.display = "inline-block";
         // discount.innerText = ele.discount + "% OFF";
-        discount.innerText = "30%" + "OFF";
+        discount.innerText = Math.floor((ele.discount_price/ele.price)*100) + "% OFF";
         discount.style.border = "1px solid #999";
         discount.style.boxSizing = "border-box";
         discount.style.padding = "4px";
@@ -1674,7 +1675,7 @@ let price_filter =()=>{
     console.log(maxval);
 
     let price_filtered_data = arr.filter((ele)=>{
-        return ((parseInt(ele.discount_price * 0.3) >= minval) && (parseInt(ele.discount_price * 0.3) <= maxval));
+        return ((parseInt(ele.discount_price) >= minval) && (parseInt(ele.discount_price) <= maxval));
     })
     displaydata(price_filtered_data);
 

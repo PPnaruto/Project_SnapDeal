@@ -2185,7 +2185,7 @@
     let mrp = document.createElement("span");
     mrp.innerText = "MRP ";
     let mrp_amount = document.createElement("span");
-    mrp_amount.innerText = "Rs. " + product.discount_price;
+    mrp_amount.innerText = "Rs. " + product.price;
     mrp_amount.style.textDecoration = "line-through";
     mrp.append(mrp_amount);
     mrp.append(" (Inclusive of all taxes) \n");
@@ -2194,7 +2194,7 @@
 
 
     let discountPrice = document.createElement("span");
-    discountPrice.innerText = "\nRs. " + Math.floor((product.discount_price * 0.3));
+    discountPrice.innerText = "\nRs. " + (product.discount_price);
     discountPrice.style.marginRight = "5px";
     discountPrice.style.color = "red";
     discountPrice.style.fontSize = "24px";
@@ -2202,7 +2202,7 @@
     let discount = document.createElement("span");
     discount.id = "discount_off";
     discount.style.display = "inline-block";
-    discount.innerText = "30" + "% OFF" + "\n";
+    discount.innerText = Math.floor((product.discount_price/product.price)*100) + "% OFF" + "\n";
     
 
 
