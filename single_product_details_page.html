@@ -1880,7 +1880,7 @@
                 </div>
                 <div class="signinButton">
                     <div id="nav_signin">
-                        <p>Sign In</p>
+                        <p id="signed_user">Sign In</p>
                         <ul>
                             <li><img src="https://img.icons8.com/material-outlined/24/ffffff/user--v1.png" />Your
                                 Account</li>
@@ -3034,7 +3034,9 @@
         window.location.href = "product_details.html"
 
     }
-
+let user_detail = JSON.parse(localStorage.getItem("logged_user")); 
+console.log(user_detail);
+document.getElementById("signed_user").innerHTML = user_detail.name;
     //Code from product_catalogue ends
 
 </script>

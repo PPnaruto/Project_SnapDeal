@@ -505,7 +505,9 @@ nav>div>div:nth-of-type(2)>p {
 .cartButton>img {
     margin-left: 5px;
 }
-
+.cartButton>p{
+    margin-top: 15px;
+}
 .signinButton {
     min-width: 80px;
     display: flex;
@@ -517,7 +519,10 @@ nav>div>div:nth-of-type(2)>p {
     height: 60px;
     cursor: pointer;
 }
-
+#signed_user{
+    margin-top: 15px;
+    align-self: center;
+}
 .signinButton:hover {
     background-color: #333;
     border-radius: 5px;
