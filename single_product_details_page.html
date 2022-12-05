@@ -2266,7 +2266,7 @@
     let buyNowBtn = document.createElement('button');
     buyNowBtn.id = "buyNowBtn";
     let logo_box = document.createElement("img");
-    logo_box.src = "images/sdLogoBox.png";
+    logo_box.src = "./final_home/images/sdLogoBox.png";
     logo_box.style.width = "1rem";
     logo_box.style.marginRight = "5px";
     buyNowBtn.append(logo_box);
@@ -2277,7 +2277,7 @@
     let returnDiv = document.createElement('div')
     let head5 = document.createElement('h5');
     let shield_img = document.createElement("img");
-    shield_img.src = "images/shield-50.png";
+    shield_img.src = "./final_home/images/shield-50.png";
     shield_img.style.width = "0.8rem";
     head5.append(shield_img);
     head5.append(" 7 Days Easy Returns");
@@ -2308,17 +2308,18 @@
 
     function addtoCart(product) {
 
-        // window.location.href = "./cart.html"
+       
 
         let mycart = JSON.parse(localStorage.getItem("mycart"))
         mycart.push(product)
         localStorage.setItem("mycart", JSON.stringify(mycart))
+         window.location.href = "./checkout.html"
 
     }
 
     function buyNow(product) {
 
-        window.location.href = "payment.html"
+        window.location.href = "./payment.html"
 
     }
 

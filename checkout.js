@@ -1,5 +1,5 @@
 
-let product_item = JSON.parse(localStorage.getItem("cart")) || [];
+let product_item = JSON.parse(localStorage.getItem("mycart")) || [];
 
 
 
@@ -49,7 +49,7 @@ document.querySelector("#cross").addEventListener("click",hideCheckoutPopup);
   console.log(product_item);
   document.getElementById("product_name").innerHTML = product_item[product_item.length-1].name;
 
-  document.getElementById("product_img").src = product_item[product_item.length-1].img;
+  document.getElementById("product_img").src = product_item[product_item.length-1].image;
 //   let image = document.createElement("img");
 //   image.src = product_item[product_item.length-1].img;
 
@@ -61,10 +61,10 @@ document.querySelector("#cross").addEventListener("click",hideCheckoutPopup);
 
   let addqty =(ele)=>{
     ele.qty++;
-    // document.getElementById("num").innerText = ele.qty;
-    console.log(ele.qty);
-    localStorage.setItem("cart",JSON.stringify(product_item));
     document.getElementById("num").innerText = ele.qty;
+    console.log(ele.qty);
+    localStorage.setItem("mycart",JSON.stringify(product_item));
+    // document.getElementById("num").innerText = ele.qty;
     console.log(product_item);
     cartdata(product_item);
     // displayprice(productdata);
@@ -74,7 +74,7 @@ let subtractqty = (ele)=>{
         ele.qty--;
     document.getElementById("num").innerText = ele.qty;
     console.log(ele.qty);
-    localStorage.setItem("cart",JSON.stringify(product_item));
+    localStorage.setItem("mycart",JSON.stringify(product_item));
     cartdata(product_item);
     // displayprice(productdata);
     }
@@ -82,7 +82,7 @@ let subtractqty = (ele)=>{
 
 let deletedata = (index)=>{
   product_item.splice(index,1);
-  localStorage.setItem("cart",JSON.stringify(product_item));
+  localStorage.setItem("mycart",JSON.stringify(product_item));
   cartdata(product_item);
   displayprice(productdata);
 }
@@ -98,7 +98,7 @@ let deletedata = (index)=>{
         let td1 = document.createElement("td");
         td1.id = "td-1";
         let image = document.createElement("img");
-        image.src = ele.img;
+        image.src = ele.image;
         let div = document.createElement("div");
 
         let p = document.createElement("p");
@@ -163,12 +163,12 @@ let deletedata = (index)=>{
   document.getElementById("cart-button").addEventListener("click",cartdata());
 
 document.getElementById("checkout-button").addEventListener("click",()=>{
-  window.location.href = "#";
-  alert("Redirect to payment page");
+  window.location.href = "./payment.html";
+  // alert("Redirect to payment page");
 })
 document.getElementById("price-button").addEventListener("click",()=>{
-  window.location.href = "#";
-  alert("Redirect to payment page");
+  window.location.href = "./payment.html";
+  // alert("Redirect to payment page");
 })
 
 

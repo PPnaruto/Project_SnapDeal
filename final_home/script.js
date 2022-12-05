@@ -806,4 +806,8 @@ function nextSideDiv11() {
     document.querySelector('.sideDiv').append(img, p2, p3, button1, div)
 
 }
+
+document.getElementById("men_section").addEventListener("click",()=>{
+    window.location.href = "../mensProduct.html";
+})
 // Code for login slider card ends

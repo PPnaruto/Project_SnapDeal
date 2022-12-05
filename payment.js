@@ -1,6 +1,6 @@
 // let login = JSON.parse(localStorage.getItem(""));
 // document.getElementById("login_id").innerText = login;
-
+let order  = JSON.parse(localStorage.getItem("mycart")) || [];
 let address = ()=>{
     document.getElementById("ad_info").innerHTML = null;
     let name = document.getElementById("name").value;
@@ -40,8 +40,8 @@ let showhidden_ad=()=>{
 }
 document.getElementById("delivery_ad").addEventListener("click",showhidden_ad);
 
-let order  = JSON.parse(localStorage.getItem("Ordered_Data")) || [];
-let amt = JSON.parse(localStorage.getItem("TotalPrice"));
+// let order  = JSON.parse(localStorage.getItem("mycart")) || [];
+// let amt = JSON.parse(localStorage.getItem("TotalPrice"));
 
 let total_pay = ()=>{
     let sum = order.reduce((acc,ele)=>{
@@ -108,6 +108,7 @@ let order_data = (order)=>{
         div_qty.style.justifyContent = "Center"
         let h3 = document.createElement("h3");
         h3.innerText = ele.qty;
+        console.log(ele.qty);
         div_qty.append(h3);
         td2.append(div_qty);
 
@@ -212,6 +213,7 @@ document.getElementById("CashOn").addEventListener("click",()=>{
 
 document.querySelector("#btn_cashon").addEventListener("click",()=>{
     alert("Your Order has been Placed Succesfully !");
+    window.location.href = "./final_home/index.html";
 })
 let orderPlaced = document.querySelector(".btn_place");
 orderPlaced.addEventListener("click",()=>{
@@ -222,6 +224,7 @@ orderPlaced.addEventListener("click",()=>{
     alert("Please Enter Valid Information");
    }else{
     alert("Your Order has been Placed Succesfully !");
+    window.location.href = "./final_home/index.html";
    }   
 })
 btn_cashon
