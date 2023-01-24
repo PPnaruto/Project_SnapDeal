@@ -19,6 +19,10 @@
 # Tech Stacks:- 
         HTML, CSS, JavaScripts 
 
+# Process Flow:-
+Here i am mentioning the process flow of our website, since there are too many sections and we have cretaed our own database of some limited products.
+        Landing page -> Men's fashion(in Top category) -> Men's Summer Fashion -> Product Page -> Normal as usual flow to buy any product
+
         
 # Pages and Features:- 
 ![snapdeal_gif](https://user-images.githubusercontent.com/113718053/214289428-149d9dfd-b365-4eb4-a639-1acad885f78d.gif)
