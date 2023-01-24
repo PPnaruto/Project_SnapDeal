@@ -21,4 +21,4 @@
 
         
 # Pages and Features:- 
-![fpRWbg](https://user-images.githubusercontent.com/113718053/214287488-8be12b1a-0a56-45c0-b772-45fdf3e7f2c5.gif)
+![snapdeal_gif](https://user-images.githubusercontent.com/113718053/214289428-149d9dfd-b365-4eb4-a639-1acad885f78d.gif)
