@@ -9,7 +9,7 @@
 # Duration : 5 Days
 
 # Project Description:-
-Snapdeal is E-commerce Platform to buy fashion and electronic products.+"\n"
+Snapdeal is E-commerce Platform to buy fashion and electronic products.
 About Snapdeal – India’s Ultimate Online Shopping Site Snapdeal’s vision is to create India’s most reliable and frictionless commerce ecosystem that creates life-   changing experiences for buyers and sellers.
   
   Original Website Link :- https://www.snapdeal.com/
@@ -21,7 +21,7 @@ About Snapdeal – India’s Ultimate Online Shopping Site Snapdeal’s vision i
 
 # Process Flow:-
 Here i am mentioning the process flow of our website, since there are too many sections and we have cretaed our own database of some limited products.
-        Landing page -> Men's fashion(in Top category) -> Men's Summer Fashion -> Product Page -> Normal as usual flow to buy any product
+Landing page -> Men's fashion(in Top category) -> Men's Summer Fashion -> Product Page -> Normal as usual flow to buy any product
 
         
 # Pages and Features:- 
