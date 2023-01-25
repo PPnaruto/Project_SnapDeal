@@ -10,6 +10,8 @@
 
 # Project Description:-
 Snapdeal is E-commerce Platform to buy fashion and electronic products.
+This site offer a huge fashion collection of various brands and products you need in your life.
+
 We got this site as our construct week project. we tried to build similar webpages along with the same features and functionality.
 we have also used some local Data base to collect the data from main website.
   
