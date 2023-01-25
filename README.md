@@ -10,7 +10,8 @@
 
 # Project Description:-
 Snapdeal is E-commerce Platform to buy fashion and electronic products.
-About Snapdeal – India’s Ultimate Online Shopping Site Snapdeal’s vision is to create India’s most reliable and frictionless commerce ecosystem that creates life-   changing experiences for buyers and sellers.
+We got this site as our construct week project. we tried to build similar webpages along with the same features and functionality.
+we have also used some local Data base to collect the data from main website.
   
   Original Website Link :- https://www.snapdeal.com/
   
