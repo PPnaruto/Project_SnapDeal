@@ -24,6 +24,7 @@ we have also used some local Data base to collect the data from main website.
 
 # Process Flow:-
 Here i am mentioning the process flow of our website, since there are too many sections and we have cretaed our own database of some limited products.
+
 Landing page -> Men's fashion(in Top category) -> Men's Summer Fashion -> Product Page -> Normal as usual flow to buy any product
 
         
