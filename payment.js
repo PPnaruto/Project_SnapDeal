@@ -57,7 +57,7 @@ let getdiscount = ()=>{
     if(value == "masai30"){
         console.log(value);
         let amt_price = JSON.parse(localStorage.getItem("TotalPrice"));
-        let discount = Math.ceil(amt_price*(30/100));
+        let discount = Math.ceil(amt_price-amt_price*(30/100));
         console.log(discount);
         localStorage.setItem("TotalPrice",JSON.stringify(discount));
         document.getElementById("total").innerHTML = discount;
