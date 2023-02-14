@@ -792,7 +792,7 @@
     <nav>
         <div>
             <div>
-                <a href="home.html">
+                <a href="index.html">
                     <img class="sd-logo" src="https://i3.sdlcdn.com/img/snapdeal/darwin/logo/sdLatestLogo.svg">
                 </a>
 
@@ -1457,7 +1457,7 @@
         let discount = document.createElement("div");
         discount.style.display = "inline-block";
         // discount.innerText = ele.discount + "% OFF";
-        discount.innerText = Math.floor((ele.discount_price/ele.price)*100) + "% OFF";
+        discount.innerText = Math.round(((ele.price-ele.discount_price)/ ele.price)*100)+ "% OFF";
         discount.style.border = "1px solid #999";
         discount.style.boxSizing = "border-box";
         discount.style.padding = "4px";
