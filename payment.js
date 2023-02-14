@@ -179,17 +179,6 @@ let hiddendata=()=>{
 let pay = document.getElementById("btn_payment");
 pay.addEventListener("click",hiddendata)
 
-
-
-// let getdiscount = ()=>{
-//     let value = document.getElementById("promo_input").value;
-//     if(value == "masai30"){
-//         console.log(value);
-//         let discount = Math.ceil(amt*(30/100));
-//         console.log(discount);
-//         document.getElementById("total").innerHTML = discount;
-//     }    
-// }
 let promo = document.getElementById("apply");
 promo.addEventListener("click",getdiscount);
 
@@ -227,4 +216,10 @@ orderPlaced.addEventListener("click",()=>{
     window.location.href = "./index.html";
    }   
 })
-btn_cashon
+const user = JSON.parse(localStorage.getItem("logged_user")) ;
+if(user){
+    let user_mail = document.getElementById("login_id");
+    console.log(user);
+    console.log(user.email);
+    user_mail.innerText = user.email;
+}
