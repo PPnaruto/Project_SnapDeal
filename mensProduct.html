@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://www.snapdeal.com/img/icons/finalFavicon.ico">
     <title>Men's Products</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
@@ -127,7 +128,16 @@
         .searchBar>button:hover {
             background-color: #3f3f3f;
         }
-
+        #productpage_tag{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40%;
+            max-width: 150px;
+            height: 100%;
+            font-size: 13px;
+            cursor: pointer;
+        }
         .cartButton {
             border-left: 1px solid #ce3840;
             border-right: 1px solid #ce3840;
@@ -804,6 +814,9 @@
 
             </div>
             <div>
+                <div id="productpage_tag">
+                    <p>Men's Collection</p> 
+                 </div>
                 <div onclick="showCart()" class="cartButton">
                     <p>Cart</p>
                     <img src="https://img.icons8.com/windows/32/ffffff/shopping-cart.png">

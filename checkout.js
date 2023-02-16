@@ -171,6 +171,11 @@ document.getElementById("price-button").addEventListener("click",()=>{
   // alert("Redirect to payment page");
 })
 
+const redirect = document.getElementById("productpage_tag");
+redirect.addEventListener("click",()=>{
+    window.location.href="./mensProduct.html";
+})
+
 let user_detail = JSON.parse(localStorage.getItem("logged_user")); 
 console.log(user_detail);
 document.getElementById("signed_user").innerHTML = user_detail.name;

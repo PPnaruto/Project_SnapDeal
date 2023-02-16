@@ -485,7 +485,17 @@ nav>div>div:nth-of-type(2)>p {
 .searchBar>button:hover {
     background-color: #3f3f3f;
 }
-
+#productpage_tag{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    width: 40%;
+    max-width: 150px;
+    height: 100%;
+    font-size: 13px;
+    cursor: pointer;
+}
 .cartButton {
     border-left: 1px solid #ce3840;
     border-right: 1px solid #ce3840;

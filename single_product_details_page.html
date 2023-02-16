@@ -142,7 +142,16 @@
         .searchBar>button:hover {
             background-color: #3f3f3f;
         }
-
+        #productpage_tag{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40%;
+            max-width: 150px;
+            height: 100%;
+            font-size: 13px;
+            cursor: pointer;
+        }
         .cartButton {
             border-left: 1px solid #ce3840;
             border-right: 1px solid #ce3840;
@@ -1874,6 +1883,9 @@
 
             </div>
             <div>
+                <div id="productpage_tag">
+                    <p>Men's Collection</p> 
+                 </div>
                 <div onclick="showCart()" class="cartButton">
                     <p>Cart</p>
                     <img src="https://img.icons8.com/windows/32/ffffff/shopping-cart.png">
@@ -3063,6 +3075,10 @@
         window.location.href = "./single_product_details_page.html"
 
     }
+const redirect = document.getElementById("productpage_tag");
+redirect.addEventListener("click",()=>{
+    window.location.href="./mensProduct.html";
+})
 let user_detail = JSON.parse(localStorage.getItem("logged_user")); 
 console.log(user_detail);
 document.getElementById("signed_user").innerHTML = user_detail.name;

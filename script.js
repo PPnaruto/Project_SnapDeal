@@ -76,6 +76,11 @@ function removeOverlay() {
     // window.onscroll = function(){};
 }
 
+const redirect = document.getElementById("productpage_tag");
+redirect.addEventListener("click",()=>{
+    window.location.href="./mensProduct.html";
+})
+
 let user = null; //User is defined here so that every function can access it.
 
 if (localStorage.getItem("logged_user") === null) {
