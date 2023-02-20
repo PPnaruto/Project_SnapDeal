@@ -2561,7 +2561,7 @@
             let data = items[k][1];
             let container = document.createElement("div");
 
-            sum += Math.floor((data.price * (1 - (data.discount * 0.01))) * (items[k][0]));
+            sum += (data.discount_price)*(data.qty);
 
             let div1 = document.createElement("div");
             let div1_0 = document.createElement("div");
@@ -2584,12 +2584,12 @@
 
             let div2 = document.createElement("div");
             let price = document.createElement("p");
-            price.textContent = "Rs." + Math.floor(data.price * (1 - (data.discount * 0.01)));
+            price.textContent = "Rs." + data.discount_price;
             div2.append(price);
 
             let div3 = document.createElement("div");
             let quantity = document.createElement("p");
-            quantity.textContent = items[k][0];
+            quantity.textContent = data.qty;
             div3.append(quantity);
 
             let div4 = document.createElement("div");
@@ -2602,7 +2602,7 @@
 
             let div5 = document.createElement("div");
             let sub = document.createElement("p");
-            sub.textContent = "Rs." + Math.floor((data.price * (1 - (data.discount * 0.01))) * (items[k][0]));
+            sub.textContent = "Rs." + (data.discount_price)*(data.qty);
             div5.append(sub);
             container.append(div1, div2, div3, div4, div5)
             cart_contents.append(container);
