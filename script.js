@@ -161,6 +161,7 @@ function logout() {
     login_top_txt[1].style.display = "block";
     // localStorage.setItem("logged_user", "");
     localStorage.removeItem("logged_user");
+    localStorage.removeItem("mycart");
     document.querySelector("#nav_signin > ul > div").onclick = function () {
         showLogin();
     }
