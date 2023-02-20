@@ -2365,12 +2365,12 @@
 
     let user = null; //User is defined here so that every function can access it.
 
-    if (localStorage.getItem("logged_user") === null) {
-        localStorage.setItem("logged_user", "");
-    }
+    // if (localStorage.getItem("logged_user") === null) {
+    //     localStorage.setItem("logged_user", "");
+    // }
 
 
-    if (localStorage.getItem("logged_user") != "") {
+    if (localStorage.getItem("logged_user")) {
         let logged_user = JSON.parse(localStorage.getItem("logged_user"));
         user = logged_user;
         // console.log(user);
@@ -2439,7 +2439,8 @@
         let login_top_txt = document.querySelectorAll("#nav_signin > ul > div > p");
         login_top_txt[0].style.display = "block";
         login_top_txt[1].style.display = "block";
-        localStorage.setItem("logged_user", "");
+        // localStorage.setItem("logged_user", "");
+        localStorage.removeItem("logged_user");
         document.querySelector("#nav_signin > ul > div").onclick = function () {
             showLogin();
         }

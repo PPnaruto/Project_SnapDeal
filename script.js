@@ -83,12 +83,12 @@ redirect.addEventListener("click",()=>{
 
 let user = null; //User is defined here so that every function can access it.
 
-if (localStorage.getItem("logged_user") === null) {
-    localStorage.setItem("logged_user", "");
-}
+// if (localStorage.getItem("logged_user") === null) {
+//     localStorage.setItem("logged_user", "");
+// }
 
 
-if (localStorage.getItem("logged_user") != "") {
+if (localStorage.getItem("logged_user")) {
     let logged_user = JSON.parse(localStorage.getItem("logged_user"));
     user = logged_user;
     // console.log(user);
@@ -133,8 +133,10 @@ function completeLogin(e) {
     // alert("Logged in successfully.");
     let nav_login = document.querySelector("#nav_signin > p:nth-of-type(1)");
     // console.log(user);
-    let first_name = user.name.split(" ");
-    nav_login.textContent = first_name[0];
+    // let first_name = user.name.split(" ");
+    // nav_login.textContent = first_name[0];
+    let first_name = user.name
+    nav_login.textContent = first_name;
     document.querySelector("#nav_signin > ul").style.left = "-60px";
     removeOverlay();
     localStorage.setItem("logged_user", JSON.stringify(user));
@@ -157,7 +159,8 @@ function logout() {
     let login_top_txt = document.querySelectorAll("#nav_signin > ul > div > p");
     login_top_txt[0].style.display = "block";
     login_top_txt[1].style.display = "block";
-    localStorage.setItem("logged_user", "");
+    // localStorage.setItem("logged_user", "");
+    localStorage.removeItem("logged_user");
     document.querySelector("#nav_signin > ul > div").onclick = function () {
         showLogin();
     }
@@ -568,7 +571,7 @@ let products = [
         price: "1678",
         size: "M",
         rating: "4",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -578,7 +581,7 @@ let products = [
         price: "1888",
         size: "L",
         rating: "5",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -588,7 +591,7 @@ let products = [
         price: "899",
         size: "L",
         rating: "4",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -598,7 +601,7 @@ let products = [
         price: "5555",
         size: "M",
         rating: "3",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -608,7 +611,7 @@ let products = [
         price: "1888",
         size: "M",
         rating: "2",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -618,7 +621,7 @@ let products = [
         price: "1767",
         size: "S",
         rating: "3",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -628,7 +631,7 @@ let products = [
         price: "1678",
         size: "M",
         rating: "4",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -638,7 +641,7 @@ let products = [
         price: "1999",
         size: "L",
         rating: "5",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -648,7 +651,7 @@ let products = [
         price: "745",
         size: "S",
         rating: "3",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -658,7 +661,7 @@ let products = [
         price: "1245",
         size: "M",
         rating: "4",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -668,7 +671,7 @@ let products = [
         price: "988",
         size: "L",
         rating: "5",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -678,7 +681,7 @@ let products = [
         price: "4673",
         size: "S",
         rating: "2",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -688,7 +691,7 @@ let products = [
         price: "5778",
         size: "M",
         rating: "3",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -698,7 +701,7 @@ let products = [
         price: "5789",
         size: "L",
         rating: "4",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -708,7 +711,7 @@ let products = [
         price: "2358",
         size: "XL",
         rating: "5",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -718,7 +721,7 @@ let products = [
         price: "6789",
         size: "XXL",
         rating: "4",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -728,7 +731,7 @@ let products = [
         price: "7667",
         size: "S",
         rating: "2",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -738,7 +741,7 @@ let products = [
         price: "1395",
         size: "M",
         rating: "3",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -748,7 +751,7 @@ let products = [
         price: "1288",
         size: "L",
         rating: "4",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -758,7 +761,7 @@ let products = [
         price: "1799",
         size: "XL",
         rating: "5",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -768,7 +771,7 @@ let products = [
         price: "899",
         size: "S",
         rating: "2",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -778,7 +781,7 @@ let products = [
         price: "877",
         size: "M",
         rating: "5",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -788,7 +791,7 @@ let products = [
         price: "999",
         size: "L",
         rating: "3",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -798,7 +801,7 @@ let products = [
         price: "1399",
         size: "XL",
         rating: "4",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -808,7 +811,7 @@ let products = [
         price: "1799",
         size: "XXL",
         rating: "5",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -818,7 +821,7 @@ let products = [
         price: "1299",
         size: "S",
         rating: "3",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -828,7 +831,7 @@ let products = [
         price: "949",
         size: "S",
         rating: "2",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -838,7 +841,7 @@ let products = [
         price: "1299",
         size: "L",
         rating: "4",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -848,7 +851,7 @@ let products = [
         price: "809",
         size: "M",
         rating: "3",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -858,7 +861,7 @@ let products = [
         price: "999",
         size: "L",
         rating: "4",
-        qty: 0,
+        qty: 1,
         discount: 34
     }
 ];
