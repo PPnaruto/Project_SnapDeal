@@ -2595,7 +2595,11 @@
 
             let div4 = document.createElement("div");
             let availability = document.createElement("p");
-            availability.textContent = "Standard Delivery By 08 Oct";
+            let date = new Date();
+            let day = date.getDate();
+            let month = date.getMonth();
+            months = new Array('Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'),
+            availability.textContent = `Standard Delivery By ${(day+2)%30}-${months[month]}`;
             let free = document.createElement("span");
             free.textContent = "FREE";
             availability.append(free);
