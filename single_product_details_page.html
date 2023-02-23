@@ -142,7 +142,16 @@
         .searchBar>button:hover {
             background-color: #3f3f3f;
         }
-
+        #productpage_tag{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40%;
+            max-width: 150px;
+            height: 100%;
+            font-size: 13px;
+            cursor: pointer;
+        }
         .cartButton {
             border-left: 1px solid #ce3840;
             border-right: 1px solid #ce3840;
@@ -1874,6 +1883,9 @@
 
             </div>
             <div>
+                <div id="productpage_tag">
+                    <p>Men's Collection</p> 
+                 </div>
                 <div onclick="showCart()" class="cartButton">
                     <p>Cart</p>
                     <img src="https://img.icons8.com/windows/32/ffffff/shopping-cart.png">
@@ -2353,12 +2365,12 @@
 
     let user = null; //User is defined here so that every function can access it.
 
-    if (localStorage.getItem("logged_user") === null) {
-        localStorage.setItem("logged_user", "");
-    }
+    // if (localStorage.getItem("logged_user") === null) {
+    //     localStorage.setItem("logged_user", "");
+    // }
 
 
-    if (localStorage.getItem("logged_user") != "") {
+    if (localStorage.getItem("logged_user")) {
         let logged_user = JSON.parse(localStorage.getItem("logged_user"));
         user = logged_user;
         // console.log(user);
@@ -2427,7 +2439,9 @@
         let login_top_txt = document.querySelectorAll("#nav_signin > ul > div > p");
         login_top_txt[0].style.display = "block";
         login_top_txt[1].style.display = "block";
-        localStorage.setItem("logged_user", "");
+        // localStorage.setItem("logged_user", "");
+        localStorage.removeItem("logged_user");
+        localStorage.removeItem("mycart");
         document.querySelector("#nav_signin > ul > div").onclick = function () {
             showLogin();
         }
@@ -2548,7 +2562,7 @@
             let data = items[k][1];
             let container = document.createElement("div");
 
-            sum += Math.floor((data.price * (1 - (data.discount * 0.01))) * (items[k][0]));
+            sum += (data.discount_price)*(data.qty);
 
             let div1 = document.createElement("div");
             let div1_0 = document.createElement("div");
@@ -2571,17 +2585,21 @@
 
             let div2 = document.createElement("div");
             let price = document.createElement("p");
-            price.textContent = "Rs." + Math.floor(data.price * (1 - (data.discount * 0.01)));
+            price.textContent = "Rs." + data.discount_price;
             div2.append(price);
 
             let div3 = document.createElement("div");
             let quantity = document.createElement("p");
-            quantity.textContent = items[k][0];
+            quantity.textContent = data.qty;
             div3.append(quantity);
 
             let div4 = document.createElement("div");
             let availability = document.createElement("p");
-            availability.textContent = "Standard Delivery By 08 Oct";
+            let date = new Date();
+            let day = date.getDate();
+            let month = date.getMonth();
+            months = new Array('Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'),
+            availability.textContent = `Standard Delivery By ${(day+2)%30}-${months[month]}`;
             let free = document.createElement("span");
             free.textContent = "FREE";
             availability.append(free);
@@ -2589,7 +2607,7 @@
 
             let div5 = document.createElement("div");
             let sub = document.createElement("p");
-            sub.textContent = "Rs." + Math.floor((data.price * (1 - (data.discount * 0.01))) * (items[k][0]));
+            sub.textContent = "Rs." + (data.discount_price)*(data.qty);
             div5.append(sub);
             container.append(div1, div2, div3, div4, div5)
             cart_contents.append(container);
@@ -3063,6 +3081,10 @@
         window.location.href = "./single_product_details_page.html"
 
     }
+const redirect = document.getElementById("productpage_tag");
+redirect.addEventListener("click",()=>{
+    window.location.href="./mensProduct.html";
+})
 let user_detail = JSON.parse(localStorage.getItem("logged_user")); 
 console.log(user_detail);
 document.getElementById("signed_user").innerHTML = user_detail.name;

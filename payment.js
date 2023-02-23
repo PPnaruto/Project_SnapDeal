@@ -200,9 +200,22 @@ document.getElementById("CashOn").addEventListener("click",()=>{
     document.getElementById("cashon_way").style.display = "block";
 })
 
+const user = JSON.parse(localStorage.getItem("logged_user")) ;
+if(user){
+    let user_mail = document.getElementById("login_id");
+    console.log(user);
+    console.log(user.email);
+    user_mail.innerText = user.email;
+}
+
 document.querySelector("#btn_cashon").addEventListener("click",()=>{
-    alert("Your Order has been Placed Succesfully !");
-    window.location.href = "./index.html";
+    if(user){
+        alert("Your Order has been Placed Succesfully !");
+        window.location.href = "./index.html";
+    }else{
+        alert("Please Login first");
+    }
+    
 })
 let orderPlaced = document.querySelector(".btn_place");
 orderPlaced.addEventListener("click",()=>{
@@ -212,14 +225,12 @@ orderPlaced.addEventListener("click",()=>{
    if(credit == "" || expiry == "" || CVV == ""){
     alert("Please Enter Valid Information");
    }else{
-    alert("Your Order has been Placed Succesfully !");
-    window.location.href = "./index.html";
+        if(user){
+            alert("Your Order has been Placed Succesfully !");
+            window.location.href = "./index.html";
+        }else{
+            alert("Please Login first");
+        }
+    
    }   
 })
-const user = JSON.parse(localStorage.getItem("logged_user")) ;
-if(user){
-    let user_mail = document.getElementById("login_id");
-    console.log(user);
-    console.log(user.email);
-    user_mail.innerText = user.email;
-}

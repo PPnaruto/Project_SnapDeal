@@ -76,14 +76,19 @@ function removeOverlay() {
     // window.onscroll = function(){};
 }
 
+const redirect = document.getElementById("productpage_tag");
+redirect.addEventListener("click",()=>{
+    window.location.href="./mensProduct.html";
+})
+
 let user = null; //User is defined here so that every function can access it.
 
-if (localStorage.getItem("logged_user") === null) {
-    localStorage.setItem("logged_user", "");
-}
+// if (localStorage.getItem("logged_user") === null) {
+//     localStorage.setItem("logged_user", "");
+// }
 
 
-if (localStorage.getItem("logged_user") != "") {
+if (localStorage.getItem("logged_user")) {
     let logged_user = JSON.parse(localStorage.getItem("logged_user"));
     user = logged_user;
     // console.log(user);
@@ -128,8 +133,10 @@ function completeLogin(e) {
     // alert("Logged in successfully.");
     let nav_login = document.querySelector("#nav_signin > p:nth-of-type(1)");
     // console.log(user);
-    let first_name = user.name.split(" ");
-    nav_login.textContent = first_name[0];
+    // let first_name = user.name.split(" ");
+    // nav_login.textContent = first_name[0];
+    let first_name = user.name
+    nav_login.textContent = first_name;
     document.querySelector("#nav_signin > ul").style.left = "-60px";
     removeOverlay();
     localStorage.setItem("logged_user", JSON.stringify(user));
@@ -152,7 +159,9 @@ function logout() {
     let login_top_txt = document.querySelectorAll("#nav_signin > ul > div > p");
     login_top_txt[0].style.display = "block";
     login_top_txt[1].style.display = "block";
-    localStorage.setItem("logged_user", "");
+    // localStorage.setItem("logged_user", "");
+    localStorage.removeItem("logged_user");
+    localStorage.removeItem("mycart");
     document.querySelector("#nav_signin > ul > div").onclick = function () {
         showLogin();
     }
@@ -563,7 +572,7 @@ let products = [
         price: "1678",
         size: "M",
         rating: "4",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -573,7 +582,7 @@ let products = [
         price: "1888",
         size: "L",
         rating: "5",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -583,7 +592,7 @@ let products = [
         price: "899",
         size: "L",
         rating: "4",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -593,7 +602,7 @@ let products = [
         price: "5555",
         size: "M",
         rating: "3",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -603,7 +612,7 @@ let products = [
         price: "1888",
         size: "M",
         rating: "2",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -613,7 +622,7 @@ let products = [
         price: "1767",
         size: "S",
         rating: "3",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -623,7 +632,7 @@ let products = [
         price: "1678",
         size: "M",
         rating: "4",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -633,7 +642,7 @@ let products = [
         price: "1999",
         size: "L",
         rating: "5",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -643,7 +652,7 @@ let products = [
         price: "745",
         size: "S",
         rating: "3",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -653,7 +662,7 @@ let products = [
         price: "1245",
         size: "M",
         rating: "4",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -663,7 +672,7 @@ let products = [
         price: "988",
         size: "L",
         rating: "5",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -673,7 +682,7 @@ let products = [
         price: "4673",
         size: "S",
         rating: "2",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -683,7 +692,7 @@ let products = [
         price: "5778",
         size: "M",
         rating: "3",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -693,7 +702,7 @@ let products = [
         price: "5789",
         size: "L",
         rating: "4",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -703,7 +712,7 @@ let products = [
         price: "2358",
         size: "XL",
         rating: "5",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -713,7 +722,7 @@ let products = [
         price: "6789",
         size: "XXL",
         rating: "4",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -723,7 +732,7 @@ let products = [
         price: "7667",
         size: "S",
         rating: "2",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -733,7 +742,7 @@ let products = [
         price: "1395",
         size: "M",
         rating: "3",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -743,7 +752,7 @@ let products = [
         price: "1288",
         size: "L",
         rating: "4",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -753,7 +762,7 @@ let products = [
         price: "1799",
         size: "XL",
         rating: "5",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -763,7 +772,7 @@ let products = [
         price: "899",
         size: "S",
         rating: "2",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -773,7 +782,7 @@ let products = [
         price: "877",
         size: "M",
         rating: "5",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -783,7 +792,7 @@ let products = [
         price: "999",
         size: "L",
         rating: "3",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -793,7 +802,7 @@ let products = [
         price: "1399",
         size: "XL",
         rating: "4",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -803,7 +812,7 @@ let products = [
         price: "1799",
         size: "XXL",
         rating: "5",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -813,7 +822,7 @@ let products = [
         price: "1299",
         size: "S",
         rating: "3",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -823,7 +832,7 @@ let products = [
         price: "949",
         size: "S",
         rating: "2",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -833,7 +842,7 @@ let products = [
         price: "1299",
         size: "L",
         rating: "4",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -843,7 +852,7 @@ let products = [
         price: "809",
         size: "M",
         rating: "3",
-        qty: 0,
+        qty: 1,
         discount: 34
     },
     {
@@ -853,7 +862,7 @@ let products = [
         price: "999",
         size: "L",
         rating: "4",
-        qty: 0,
+        qty: 1,
         discount: 34
     }
 ];
@@ -1113,3 +1122,127 @@ document.getElementById("men_section").addEventListener("click",()=>{
     window.location.href = "./mensProduct.html";
 })
 // Code for login slider card ends
+
+//Code for Cart-Overlay Starts
+
+if (localStorage.getItem("mycart") === null) {
+    localStorage.setItem("mycart", JSON.stringify([]));
+}
+
+function showCart() {
+    let overlay = document.getElementById("overlay");
+    overlay.style.display = "block";
+    document.getElementById("login-area").style.display = "none";
+    document.getElementById("cart-overlay").style.display = "block";
+    if (JSON.parse(localStorage.getItem
+        ("mycart")).length == 0) {
+        document.querySelector(".cart-without-items").style.display = "block";
+        document.querySelector(".cart-with-items").style.display = "none";
+    } else {
+        document.querySelector(".cart-without-items").style.display = "none";
+        document.querySelector(".cart-with-items").style.display = "block";
+        fillCartContent();
+    }
+}
+
+function fillCartContent() {
+    let cart_contents = document.getElementById("cart-contents");
+    let cart_items = JSON.parse(localStorage.getItem("mycart"));
+   
+    let items = {};
+    cart_items.forEach(e => {
+        if (items[e.name] == undefined) {
+            items[e.name] = [1, e];
+        } else {
+            items[e.name][0]++;
+        }
+    })
+    total_items_overlay_cart.innerText = "(" + cart_items.length + " Items)"
+    // console.log(items);
+    cart_contents.innerHTML = "";
+    let sum = 0;
+    for (let k in items) {
+
+        let data = items[k][1];
+        let container = document.createElement("div");
+
+        // sum += Math.floor((data.price * (1 - (data.discount * 0.01))) * (items[k][0]));
+         sum += (data.discount_price * data.qty);
+
+        let div1 = document.createElement("div");
+        let div1_0 = document.createElement("div");
+        let img = document.createElement("img");
+        img.src = data.image;
+        div1_0.append(img);
+        let div1_1 = document.createElement("div");
+        let name = document.createElement("p");
+        name.textContent = data.name;
+        let remove = document.createElement("button");
+        remove.textContent = "X REMOVE";
+
+        //try to add remove item from the cart
+        remove.onclick = function () {
+            removeItem(k);
+        }
+
+        div1_1.append(name, remove);
+        div1.append(div1_0, div1_1);
+
+        let div2 = document.createElement("div");
+        let price = document.createElement("p");
+        price.textContent = "Rs." + data.discount_price //Math.floor(data.price * (1 - (data.discount * 0.01)));
+        div2.append(price);
+
+        let div3 = document.createElement("div");
+        let quantity = document.createElement("p");
+        quantity.textContent = data.qty;
+        div3.append(quantity);
+
+        let div4 = document.createElement("div");
+        let availability = document.createElement("p");
+        let date = new Date();
+        let day = date.getDate();
+        let month = date.getMonth();
+        months = new Array('Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'),
+        availability.textContent = `Standard Delivery By ${(day+2)%30}-${months[month]}`;
+        let free = document.createElement("span");
+        free.textContent = "FREE";
+        availability.append(free);
+        div4.append(availability);
+
+        let div5 = document.createElement("div");
+        let sub = document.createElement("p");
+        sub.textContent = "Rs." + data.discount_price*(data.qty) //Math.floor((data.price * (1 - (data.discount * 0.01))) * (items[k][0]));
+        div5.append(sub);
+        container.append(div1, div2, div3, div4, div5)
+        cart_contents.append(container);
+    }
+
+    document.getElementById("cart-sub-total-price").textContent = "Rs." + sum;
+    document.getElementById("cart-sub-total-btn").textContent = "PROCEED TO PAY Rs. " + sum;
+
+}
+
+function removeItem(r) {
+    let cart_items = JSON.parse(localStorage.getItem("mycart"));
+    let new_cart_items = [];
+    let found = false;
+    for (let i = 0; i < cart_items.length; i++) {
+        if (cart_items[i].name == r && !found) {
+            found = true;
+        } else {
+            new_cart_items.push(cart_items[i]);
+        }
+    }
+    // console.log(new_cart_items);
+    localStorage.setItem("mycart", JSON.stringify(new_cart_items));
+    if (new_cart_items.length == 0) {
+        showCart();
+    } else {
+        fillCartContent();
+    }
+}
+
+function goToPaymentPage() {
+    window.location.href = "payment.html";
+}

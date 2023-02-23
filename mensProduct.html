@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://www.snapdeal.com/img/icons/finalFavicon.ico">
     <title>Men's Products</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
@@ -127,7 +128,16 @@
         .searchBar>button:hover {
             background-color: #3f3f3f;
         }
-
+        #productpage_tag{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40%;
+            max-width: 150px;
+            height: 100%;
+            font-size: 13px;
+            cursor: pointer;
+        }
         .cartButton {
             border-left: 1px solid #ce3840;
             border-right: 1px solid #ce3840;
@@ -804,6 +814,9 @@
 
             </div>
             <div>
+                <div id="productpage_tag">
+                    <p>Men's Collection</p> 
+                 </div>
                 <div onclick="showCart()" class="cartButton">
                     <p>Cart</p>
                     <img src="https://img.icons8.com/windows/32/ffffff/shopping-cart.png">
@@ -1468,58 +1481,9 @@
         div.append(img, name, star, pricing);
         let productsDisplay = document.getElementById("productsDisplay");
         productsDisplay.append(div);
-        })
-    //         let div = document.createElement("div");
-    //         div.setAttribute("id","item_div");
-
-    //         let img_div = document.createElement("div");
-    //         img_div.setAttribute("id","img_div");
-    //         let img = document.createElement("img");
-    //         img.src = ele.image;
-    //         img_div.append(img);
-
-    //         let name_div = document.createElement("div");
-    //         let name = document.createElement("h3"); 
-    //         name.innerText = ele.name;
-    //         name_div.append(name);
-    //         name_div.style.height = "60px";
-
-    //         let price_div = document.createElement("div");
-    //         price_div.setAttribute("id","price_div");
-
-    //         let price = document.createElement("h4"); 
-    //         price.innerText = ele.price;
-
-    //         let discount_price = document.createElement("h4"); 
-    //         discount_price.innerText = ele.discount_price;
-
-    //         let size = document.createElement("h4"); 
-    //         size.innerText = ele.size;
-    //         price_div.append(price,discount_price,size)
-
-    //         let start_div = document.createElement("div");
-    //         start_div.innerHTML = '<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>';
-    //         if(ele.rating == "5"){
-    //             start_div.innerHTML = document.getElementById("5_rating").innerHTML;
-    //         }
-    //         else if(ele.rating == "4"){
-    //             // start_div.innerHTML = '<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>';
-    //             start_div.innerHTML = document.getElementById("4_rating").innerHTML;
-    //         }
-    //         else if(ele.rating == "3"){
-    //             // start_div.innerHTML = '<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>';
-    //             start_div.innerHTML = document.getElementById("3_rating").innerHTML;
-    //         }
-    //         else if(ele.rating == "2"){
-    //             // start_div.innerHTML = '<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>';
-    //             start_div.innerHTML = document.getElementById("2_rating").innerHTML;
-    //         }
-
-    //         div.append(img_div,name_div,price_div,start_div);
-    //         document.getElementById("Products").append(div);
-    //     })   
+        }) 
     }
-// displaydata(Shirts);
+
 function getStar(r) {
     switch (Math.floor(r)) {
         case 0:
@@ -1537,8 +1501,7 @@ function getStar(r) {
     }
 }
 let sortdata = ()=>{
-        // console.log("Sorting is working...");
-        // console.log(sh);
+        
         let value = document.getElementById("sort").value;
         if(value == "popularity"){
             displaydata(arr);
@@ -1554,6 +1517,13 @@ let sortdata = ()=>{
             return b.discount_price - a.discount_price;
         })
         displaydata(arr);
+        }
+        else if(value == "discount"){
+            console.log('In Discount');
+            arr.sort((a,b)=>{
+                return Math.round(((b.price-b.discount_price)/ b.price)*100) - Math.round(((a.price-a.discount_price)/ a.price)*100);
+            })
+            displaydata(arr);
         }
         
 }

@@ -228,6 +228,7 @@ tbody{
 #apply{
     color: blue;
     margin-left: 10px;
+    cursor: pointer;
 }
 #pay_total{
     margin-left: 225px;
