@@ -768,6 +768,319 @@
 
         /* CSS for login ends */
 
+         /* CSS for cart Overlay Starts */
+         .cart-without-items {
+            max-width: 1160px;
+            min-width: 960px;
+            background-color: white;
+            box-shadow: 0 10px 10px rgba(59, 57, 57, 0.472);
+            position: absolute;
+            z-index: 10;
+            top: 20%;
+            left: 15%;
+            padding: 20px;
+        }
+
+        .cart-without-items>h4 {
+            text-align: center;
+            color: #5a5a59;
+            font-size: 18px;
+        }
+
+        .cart-without-items>button:nth-of-type(1) {
+            border: 0;
+            background: transparent;
+            color: black;
+            font-size: 20px;
+            position: absolute;
+            top: 25px;
+            left: 950px;
+            cursor: pointer;
+        }
+
+        .cart-without-items>p:nth-of-type(1) {
+            text-align: center;
+            color: #344c55;
+            font-size: 16px;
+            margin-top: 40px;
+        }
+
+        .cart-without-items>hr {
+            border: 1px solid #f5f5f5;
+        }
+
+        .cart-without-items>ul {
+            height: 170px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            row-gap: 20px;
+            font-size: 13px;
+            color: #777;
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .cart-without-items>div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cart-without-items>div>button:nth-of-type(1) {
+            color: #ffffff;
+            background-color: #e40046;
+            font-size: 13px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            height: 40px;
+            border-radius: 3px;
+            border: 0;
+            font-weight: 400;
+            width: 280px;
+        }
+
+        .cart-without-items>div>div {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cart-without-items>div>div>p {
+            color: #b2b2b2;
+            font-size: 12px;
+            vertical-align: middle;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cart-with-items>div:nth-of-type(1) {
+            width: 100%;
+            position: absolute;
+            z-index: 10px;
+            bottom: 0;
+        }
+
+        .cart-with-items>div:nth-of-type(1)>div:nth-of-type(1) {
+            display: flex;
+            justify-content: center;
+        }
+
+        .cart-content-area {
+            max-height: 640px;
+            max-width: 1160px;
+            min-width: 960px;
+            background-color: white;
+            box-shadow: 0 10px 10px rgba(59, 57, 57, 0.472);
+            padding: 20px;
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 5px;
+            ;
+        }
+
+        .cart-with-items>div:nth-of-type(1)>div:nth-of-type(2) {
+            width: 100%;
+            height: 135px;
+            background-color: #222;
+            display: flex;
+            justify-content: center;
+            box-sizing: border-box;
+            padding: 20px 0;
+        }
+
+        .cart-pricing-area {
+            max-width: 1160px;
+            min-width: 960px;
+            width: 100%;
+            color: #ddd;
+            font-size: 13px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .cart-pricing-area>div:nth-of-type(2) {
+            width: 290px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .cart-pricing-area>div:nth-of-type(2)>div {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .cart-pricing-area>div:nth-of-type(2)>div p {
+            margin: 5px;
+        }
+
+        #cart-sub-total-price {
+            font-size: 13px;
+            color: white;
+        }
+
+        .cart-pricing-area>div:nth-of-type(2)>div:nth-of-type(2)>p:nth-of-type(2) {
+            color: #60bf79;
+        }
+
+        .cart-pricing-area>div:nth-of-type(3) {
+            display: flex;
+            align-items: center;
+        }
+
+        #cart-sub-total-btn {
+            color: #ffffff;
+            background-color: #e40046;
+            font-size: 13px;
+            cursor: pointer;
+            height: 40px;
+            border-radius: 3px;
+            border: 0;
+            font-weight: 400;
+            width: 240px;
+        }
+
+        .cart-content-area>div:nth-of-type(1) {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .cart-content-area>div:nth-of-type(1)>h4 {
+            font-size: 18px;
+            color: #5a5a59;
+        }
+
+        .cart-content-area>div:nth-of-type(1)>h4>span {
+            font-size: 14px;
+            color: #999;
+        }
+
+        .cart-content-area>div:nth-of-type(1)>button {
+            border: 0;
+            background: transparent;
+            color: black;
+            font-size: 25px;
+            position: relative;
+            top: 0px;
+            left: 0px;
+            cursor: pointer;
+        }
+
+        .cart-content-area>div:nth-of-type(2) {
+            display: flex;
+            justify-content: space-between;
+            height: 47px;
+            font-size: 14px;
+            color: #999;
+            background-color: #f7f7f7;
+            padding: 0px 10px;
+        }
+
+        .cart-content-area>div:nth-of-type(2)>p:nth-of-type(1) {
+            width: 30%;
+        }
+
+        .cart-content-area>div:nth-of-type(2)>p:nth-of-type(2) {
+            width: 10%;
+            text-align: center;
+        }
+
+        .cart-content-area>div:nth-of-type(2)>p:nth-of-type(3) {
+            width: 10%;
+            text-align: center;
+        }
+
+        .cart-content-area>div:nth-of-type(2)>p:nth-of-type(4) {
+            width: 25%;
+        }
+
+        .cart-content-area>div:nth-of-type(2)>p:nth-of-type(5) {
+            width: 10%;
+            text-align: center;
+        }
+
+        #cart-contents {
+            height: 327px;
+            overflow-y: scroll;
+            font-size: 14px;
+            color: #666;
+        }
+
+        #cart-contents>div {
+            display: flex;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgb(211, 209, 209);
+            height: 140px;
+            justify-content: space-between;
+        }
+
+        #cart-contents>div img {
+            width: 100%;
+        }
+
+        #cart-contents>div>div:nth-of-type(1) {
+            display: flex;
+            width: 30%;
+        }
+
+        #cart-contents>div>div:nth-of-type(1)>div:nth-of-type(1) {
+            width: 80px;
+            margin-right: 10px;
+        }
+
+        #cart-contents>div>div:nth-of-type(1)>div:nth-of-type(2)>p {
+            width: 175px;
+            height: 75px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 10 0px;
+        }
+
+        #cart-contents>div>div:nth-of-type(1)>div:nth-of-type(2)>button {
+            background-color: transparent;
+            border: 0;
+            color: #666;
+            cursor: pointer;
+        }
+
+        #cart-contents>div>div:nth-of-type(2) {
+            width: 10%;
+            display: flex;
+            justify-content: center;
+        }
+
+        #cart-contents>div>div:nth-of-type(3) {
+            width: 10%;
+            display: flex;
+            justify-content: center;
+        }
+
+        #cart-contents>div>div:nth-of-type(4) {
+            width: 25%;
+        }
+
+        #cart-contents>div>div:nth-of-type(4)>p {
+            font-size: 13px;
+            margin-top: 10px;
+        }
+
+        #cart-contents>div>div:nth-of-type(4)>p>span {
+            color: #60bf79;
+            margin-left: 5px;
+        }
+
+        #cart-contents>div>div:nth-of-type(5) {
+            width: 10%;
+            display: flex;
+            justify-content: center;
+        }
+         /* CSS for cart Overlay ends */
 
         /* CSS from product_catalogue starts */
         #productsDisplay {
@@ -1505,7 +1818,101 @@
 
             </div>
         </div>
+        <div id="cart-overlay">
+            <div class="cart-without-items">
+                <h4>Shopping Cart is empty!</h4>
+                <button onclick="removeOverlay()">X</button>
+                <p>BROWSE CATEGORIES</p>
+                <hr>
+                <ul>
+                    <li>- Appliances</li>
+                    <li>- Cameras & Accessories</li>
+                    <li>- Gaming</li>
+                    <li>- Men's Clothing</li>
+                    <li>- Tablets & Accessories</li>
+                    <li>- Baby & Kids</li>
+                    <li>- Daily Needs</li>
+                    <li>- Jewellery</li>
+                    <li>- Mobile Accessories</li>
+                    <li>- TV, Audio & Video</li>
+                    <li>- Beauty & Personal Care</li>
+                    <li>- Furnishing</li>
+                    <li>- Kitchenware</li>
+                    <li>- Mobile Phones</li>
+                    <li>- Women's Ethnic Wear</li>
+                    <li>- Books</li>
+                    <li>- Furniture</li>
+                    <li>- Laptops & Computers</li>
+                    <li>- Nutrition & Supplements</li>
+                    <li>- Women's Western Wear</li>
+                </ul>
+                <div>
+                    <button onclick="removeOverlay()">START SHOPPING NOW</button>
+                    <div>
+                        <p><img src="https://img.icons8.com/ios/50/000000/favorites-shield.png"
+                                style="width: 16px; margin-right: 10px;">
+                            Safe and Secure</p>
+                        <p><img src="https://img.icons8.com/ios-glyphs/24/000000/card-security.png"
+                                style="width: 16px; margin-right: 10px; " />
+                            100% Payment Protection, Easy Returns Policy</p>
+                    </div>
 
+                </div>
+
+            </div>
+            <div class="cart-with-items">
+                <div>
+                    <div>
+                        <div class="cart-content-area">
+                            <div>
+                                <h4>Shopping Cart <span id="total_items_overlay_cart">(5 Items)</span></h4>
+                                <button onclick="removeOverlay()">X</button>
+                            </div>
+                            <div>
+                                <p>Item Details</p>
+                                <p>Price</p>
+                                <p>Quantity</p>
+                                <p>Showing Availability</p>
+                                <p>Subtotal</p>
+                            </div>
+                            <div id="cart-contents">
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="cart-pricing-area">
+                            <div>
+                                <p>Delivery and payment options can be selected later</p>
+                                <p>
+                                    <img src="https://img.icons8.com/ios/50/ffffff/favorites-shield.png"
+                                        style="width: 16px; margin-right: 10px;">
+                                    Safe and Secure Payments
+                                </p>
+                                <p><img src="https://img.icons8.com/ios-glyphs/30/ffffff/card-security.png"
+                                        style="width: 16px; margin-right: 10px;" />
+                                    100% Payment Protection, Easy Returns Policy</p>
+                            </div>
+                            <div>
+                                <div>
+                                    <p>Sub Total:</p>
+                                    <p id="cart-sub-total-price">price</p>
+                                </div>
+                                <div>
+                                    <p>Delivery Charges:</p>
+                                    <p>FREE</p>
+                                </div>
+                            </div>
+                            <div>
+                                <button id="cart-sub-total-btn" onclick="goToPaymentPage()">PROCEED TO PAY
+                                    Rs.1,169</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
 
     </div>
     <!-- Login Signup Cart Overlay Ends -->

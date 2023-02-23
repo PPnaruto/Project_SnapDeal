@@ -1122,3 +1122,127 @@ document.getElementById("men_section").addEventListener("click",()=>{
     window.location.href = "./mensProduct.html";
 })
 // Code for login slider card ends
+
+//Code for Cart-Overlay Starts
+
+if (localStorage.getItem("mycart") === null) {
+    localStorage.setItem("mycart", JSON.stringify([]));
+}
+
+function showCart() {
+    let overlay = document.getElementById("overlay");
+    overlay.style.display = "block";
+    document.getElementById("login-area").style.display = "none";
+    document.getElementById("cart-overlay").style.display = "block";
+    if (JSON.parse(localStorage.getItem
+        ("mycart")).length == 0) {
+        document.querySelector(".cart-without-items").style.display = "block";
+        document.querySelector(".cart-with-items").style.display = "none";
+    } else {
+        document.querySelector(".cart-without-items").style.display = "none";
+        document.querySelector(".cart-with-items").style.display = "block";
+        fillCartContent();
+    }
+}
+
+function fillCartContent() {
+    let cart_contents = document.getElementById("cart-contents");
+    let cart_items = JSON.parse(localStorage.getItem("mycart"));
+   
+    let items = {};
+    cart_items.forEach(e => {
+        if (items[e.name] == undefined) {
+            items[e.name] = [1, e];
+        } else {
+            items[e.name][0]++;
+        }
+    })
+    total_items_overlay_cart.innerText = "(" + cart_items.length + " Items)"
+    // console.log(items);
+    cart_contents.innerHTML = "";
+    let sum = 0;
+    for (let k in items) {
+
+        let data = items[k][1];
+        let container = document.createElement("div");
+
+        // sum += Math.floor((data.price * (1 - (data.discount * 0.01))) * (items[k][0]));
+         sum += (data.discount_price * data.qty);
+
+        let div1 = document.createElement("div");
+        let div1_0 = document.createElement("div");
+        let img = document.createElement("img");
+        img.src = data.image;
+        div1_0.append(img);
+        let div1_1 = document.createElement("div");
+        let name = document.createElement("p");
+        name.textContent = data.name;
+        let remove = document.createElement("button");
+        remove.textContent = "X REMOVE";
+
+        //try to add remove item from the cart
+        remove.onclick = function () {
+            removeItem(k);
+        }
+
+        div1_1.append(name, remove);
+        div1.append(div1_0, div1_1);
+
+        let div2 = document.createElement("div");
+        let price = document.createElement("p");
+        price.textContent = "Rs." + data.discount_price //Math.floor(data.price * (1 - (data.discount * 0.01)));
+        div2.append(price);
+
+        let div3 = document.createElement("div");
+        let quantity = document.createElement("p");
+        quantity.textContent = data.qty;
+        div3.append(quantity);
+
+        let div4 = document.createElement("div");
+        let availability = document.createElement("p");
+        let date = new Date();
+        let day = date.getDate();
+        let month = date.getMonth();
+        months = new Array('Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'),
+        availability.textContent = `Standard Delivery By ${(day+2)%30}-${months[month]}`;
+        let free = document.createElement("span");
+        free.textContent = "FREE";
+        availability.append(free);
+        div4.append(availability);
+
+        let div5 = document.createElement("div");
+        let sub = document.createElement("p");
+        sub.textContent = "Rs." + data.discount_price*(data.qty) //Math.floor((data.price * (1 - (data.discount * 0.01))) * (items[k][0]));
+        div5.append(sub);
+        container.append(div1, div2, div3, div4, div5)
+        cart_contents.append(container);
+    }
+
+    document.getElementById("cart-sub-total-price").textContent = "Rs." + sum;
+    document.getElementById("cart-sub-total-btn").textContent = "PROCEED TO PAY Rs. " + sum;
+
+}
+
+function removeItem(r) {
+    let cart_items = JSON.parse(localStorage.getItem("mycart"));
+    let new_cart_items = [];
+    let found = false;
+    for (let i = 0; i < cart_items.length; i++) {
+        if (cart_items[i].name == r && !found) {
+            found = true;
+        } else {
+            new_cart_items.push(cart_items[i]);
+        }
+    }
+    // console.log(new_cart_items);
+    localStorage.setItem("mycart", JSON.stringify(new_cart_items));
+    if (new_cart_items.length == 0) {
+        showCart();
+    } else {
+        fillCartContent();
+    }
+}
+
+function goToPaymentPage() {
+    window.location.href = "payment.html";
+}
